@@ -1,20 +1,20 @@
-#  Pyrogram - Telegram MTProto API Client Library for Python
+#  Nerogram - Telegram MTProto API Client Library for Python
 #  Copyright (C) 2017-present Dan <https://github.com/delivrance>
 #
-#  This file is part of Pyrogram.
+#  This file is part of Nerogram.
 #
-#  Pyrogram is free software: you can redistribute it and/or modify
+#  Nerogram is free software: you can redistribute it and/or modify
 #  it under the terms of the GNU Lesser General Public License as published
 #  by the Free Software Foundation, either version 3 of the License, or
 #  (at your option) any later version.
 #
-#  Pyrogram is distributed in the hope that it will be useful,
+#  Nerogram is distributed in the hope that it will be useful,
 #  but WITHOUT ANY WARRANTY; without even the implied warranty of
 #  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
 #  GNU Lesser General Public License for more details.
 #
 #  You should have received a copy of the GNU Lesser General Public License
-#  along with Pyrogram.  If not, see <http://www.gnu.org/licenses/>.
+#  along with Nerogram.  If not, see <http://www.gnu.org/licenses/>.
 
 from io import BytesIO
 
@@ -33,7 +33,7 @@ from typing import List, Optional, Any
 class StoryItem(TLObject):  # type: ignore
     """Telegram API type.
 
-    Constructor of :obj:`~pyrogram.raw.base.StoryItem`.
+    Constructor of :obj:`~nerogram.raw.base.StoryItem`.
 
     Details:
         - Layer: ``166``
@@ -49,7 +49,7 @@ class StoryItem(TLObject):  # type: ignore
         expire_date (``int`` ``32-bit``):
             N/A
 
-        media (:obj:`MessageMedia <pyrogram.raw.base.MessageMedia>`):
+        media (:obj:`MessageMedia <nerogram.raw.base.MessageMedia>`):
             N/A
 
         pinned (``bool``, *optional*):
@@ -82,19 +82,19 @@ class StoryItem(TLObject):  # type: ignore
         caption (``str``, *optional*):
             N/A
 
-        entities (List of :obj:`MessageEntity <pyrogram.raw.base.MessageEntity>`, *optional*):
+        entities (List of :obj:`MessageEntity <nerogram.raw.base.MessageEntity>`, *optional*):
             N/A
 
-        media_areas (List of :obj:`MediaArea <pyrogram.raw.base.MediaArea>`, *optional*):
+        media_areas (List of :obj:`MediaArea <nerogram.raw.base.MediaArea>`, *optional*):
             N/A
 
-        privacy (List of :obj:`PrivacyRule <pyrogram.raw.base.PrivacyRule>`, *optional*):
+        privacy (List of :obj:`PrivacyRule <nerogram.raw.base.PrivacyRule>`, *optional*):
             N/A
 
-        views (:obj:`StoryViews <pyrogram.raw.base.StoryViews>`, *optional*):
+        views (:obj:`StoryViews <nerogram.raw.base.StoryViews>`, *optional*):
             N/A
 
-        sent_reaction (:obj:`Reaction <pyrogram.raw.base.Reaction>`, *optional*):
+        sent_reaction (:obj:`Reaction <nerogram.raw.base.Reaction>`, *optional*):
             N/A
 
     """

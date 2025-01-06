@@ -1,20 +1,20 @@
-#  Pyrogram - Telegram MTProto API Client Library for Python
+#  Nerogram - Telegram MTProto API Client Library for Python
 #  Copyright (C) 2017-present Dan <https://github.com/delivrance>
 #
-#  This file is part of Pyrogram.
+#  This file is part of Nerogram.
 #
-#  Pyrogram is free software: you can redistribute it and/or modify
+#  Nerogram is free software: you can redistribute it and/or modify
 #  it under the terms of the GNU Lesser General Public License as published
 #  by the Free Software Foundation, either version 3 of the License, or
 #  (at your option) any later version.
 #
-#  Pyrogram is distributed in the hope that it will be useful,
+#  Nerogram is distributed in the hope that it will be useful,
 #  but WITHOUT ANY WARRANTY; without even the implied warranty of
 #  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
 #  GNU Lesser General Public License for more details.
 #
 #  You should have received a copy of the GNU Lesser General Public License
-#  along with Pyrogram.  If not, see <http://www.gnu.org/licenses/>.
+#  along with Nerogram.  If not, see <http://www.gnu.org/licenses/>.
 
 from uuid import uuid4
 
@@ -26,23 +26,23 @@ from ..object import Object
 class InlineQueryResult(Object):
     """One result of an inline query.
 
-    - :obj:`~pyrogram.types.InlineQueryResultCachedAudio`
-    - :obj:`~pyrogram.types.InlineQueryResultCachedDocument`
-    - :obj:`~pyrogram.types.InlineQueryResultCachedAnimation`
-    - :obj:`~pyrogram.types.InlineQueryResultCachedPhoto`
-    - :obj:`~pyrogram.types.InlineQueryResultCachedSticker`
-    - :obj:`~pyrogram.types.InlineQueryResultCachedVideo`
-    - :obj:`~pyrogram.types.InlineQueryResultCachedVoice`
-    - :obj:`~pyrogram.types.InlineQueryResultArticle`
-    - :obj:`~pyrogram.types.InlineQueryResultAudio`
-    - :obj:`~pyrogram.types.InlineQueryResultContact`
-    - :obj:`~pyrogram.types.InlineQueryResultDocument`
-    - :obj:`~pyrogram.types.InlineQueryResultAnimation`
-    - :obj:`~pyrogram.types.InlineQueryResultLocation`
-    - :obj:`~pyrogram.types.InlineQueryResultPhoto`
-    - :obj:`~pyrogram.types.InlineQueryResultVenue`
-    - :obj:`~pyrogram.types.InlineQueryResultVideo`
-    - :obj:`~pyrogram.types.InlineQueryResultVoice`
+    - :obj:`~nerogram.types.InlineQueryResultCachedAudio`
+    - :obj:`~nerogram.types.InlineQueryResultCachedDocument`
+    - :obj:`~nerogram.types.InlineQueryResultCachedAnimation`
+    - :obj:`~nerogram.types.InlineQueryResultCachedPhoto`
+    - :obj:`~nerogram.types.InlineQueryResultCachedSticker`
+    - :obj:`~nerogram.types.InlineQueryResultCachedVideo`
+    - :obj:`~nerogram.types.InlineQueryResultCachedVoice`
+    - :obj:`~nerogram.types.InlineQueryResultArticle`
+    - :obj:`~nerogram.types.InlineQueryResultAudio`
+    - :obj:`~nerogram.types.InlineQueryResultContact`
+    - :obj:`~nerogram.types.InlineQueryResultDocument`
+    - :obj:`~nerogram.types.InlineQueryResultAnimation`
+    - :obj:`~nerogram.types.InlineQueryResultLocation`
+    - :obj:`~nerogram.types.InlineQueryResultPhoto`
+    - :obj:`~nerogram.types.InlineQueryResultVenue`
+    - :obj:`~nerogram.types.InlineQueryResultVideo`
+    - :obj:`~nerogram.types.InlineQueryResultVoice`
     """
 
     def __init__(

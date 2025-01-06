@@ -1,20 +1,20 @@
-#  Pyrogram - Telegram MTProto API Client Library for Python
+#  Nerogram - Telegram MTProto API Client Library for Python
 #  Copyright (C) 2017-present Dan <https://github.com/delivrance>
 #
-#  This file is part of Pyrogram.
+#  This file is part of Nerogram.
 #
-#  Pyrogram is free software: you can redistribute it and/or modify
+#  Nerogram is free software: you can redistribute it and/or modify
 #  it under the terms of the GNU Lesser General Public License as published
 #  by the Free Software Foundation, either version 3 of the License, or
 #  (at your option) any later version.
 #
-#  Pyrogram is distributed in the hope that it will be useful,
+#  Nerogram is distributed in the hope that it will be useful,
 #  but WITHOUT ANY WARRANTY; without even the implied warranty of
 #  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
 #  GNU Lesser General Public License for more details.
 #
 #  You should have received a copy of the GNU Lesser General Public License
-#  along with Pyrogram.  If not, see <http://www.gnu.org/licenses/>.
+#  along with Nerogram.  If not, see <http://www.gnu.org/licenses/>.
 
 from io import BytesIO
 
@@ -38,7 +38,7 @@ class EditExportedInvite(TLObject):  # type: ignore
         - ID: ``653DB63D``
 
     Parameters:
-        chatlist (:obj:`InputChatlist <pyrogram.raw.base.InputChatlist>`):
+        chatlist (:obj:`InputChatlist <nerogram.raw.base.InputChatlist>`):
             N/A
 
         slug (``str``):
@@ -47,11 +47,11 @@ class EditExportedInvite(TLObject):  # type: ignore
         title (``str``, *optional*):
             N/A
 
-        peers (List of :obj:`InputPeer <pyrogram.raw.base.InputPeer>`, *optional*):
+        peers (List of :obj:`InputPeer <nerogram.raw.base.InputPeer>`, *optional*):
             N/A
 
     Returns:
-        :obj:`ExportedChatlistInvite <pyrogram.raw.base.ExportedChatlistInvite>`
+        :obj:`ExportedChatlistInvite <nerogram.raw.base.ExportedChatlistInvite>`
     """
 
     __slots__: List[str] = ["chatlist", "slug", "title", "peers"]

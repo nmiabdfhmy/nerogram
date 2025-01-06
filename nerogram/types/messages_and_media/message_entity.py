@@ -1,20 +1,20 @@
-#  Pyrogram - Telegram MTProto API Client Library for Python
+#  Nerogram - Telegram MTProto API Client Library for Python
 #  Copyright (C) 2017-present Dan <https://github.com/delivrance>
 #
-#  This file is part of Pyrogram.
+#  This file is part of Nerogram.
 #
-#  Pyrogram is free software: you can redistribute it and/or modify
+#  Nerogram is free software: you can redistribute it and/or modify
 #  it under the terms of the GNU Lesser General Public License as published
 #  by the Free Software Foundation, either version 3 of the License, or
 #  (at your option) any later version.
 #
-#  Pyrogram is distributed in the hope that it will be useful,
+#  Nerogram is distributed in the hope that it will be useful,
 #  but WITHOUT ANY WARRANTY; without even the implied warranty of
 #  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
 #  GNU Lesser General Public License for more details.
 #
 #  You should have received a copy of the GNU Lesser General Public License
-#  along with Pyrogram.  If not, see <http://www.gnu.org/licenses/>.
+#  along with Nerogram.  If not, see <http://www.gnu.org/licenses/>.
 
 from typing import Optional
 
@@ -30,7 +30,7 @@ class MessageEntity(Object):
     For example, hashtags, usernames, URLs, etc.
 
     Parameters:
-        type (:obj:`~pyrogram.enums.MessageEntityType`):
+        type (:obj:`~nerogram.enums.MessageEntityType`):
             Type of the entity.
 
         offset (``int``):
@@ -40,17 +40,17 @@ class MessageEntity(Object):
             Length of the entity in UTF-16 code units.
 
         url (``str``, *optional*):
-            For :obj:`~pyrogram.enums.MessageEntityType.TEXT_LINK` only, url that will be opened after user taps on the text.
+            For :obj:`~nerogram.enums.MessageEntityType.TEXT_LINK` only, url that will be opened after user taps on the text.
 
-        user (:obj:`~pyrogram.types.User`, *optional*):
-            For :obj:`~pyrogram.enums.MessageEntityType.TEXT_MENTION` only, the mentioned user.
+        user (:obj:`~nerogram.types.User`, *optional*):
+            For :obj:`~nerogram.enums.MessageEntityType.TEXT_MENTION` only, the mentioned user.
 
         language (``str``, *optional*):
             For "pre" only, the programming language of the entity text.
 
         custom_emoji_id (``int``, *optional*):
-            For :obj:`~pyrogram.enums.MessageEntityType.CUSTOM_EMOJI` only, unique identifier of the custom emoji.
-            Use :meth:`~pyrogram.Client.get_custom_emoji_stickers` to get full information about the sticker.
+            For :obj:`~nerogram.enums.MessageEntityType.CUSTOM_EMOJI` only, unique identifier of the custom emoji.
+            Use :meth:`~nerogram.Client.get_custom_emoji_stickers` to get full information about the sticker.
     """
 
     def __init__(

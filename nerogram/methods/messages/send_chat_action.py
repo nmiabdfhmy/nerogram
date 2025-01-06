@@ -1,20 +1,20 @@
-#  Pyrogram - Telegram MTProto API Client Library for Python
+#  Nerogram - Telegram MTProto API Client Library for Python
 #  Copyright (C) 2017-present Dan <https://github.com/delivrance>
 #
-#  This file is part of Pyrogram.
+#  This file is part of Nerogram.
 #
-#  Pyrogram is free software: you can redistribute it and/or modify
+#  Nerogram is free software: you can redistribute it and/or modify
 #  it under the terms of the GNU Lesser General Public License as published
 #  by the Free Software Foundation, either version 3 of the License, or
 #  (at your option) any later version.
 #
-#  Pyrogram is distributed in the hope that it will be useful,
+#  Nerogram is distributed in the hope that it will be useful,
 #  but WITHOUT ANY WARRANTY; without even the implied warranty of
 #  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
 #  GNU Lesser General Public License for more details.
 #
 #  You should have received a copy of the GNU Lesser General Public License
-#  along with Pyrogram.  If not, see <http://www.gnu.org/licenses/>.
+#  along with Nerogram.  If not, see <http://www.gnu.org/licenses/>.
 
 from typing import Union
 
@@ -38,7 +38,7 @@ class SendChatAction:
                 For your personal cloud (Saved Messages) you can simply use "me" or "self".
                 For a contact that exists in your Telegram address book you can use his phone number (str).
 
-            action (:obj:`~pyrogram.enums.ChatAction`):
+            action (:obj:`~nerogram.enums.ChatAction`):
                 Type of action to broadcast.
 
         Returns:
@@ -50,7 +50,7 @@ class SendChatAction:
         Example:
             .. code-block:: python
 
-                from pyrogram import enums
+                from nerogram import enums
 
                 # Send "typing" chat action
                 await app.send_chat_action(chat_id, enums.ChatAction.TYPING)

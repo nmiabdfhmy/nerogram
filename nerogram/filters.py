@@ -1,20 +1,20 @@
-#  Pyrogram - Telegram MTProto API Client Library for Python
+#  Nerogram - Telegram MTProto API Client Library for Python
 #  Copyright (C) 2017-present Dan <https://github.com/delivrance>
 #
-#  This file is part of Pyrogram.
+#  This file is part of Nerogram.
 #
-#  Pyrogram is free software: you can redistribute it and/or modify
+#  Nerogram is free software: you can redistribute it and/or modify
 #  it under the terms of the GNU Lesser General Public License as published
 #  by the Free Software Foundation, either version 3 of the License, or
 #  (at your option) any later version.
 #
-#  Pyrogram is distributed in the hope that it will be useful,
+#  Nerogram is distributed in the hope that it will be useful,
 #  but WITHOUT ANY WARRANTY; without even the implied warranty of
 #  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
 #  GNU Lesser General Public License for more details.
 #
 #  You should have received a copy of the GNU Lesser General Public License
-#  along with Pyrogram.  If not, see <http://www.gnu.org/licenses/>.
+#  along with Nerogram.  If not, see <http://www.gnu.org/licenses/>.
 
 import inspect
 import re
@@ -131,9 +131,9 @@ def create(func: Callable, name: str = None, **kwargs) -> Filter:
             A function that accepts three positional arguments *(filter, client, update)* and returns a boolean: True if the
             update should be handled, False otherwise.
             The *filter* argument refers to the filter itself and can be used to access keyword arguments (read below).
-            The *client* argument refers to the :obj:`~pyrogram.Client` that received the update.
+            The *client* argument refers to the :obj:`~nerogram.Client` that received the update.
             The *update* argument type will vary depending on which `Handler <handlers>`_ is coming from.
-            For example, in a :obj:`~pyrogram.handlers.MessageHandler` the *update* argument will be a :obj:`~pyrogram.types.Message`; in a :obj:`~pyrogram.handlers.CallbackQueryHandler` the *update* will be a :obj:`~pyrogram.types.CallbackQuery`.
+            For example, in a :obj:`~nerogram.handlers.MessageHandler` the *update* argument will be a :obj:`~nerogram.types.Message`; in a :obj:`~nerogram.handlers.CallbackQueryHandler` the *update* will be a :obj:`~nerogram.types.CallbackQuery`.
             Your function body can then access the incoming update attributes and decide whether to allow it or not.
 
         name (``str``, *optional*):
@@ -142,7 +142,7 @@ def create(func: Callable, name: str = None, **kwargs) -> Filter:
 
         **kwargs (``any``, *optional*):
             Any keyword argument you would like to pass. Useful when creating parameterized custom filters, such as
-            :meth:`~pyrogram.filters.command` or :meth:`~pyrogram.filters.regex`.
+            :meth:`~nerogram.filters.command` or :meth:`~nerogram.filters.regex`.
     """
     return type(
         name or func.__name__ or CUSTOM_FILTER_NAME,
@@ -257,7 +257,7 @@ async def audio_filter(_, __, m: Message):
 
 
 audio = create(audio_filter)
-"""Filter messages that contain :obj:`~pyrogram.types.Audio` objects."""
+"""Filter messages that contain :obj:`~nerogram.types.Audio` objects."""
 
 
 # endregion
@@ -268,7 +268,7 @@ async def document_filter(_, __, m: Message):
 
 
 document = create(document_filter)
-"""Filter messages that contain :obj:`~pyrogram.types.Document` objects."""
+"""Filter messages that contain :obj:`~nerogram.types.Document` objects."""
 
 
 # endregion
@@ -279,7 +279,7 @@ async def photo_filter(_, __, m: Message):
 
 
 photo = create(photo_filter)
-"""Filter messages that contain :obj:`~pyrogram.types.Photo` objects."""
+"""Filter messages that contain :obj:`~nerogram.types.Photo` objects."""
 
 
 # endregion
@@ -290,7 +290,7 @@ async def sticker_filter(_, __, m: Message):
 
 
 sticker = create(sticker_filter)
-"""Filter messages that contain :obj:`~pyrogram.types.Sticker` objects."""
+"""Filter messages that contain :obj:`~nerogram.types.Sticker` objects."""
 
 
 # endregion
@@ -301,7 +301,7 @@ async def animation_filter(_, __, m: Message):
 
 
 animation = create(animation_filter)
-"""Filter messages that contain :obj:`~pyrogram.types.Animation` objects."""
+"""Filter messages that contain :obj:`~nerogram.types.Animation` objects."""
 
 
 # endregion
@@ -312,7 +312,7 @@ async def game_filter(_, __, m: Message):
 
 
 game = create(game_filter)
-"""Filter messages that contain :obj:`~pyrogram.types.Game` objects."""
+"""Filter messages that contain :obj:`~nerogram.types.Game` objects."""
 
 
 # endregion
@@ -323,7 +323,7 @@ async def giveaway_filter(_, __, m: Message):
 
 
 giveaway = create(giveaway_filter)
-"""Filter messages that contain :obj:`~pyrogram.types.Giveaway` objects."""
+"""Filter messages that contain :obj:`~nerogram.types.Giveaway` objects."""
 
 
 # endregion
@@ -334,7 +334,7 @@ async def video_filter(_, __, m: Message):
 
 
 video = create(video_filter)
-"""Filter messages that contain :obj:`~pyrogram.types.Video` objects."""
+"""Filter messages that contain :obj:`~nerogram.types.Video` objects."""
 
 
 # endregion
@@ -356,7 +356,7 @@ async def voice_filter(_, __, m: Message):
 
 
 voice = create(voice_filter)
-"""Filter messages that contain :obj:`~pyrogram.types.Voice` note objects."""
+"""Filter messages that contain :obj:`~nerogram.types.Voice` note objects."""
 
 
 # endregion
@@ -367,7 +367,7 @@ async def video_note_filter(_, __, m: Message):
 
 
 video_note = create(video_note_filter)
-"""Filter messages that contain :obj:`~pyrogram.types.VideoNote` objects."""
+"""Filter messages that contain :obj:`~nerogram.types.VideoNote` objects."""
 
 
 # endregion
@@ -378,7 +378,7 @@ async def contact_filter(_, __, m: Message):
 
 
 contact = create(contact_filter)
-"""Filter messages that contain :obj:`~pyrogram.types.Contact` objects."""
+"""Filter messages that contain :obj:`~nerogram.types.Contact` objects."""
 
 
 # endregion
@@ -389,7 +389,7 @@ async def location_filter(_, __, m: Message):
 
 
 location = create(location_filter)
-"""Filter messages that contain :obj:`~pyrogram.types.Location` objects."""
+"""Filter messages that contain :obj:`~nerogram.types.Location` objects."""
 
 
 # endregion
@@ -400,7 +400,7 @@ async def venue_filter(_, __, m: Message):
 
 
 venue = create(venue_filter)
-"""Filter messages that contain :obj:`~pyrogram.types.Venue` objects."""
+"""Filter messages that contain :obj:`~nerogram.types.Venue` objects."""
 
 
 # endregion
@@ -422,7 +422,7 @@ async def poll_filter(_, __, m: Message):
 
 
 poll = create(poll_filter)
-"""Filter messages that contain :obj:`~pyrogram.types.Poll` objects."""
+"""Filter messages that contain :obj:`~nerogram.types.Poll` objects."""
 
 
 # endregion
@@ -433,7 +433,7 @@ async def dice_filter(_, __, m: Message):
 
 
 dice = create(dice_filter)
-"""Filter messages that contain :obj:`~pyrogram.types.Dice` objects."""
+"""Filter messages that contain :obj:`~nerogram.types.Dice` objects."""
 
 
 # endregion
@@ -788,7 +788,7 @@ def command(commands: Union[str, List[str]], prefixes: Union[str, List[str]] = "
             The command or list of commands as string the filter should look for.
             Examples: "start", ["start", "help", "settings"]. When a message text containing
             a command arrives, the command itself and its arguments will be stored in the *command*
-            field of the :obj:`~pyrogram.types.Message`.
+            field of the :obj:`~nerogram.types.Message`.
 
         prefixes (``str`` | ``list``, *optional*):
             A prefix or a list of prefixes as string the filter should look for.
@@ -859,9 +859,9 @@ def regex(pattern: Union[str, Pattern], flags: int = 0):
 
     Can be applied to handlers that receive one of the following updates:
 
-    - :obj:`~pyrogram.types.Message`: The filter will match ``text`` or ``caption``.
-    - :obj:`~pyrogram.types.CallbackQuery`: The filter will match ``data``.
-    - :obj:`~pyrogram.types.InlineQuery`: The filter will match ``query``.
+    - :obj:`~nerogram.types.Message`: The filter will match ``text`` or ``caption``.
+    - :obj:`~nerogram.types.CallbackQuery`: The filter will match ``data``.
+    - :obj:`~nerogram.types.InlineQuery`: The filter will match ``query``.
 
     When a pattern matches, all the `Match Objects <https://docs.python.org/3/library/re.html#match-objects>`_ are
     stored in the ``matches`` field of the update object itself.

@@ -1,20 +1,20 @@
-#  Pyrogram - Telegram MTProto API Client Library for Python
+#  Nerogram - Telegram MTProto API Client Library for Python
 #  Copyright (C) 2017-present Dan <https://github.com/delivrance>
 #
-#  This file is part of Pyrogram.
+#  This file is part of Nerogram.
 #
-#  Pyrogram is free software: you can redistribute it and/or modify
+#  Nerogram is free software: you can redistribute it and/or modify
 #  it under the terms of the GNU Lesser General Public License as published
 #  by the Free Software Foundation, either version 3 of the License, or
 #  (at your option) any later version.
 #
-#  Pyrogram is distributed in the hope that it will be useful,
+#  Nerogram is distributed in the hope that it will be useful,
 #  but WITHOUT ANY WARRANTY; without even the implied warranty of
 #  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
 #  GNU Lesser General Public License for more details.
 #
 #  You should have received a copy of the GNU Lesser General Public License
-#  along with Pyrogram.  If not, see <http://www.gnu.org/licenses/>.
+#  along with Nerogram.  If not, see <http://www.gnu.org/licenses/>.
 
 import logging
 from typing import Union
@@ -42,15 +42,15 @@ class SignIn:
                 Phone number in international format (includes the country prefix).
 
             phone_code_hash (``str``):
-                Code identifier taken from the result of :meth:`~pyrogram.Client.send_code`.
+                Code identifier taken from the result of :meth:`~nerogram.Client.send_code`.
 
             phone_code (``str``):
                 The valid confirmation code you received (either as Telegram message or as SMS in your phone number).
 
         Returns:
-            :obj:`~pyrogram.types.User` | :obj:`~pyrogram.types.TermsOfService` | bool: On success, in case the
+            :obj:`~nerogram.types.User` | :obj:`~nerogram.types.TermsOfService` | bool: On success, in case the
             authorization completed, the user is returned. In case the phone number needs to be registered first AND the
-            terms of services accepted (with :meth:`~pyrogram.Client.accept_terms_of_service`), an object containing
+            terms of services accepted (with :meth:`~nerogram.Client.accept_terms_of_service`), an object containing
             them is returned. In case the phone number needs to be registered, but the terms of services don't need to
             be accepted, False is returned instead.
 

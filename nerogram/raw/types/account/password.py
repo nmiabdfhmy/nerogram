@@ -1,20 +1,20 @@
-#  Pyrogram - Telegram MTProto API Client Library for Python
+#  Nerogram - Telegram MTProto API Client Library for Python
 #  Copyright (C) 2017-present Dan <https://github.com/delivrance>
 #
-#  This file is part of Pyrogram.
+#  This file is part of Nerogram.
 #
-#  Pyrogram is free software: you can redistribute it and/or modify
+#  Nerogram is free software: you can redistribute it and/or modify
 #  it under the terms of the GNU Lesser General Public License as published
 #  by the Free Software Foundation, either version 3 of the License, or
 #  (at your option) any later version.
 #
-#  Pyrogram is distributed in the hope that it will be useful,
+#  Nerogram is distributed in the hope that it will be useful,
 #  but WITHOUT ANY WARRANTY; without even the implied warranty of
 #  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
 #  GNU Lesser General Public License for more details.
 #
 #  You should have received a copy of the GNU Lesser General Public License
-#  along with Pyrogram.  If not, see <http://www.gnu.org/licenses/>.
+#  along with Nerogram.  If not, see <http://www.gnu.org/licenses/>.
 
 from io import BytesIO
 
@@ -33,17 +33,17 @@ from typing import List, Optional, Any
 class Password(TLObject):  # type: ignore
     """Telegram API type.
 
-    Constructor of :obj:`~pyrogram.raw.base.account.Password`.
+    Constructor of :obj:`~nerogram.raw.base.account.Password`.
 
     Details:
         - Layer: ``166``
         - ID: ``957B50FB``
 
     Parameters:
-        new_algo (:obj:`PasswordKdfAlgo <pyrogram.raw.base.PasswordKdfAlgo>`):
+        new_algo (:obj:`PasswordKdfAlgo <nerogram.raw.base.PasswordKdfAlgo>`):
             N/A
 
-        new_secure_algo (:obj:`SecurePasswordKdfAlgo <pyrogram.raw.base.SecurePasswordKdfAlgo>`):
+        new_secure_algo (:obj:`SecurePasswordKdfAlgo <nerogram.raw.base.SecurePasswordKdfAlgo>`):
             N/A
 
         secure_random (``bytes``):
@@ -58,7 +58,7 @@ class Password(TLObject):  # type: ignore
         has_password (``bool``, *optional*):
             N/A
 
-        current_algo (:obj:`PasswordKdfAlgo <pyrogram.raw.base.PasswordKdfAlgo>`, *optional*):
+        current_algo (:obj:`PasswordKdfAlgo <nerogram.raw.base.PasswordKdfAlgo>`, *optional*):
             N/A
 
         srp_B (``bytes``, *optional*):
@@ -82,7 +82,7 @@ class Password(TLObject):  # type: ignore
     Functions:
         This object can be returned by 1 function.
 
-        .. currentmodule:: pyrogram.raw.functions
+        .. currentmodule:: nerogram.raw.functions
 
         .. autosummary::
             :nosignatures:

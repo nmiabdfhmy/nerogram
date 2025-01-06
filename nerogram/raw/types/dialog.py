@@ -1,20 +1,20 @@
-#  Pyrogram - Telegram MTProto API Client Library for Python
+#  Nerogram - Telegram MTProto API Client Library for Python
 #  Copyright (C) 2017-present Dan <https://github.com/delivrance>
 #
-#  This file is part of Pyrogram.
+#  This file is part of Nerogram.
 #
-#  Pyrogram is free software: you can redistribute it and/or modify
+#  Nerogram is free software: you can redistribute it and/or modify
 #  it under the terms of the GNU Lesser General Public License as published
 #  by the Free Software Foundation, either version 3 of the License, or
 #  (at your option) any later version.
 #
-#  Pyrogram is distributed in the hope that it will be useful,
+#  Nerogram is distributed in the hope that it will be useful,
 #  but WITHOUT ANY WARRANTY; without even the implied warranty of
 #  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
 #  GNU Lesser General Public License for more details.
 #
 #  You should have received a copy of the GNU Lesser General Public License
-#  along with Pyrogram.  If not, see <http://www.gnu.org/licenses/>.
+#  along with Nerogram.  If not, see <http://www.gnu.org/licenses/>.
 
 from io import BytesIO
 
@@ -33,14 +33,14 @@ from typing import List, Optional, Any
 class Dialog(TLObject):  # type: ignore
     """Telegram API type.
 
-    Constructor of :obj:`~pyrogram.raw.base.Dialog`.
+    Constructor of :obj:`~nerogram.raw.base.Dialog`.
 
     Details:
         - Layer: ``166``
         - ID: ``D58A08C6``
 
     Parameters:
-        peer (:obj:`Peer <pyrogram.raw.base.Peer>`):
+        peer (:obj:`Peer <nerogram.raw.base.Peer>`):
             N/A
 
         top_message (``int`` ``32-bit``):
@@ -61,7 +61,7 @@ class Dialog(TLObject):  # type: ignore
         unread_reactions_count (``int`` ``32-bit``):
             N/A
 
-        notify_settings (:obj:`PeerNotifySettings <pyrogram.raw.base.PeerNotifySettings>`):
+        notify_settings (:obj:`PeerNotifySettings <nerogram.raw.base.PeerNotifySettings>`):
             N/A
 
         pinned (``bool``, *optional*):
@@ -73,7 +73,7 @@ class Dialog(TLObject):  # type: ignore
         pts (``int`` ``32-bit``, *optional*):
             N/A
 
-        draft (:obj:`DraftMessage <pyrogram.raw.base.DraftMessage>`, *optional*):
+        draft (:obj:`DraftMessage <nerogram.raw.base.DraftMessage>`, *optional*):
             N/A
 
         folder_id (``int`` ``32-bit``, *optional*):

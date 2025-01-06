@@ -1,20 +1,20 @@
-#  Pyrogram - Telegram MTProto API Client Library for Python
+#  Nerogram - Telegram MTProto API Client Library for Python
 #  Copyright (C) 2017-present Dan <https://github.com/delivrance>
 #
-#  This file is part of Pyrogram.
+#  This file is part of Nerogram.
 #
-#  Pyrogram is free software: you can redistribute it and/or modify
+#  Nerogram is free software: you can redistribute it and/or modify
 #  it under the terms of the GNU Lesser General Public License as published
 #  by the Free Software Foundation, either version 3 of the License, or
 #  (at your option) any later version.
 #
-#  Pyrogram is distributed in the hope that it will be useful,
+#  Nerogram is distributed in the hope that it will be useful,
 #  but WITHOUT ANY WARRANTY; without even the implied warranty of
 #  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
 #  GNU Lesser General Public License for more details.
 #
 #  You should have received a copy of the GNU Lesser General Public License
-#  along with Pyrogram.  If not, see <http://www.gnu.org/licenses/>.
+#  along with Nerogram.  If not, see <http://www.gnu.org/licenses/>.
 
 from io import BytesIO
 
@@ -33,7 +33,7 @@ from typing import List, Optional, Any
 class MessageReplyHeader(TLObject):  # type: ignore
     """Telegram API type.
 
-    Constructor of :obj:`~pyrogram.raw.base.MessageReplyHeader`.
+    Constructor of :obj:`~nerogram.raw.base.MessageReplyHeader`.
 
     Details:
         - Layer: ``166``
@@ -52,13 +52,13 @@ class MessageReplyHeader(TLObject):  # type: ignore
         reply_to_msg_id (``int`` ``32-bit``, *optional*):
             N/A
 
-        reply_to_peer_id (:obj:`Peer <pyrogram.raw.base.Peer>`, *optional*):
+        reply_to_peer_id (:obj:`Peer <nerogram.raw.base.Peer>`, *optional*):
             N/A
 
-        reply_from (:obj:`MessageFwdHeader <pyrogram.raw.base.MessageFwdHeader>`, *optional*):
+        reply_from (:obj:`MessageFwdHeader <nerogram.raw.base.MessageFwdHeader>`, *optional*):
             N/A
 
-        reply_media (:obj:`MessageMedia <pyrogram.raw.base.MessageMedia>`, *optional*):
+        reply_media (:obj:`MessageMedia <nerogram.raw.base.MessageMedia>`, *optional*):
             N/A
 
         reply_to_top_id (``int`` ``32-bit``, *optional*):
@@ -67,7 +67,7 @@ class MessageReplyHeader(TLObject):  # type: ignore
         quote_text (``str``, *optional*):
             N/A
 
-        quote_entities (List of :obj:`MessageEntity <pyrogram.raw.base.MessageEntity>`, *optional*):
+        quote_entities (List of :obj:`MessageEntity <nerogram.raw.base.MessageEntity>`, *optional*):
             N/A
 
     """

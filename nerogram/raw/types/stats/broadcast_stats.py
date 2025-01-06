@@ -1,20 +1,20 @@
-#  Pyrogram - Telegram MTProto API Client Library for Python
+#  Nerogram - Telegram MTProto API Client Library for Python
 #  Copyright (C) 2017-present Dan <https://github.com/delivrance>
 #
-#  This file is part of Pyrogram.
+#  This file is part of Nerogram.
 #
-#  Pyrogram is free software: you can redistribute it and/or modify
+#  Nerogram is free software: you can redistribute it and/or modify
 #  it under the terms of the GNU Lesser General Public License as published
 #  by the Free Software Foundation, either version 3 of the License, or
 #  (at your option) any later version.
 #
-#  Pyrogram is distributed in the hope that it will be useful,
+#  Nerogram is distributed in the hope that it will be useful,
 #  but WITHOUT ANY WARRANTY; without even the implied warranty of
 #  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
 #  GNU Lesser General Public License for more details.
 #
 #  You should have received a copy of the GNU Lesser General Public License
-#  along with Pyrogram.  If not, see <http://www.gnu.org/licenses/>.
+#  along with Nerogram.  If not, see <http://www.gnu.org/licenses/>.
 
 from io import BytesIO
 
@@ -33,62 +33,62 @@ from typing import List, Optional, Any
 class BroadcastStats(TLObject):  # type: ignore
     """Telegram API type.
 
-    Constructor of :obj:`~pyrogram.raw.base.stats.BroadcastStats`.
+    Constructor of :obj:`~nerogram.raw.base.stats.BroadcastStats`.
 
     Details:
         - Layer: ``166``
         - ID: ``BDF78394``
 
     Parameters:
-        period (:obj:`StatsDateRangeDays <pyrogram.raw.base.StatsDateRangeDays>`):
+        period (:obj:`StatsDateRangeDays <nerogram.raw.base.StatsDateRangeDays>`):
             N/A
 
-        followers (:obj:`StatsAbsValueAndPrev <pyrogram.raw.base.StatsAbsValueAndPrev>`):
+        followers (:obj:`StatsAbsValueAndPrev <nerogram.raw.base.StatsAbsValueAndPrev>`):
             N/A
 
-        views_per_post (:obj:`StatsAbsValueAndPrev <pyrogram.raw.base.StatsAbsValueAndPrev>`):
+        views_per_post (:obj:`StatsAbsValueAndPrev <nerogram.raw.base.StatsAbsValueAndPrev>`):
             N/A
 
-        shares_per_post (:obj:`StatsAbsValueAndPrev <pyrogram.raw.base.StatsAbsValueAndPrev>`):
+        shares_per_post (:obj:`StatsAbsValueAndPrev <nerogram.raw.base.StatsAbsValueAndPrev>`):
             N/A
 
-        enabled_notifications (:obj:`StatsPercentValue <pyrogram.raw.base.StatsPercentValue>`):
+        enabled_notifications (:obj:`StatsPercentValue <nerogram.raw.base.StatsPercentValue>`):
             N/A
 
-        growth_graph (:obj:`StatsGraph <pyrogram.raw.base.StatsGraph>`):
+        growth_graph (:obj:`StatsGraph <nerogram.raw.base.StatsGraph>`):
             N/A
 
-        followers_graph (:obj:`StatsGraph <pyrogram.raw.base.StatsGraph>`):
+        followers_graph (:obj:`StatsGraph <nerogram.raw.base.StatsGraph>`):
             N/A
 
-        mute_graph (:obj:`StatsGraph <pyrogram.raw.base.StatsGraph>`):
+        mute_graph (:obj:`StatsGraph <nerogram.raw.base.StatsGraph>`):
             N/A
 
-        top_hours_graph (:obj:`StatsGraph <pyrogram.raw.base.StatsGraph>`):
+        top_hours_graph (:obj:`StatsGraph <nerogram.raw.base.StatsGraph>`):
             N/A
 
-        interactions_graph (:obj:`StatsGraph <pyrogram.raw.base.StatsGraph>`):
+        interactions_graph (:obj:`StatsGraph <nerogram.raw.base.StatsGraph>`):
             N/A
 
-        iv_interactions_graph (:obj:`StatsGraph <pyrogram.raw.base.StatsGraph>`):
+        iv_interactions_graph (:obj:`StatsGraph <nerogram.raw.base.StatsGraph>`):
             N/A
 
-        views_by_source_graph (:obj:`StatsGraph <pyrogram.raw.base.StatsGraph>`):
+        views_by_source_graph (:obj:`StatsGraph <nerogram.raw.base.StatsGraph>`):
             N/A
 
-        new_followers_by_source_graph (:obj:`StatsGraph <pyrogram.raw.base.StatsGraph>`):
+        new_followers_by_source_graph (:obj:`StatsGraph <nerogram.raw.base.StatsGraph>`):
             N/A
 
-        languages_graph (:obj:`StatsGraph <pyrogram.raw.base.StatsGraph>`):
+        languages_graph (:obj:`StatsGraph <nerogram.raw.base.StatsGraph>`):
             N/A
 
-        recent_message_interactions (List of :obj:`MessageInteractionCounters <pyrogram.raw.base.MessageInteractionCounters>`):
+        recent_message_interactions (List of :obj:`MessageInteractionCounters <nerogram.raw.base.MessageInteractionCounters>`):
             N/A
 
     Functions:
         This object can be returned by 1 function.
 
-        .. currentmodule:: pyrogram.raw.functions
+        .. currentmodule:: nerogram.raw.functions
 
         .. autosummary::
             :nosignatures:

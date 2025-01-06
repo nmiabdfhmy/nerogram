@@ -1,20 +1,20 @@
-#  Pyrogram - Telegram MTProto API Client Library for Python
+#  Nerogram - Telegram MTProto API Client Library for Python
 #  Copyright (C) 2017-present Dan <https://github.com/delivrance>
 #
-#  This file is part of Pyrogram.
+#  This file is part of Nerogram.
 #
-#  Pyrogram is free software: you can redistribute it and/or modify
+#  Nerogram is free software: you can redistribute it and/or modify
 #  it under the terms of the GNU Lesser General Public License as published
 #  by the Free Software Foundation, either version 3 of the License, or
 #  (at your option) any later version.
 #
-#  Pyrogram is distributed in the hope that it will be useful,
+#  Nerogram is distributed in the hope that it will be useful,
 #  but WITHOUT ANY WARRANTY; without even the implied warranty of
 #  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
 #  GNU Lesser General Public License for more details.
 #
 #  You should have received a copy of the GNU Lesser General Public License
-#  along with Pyrogram.  If not, see <http://www.gnu.org/licenses/>.
+#  along with Nerogram.  If not, see <http://www.gnu.org/licenses/>.
 
 import html
 from datetime import datetime
@@ -118,25 +118,25 @@ class User(Object, Update):
         full_name (``str``, *property*):
             Full name of the other party in a private chat, for private chats and bots.
 
-        status (:obj:`~pyrogram.enums.UserStatus`, *optional*):
+        status (:obj:`~nerogram.enums.UserStatus`, *optional*):
             User's last seen & online status. ``None``, for bots.
 
         last_online_date (:py:obj:`~datetime.datetime`, *optional*):
-            Last online date of a user. Only available in case status is :obj:`~pyrogram.enums.UserStatus.OFFLINE`.
+            Last online date of a user. Only available in case status is :obj:`~nerogram.enums.UserStatus.OFFLINE`.
 
         next_offline_date (:py:obj:`~datetime.datetime`, *optional*):
-            Date when a user will automatically go offline. Only available in case status is :obj:`~pyrogram.enums.UserStatus.ONLINE`.
+            Date when a user will automatically go offline. Only available in case status is :obj:`~nerogram.enums.UserStatus.ONLINE`.
 
         username (``str``, *optional*):
             User's or bot's username.
 
-        usernames (List of :obj:`~pyrogram.types.Username`, *optional*):
+        usernames (List of :obj:`~nerogram.types.Username`, *optional*):
             The list of user's collectible (and basic) usernames if available.
 
         language_code (``str``, *optional*):
             IETF language tag of the user's language.
 
-        emoji_status (:obj:`~pyrogram.types.EmojiStatus`, *optional*):
+        emoji_status (:obj:`~nerogram.types.EmojiStatus`, *optional*):
             Emoji status.
 
         dc_id (``int``, *optional*):
@@ -148,10 +148,10 @@ class User(Object, Update):
         phone_number (``str``, *optional*):
             User's phone number.
 
-        photo (:obj:`~pyrogram.types.ChatPhoto`, *optional*):
+        photo (:obj:`~nerogram.types.ChatPhoto`, *optional*):
             User's or bot's current profile photo. Suitable for downloads only.
 
-        restrictions (List of :obj:`~pyrogram.types.Restriction`, *optional*):
+        restrictions (List of :obj:`~nerogram.types.Restriction`, *optional*):
             The list of reasons why this bot might be unavailable to some users.
             This field is available only in case *is_restricted* is True.
 
@@ -327,7 +327,7 @@ class User(Object, Update):
         )
 
     async def archive(self):
-        """Bound method *archive* of :obj:`~pyrogram.types.User`.
+        """Bound method *archive* of :obj:`~nerogram.types.User`.
 
         Use as a shortcut for:
 
@@ -350,7 +350,7 @@ class User(Object, Update):
         return await self._client.archive_chats(self.id)
 
     async def unarchive(self):
-        """Bound method *unarchive* of :obj:`~pyrogram.types.User`.
+        """Bound method *unarchive* of :obj:`~nerogram.types.User`.
 
         Use as a shortcut for:
 
@@ -373,7 +373,7 @@ class User(Object, Update):
         return await self._client.unarchive_chats(self.id)
 
     def block(self):
-        """Bound method *block* of :obj:`~pyrogram.types.User`.
+        """Bound method *block* of :obj:`~nerogram.types.User`.
 
         Use as a shortcut for:
 
@@ -396,7 +396,7 @@ class User(Object, Update):
         return self._client.block_user(self.id)
 
     def unblock(self):
-        """Bound method *unblock* of :obj:`~pyrogram.types.User`.
+        """Bound method *unblock* of :obj:`~nerogram.types.User`.
 
         Use as a shortcut for:
 
@@ -419,7 +419,7 @@ class User(Object, Update):
         return self._client.unblock_user(self.id)
 
     def get_common_chats(self):
-        """Bound method *get_common_chats* of :obj:`~pyrogram.types.User`.
+        """Bound method *get_common_chats* of :obj:`~nerogram.types.User`.
 
         Use as a shortcut for:
 

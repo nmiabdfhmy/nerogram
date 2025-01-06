@@ -1,20 +1,20 @@
-#  Pyrogram - Telegram MTProto API Client Library for Python
+#  Nerogram - Telegram MTProto API Client Library for Python
 #  Copyright (C) 2017-present Dan <https://github.com/delivrance>
 #
-#  This file is part of Pyrogram.
+#  This file is part of Nerogram.
 #
-#  Pyrogram is free software: you can redistribute it and/or modify
+#  Nerogram is free software: you can redistribute it and/or modify
 #  it under the terms of the GNU Lesser General Public License as published
 #  by the Free Software Foundation, either version 3 of the License, or
 #  (at your option) any later version.
 #
-#  Pyrogram is distributed in the hope that it will be useful,
+#  Nerogram is distributed in the hope that it will be useful,
 #  but WITHOUT ANY WARRANTY; without even the implied warranty of
 #  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
 #  GNU Lesser General Public License for more details.
 #
 #  You should have received a copy of the GNU Lesser General Public License
-#  along with Pyrogram.  If not, see <http://www.gnu.org/licenses/>.
+#  along with Nerogram.  If not, see <http://www.gnu.org/licenses/>.
 
 from typing import Union, Optional
 
@@ -39,13 +39,13 @@ class InlineKeyboardButton(Object):
         url (``str``, *optional*):
             HTTP url to be opened when button is pressed.
 
-        web_app (:obj:`~pyrogram.types.WebAppInfo`, *optional*):
+        web_app (:obj:`~nerogram.types.WebAppInfo`, *optional*):
             Description of the `Web App <https://core.telegram.org/bots/webapps>`_ that will be launched when the user
             presses the button. The Web App will be able to send an arbitrary message on behalf of the user using the
-            method :meth:`~pyrogram.Client.answer_web_app_query`. Available only in private chats between a user and the
+            method :meth:`~nerogram.Client.answer_web_app_query`. Available only in private chats between a user and the
             bot.
 
-        login_url (:obj:`~pyrogram.types.LoginUrl`, *optional*):
+        login_url (:obj:`~nerogram.types.LoginUrl`, *optional*):
              An HTTP URL used to automatically authorize the user. Can be used as a replacement for
              the `Telegram Login Widget <https://core.telegram.org/widgets/login>`_.
 
@@ -66,7 +66,7 @@ class InlineKeyboardButton(Object):
             quick way for the user to open your bot in inline mode in the same chat – good for selecting something
             from multiple options.
 
-        callback_game (:obj:`~pyrogram.types.CallbackGame`, *optional*):
+        callback_game (:obj:`~nerogram.types.CallbackGame`, *optional*):
             Description of the game that will be launched when the user presses the button.
             **NOTE**: This type of button **must** always be the first button in the first row.
 
@@ -76,7 +76,7 @@ class InlineKeyboardButton(Object):
         pay (``bool``, *optional*):
             Pass True, to send a Pay button.
             Substrings `⭐` and `XTR` in the buttons's text will be replaced with a Telegram Star icon.
-            Available in :meth:`~pyrogram.Client.send_invoice`.
+            Available in :meth:`~nerogram.Client.send_invoice`.
 
             **NOTE**: This type of button **must** always be the first button in the first row and can only be used in invoice messages.
 

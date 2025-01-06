@@ -1,20 +1,20 @@
-#  Pyrogram - Telegram MTProto API Client Library for Python
+#  Nerogram - Telegram MTProto API Client Library for Python
 #  Copyright (C) 2017-present Dan <https://github.com/delivrance>
 #
-#  This file is part of Pyrogram.
+#  This file is part of Nerogram.
 #
-#  Pyrogram is free software: you can redistribute it and/or modify
+#  Nerogram is free software: you can redistribute it and/or modify
 #  it under the terms of the GNU Lesser General Public License as published
 #  by the Free Software Foundation, either version 3 of the License, or
 #  (at your option) any later version.
 #
-#  Pyrogram is distributed in the hope that it will be useful,
+#  Nerogram is distributed in the hope that it will be useful,
 #  but WITHOUT ANY WARRANTY; without even the implied warranty of
 #  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
 #  GNU Lesser General Public License for more details.
 #
 #  You should have received a copy of the GNU Lesser General Public License
-#  along with Pyrogram.  If not, see <http://www.gnu.org/licenses/>.
+#  along with Nerogram.  If not, see <http://www.gnu.org/licenses/>.
 
 from io import BytesIO
 
@@ -33,7 +33,7 @@ from typing import List, Optional, Any
 class User(TLObject):  # type: ignore
     """Telegram API type.
 
-    Constructor of :obj:`~pyrogram.raw.base.User`.
+    Constructor of :obj:`~nerogram.raw.base.User`.
 
     Details:
         - Layer: ``166``
@@ -124,16 +124,16 @@ class User(TLObject):  # type: ignore
         phone (``str``, *optional*):
             N/A
 
-        photo (:obj:`UserProfilePhoto <pyrogram.raw.base.UserProfilePhoto>`, *optional*):
+        photo (:obj:`UserProfilePhoto <nerogram.raw.base.UserProfilePhoto>`, *optional*):
             N/A
 
-        status (:obj:`UserStatus <pyrogram.raw.base.UserStatus>`, *optional*):
+        status (:obj:`UserStatus <nerogram.raw.base.UserStatus>`, *optional*):
             N/A
 
         bot_info_version (``int`` ``32-bit``, *optional*):
             N/A
 
-        restriction_reason (List of :obj:`RestrictionReason <pyrogram.raw.base.RestrictionReason>`, *optional*):
+        restriction_reason (List of :obj:`RestrictionReason <nerogram.raw.base.RestrictionReason>`, *optional*):
             N/A
 
         bot_inline_placeholder (``str``, *optional*):
@@ -142,10 +142,10 @@ class User(TLObject):  # type: ignore
         lang_code (``str``, *optional*):
             N/A
 
-        emoji_status (:obj:`EmojiStatus <pyrogram.raw.base.EmojiStatus>`, *optional*):
+        emoji_status (:obj:`EmojiStatus <nerogram.raw.base.EmojiStatus>`, *optional*):
             N/A
 
-        usernames (List of :obj:`Username <pyrogram.raw.base.Username>`, *optional*):
+        usernames (List of :obj:`Username <nerogram.raw.base.Username>`, *optional*):
             N/A
 
         stories_max_id (``int`` ``32-bit``, *optional*):
@@ -160,7 +160,7 @@ class User(TLObject):  # type: ignore
     Functions:
         This object can be returned by 5 functions.
 
-        .. currentmodule:: pyrogram.raw.functions
+        .. currentmodule:: nerogram.raw.functions
 
         .. autosummary::
             :nosignatures:

@@ -1,20 +1,20 @@
-#  Pyrogram - Telegram MTProto API Client Library for Python
+#  Nerogram - Telegram MTProto API Client Library for Python
 #  Copyright (C) 2017-present Dan <https://github.com/delivrance>
 #
-#  This file is part of Pyrogram.
+#  This file is part of Nerogram.
 #
-#  Pyrogram is free software: you can redistribute it and/or modify
+#  Nerogram is free software: you can redistribute it and/or modify
 #  it under the terms of the GNU Lesser General Public License as published
 #  by the Free Software Foundation, either version 3 of the License, or
 #  (at your option) any later version.
 #
-#  Pyrogram is distributed in the hope that it will be useful,
+#  Nerogram is distributed in the hope that it will be useful,
 #  but WITHOUT ANY WARRANTY; without even the implied warranty of
 #  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
 #  GNU Lesser General Public License for more details.
 #
 #  You should have received a copy of the GNU Lesser General Public License
-#  along with Pyrogram.  If not, see <http://www.gnu.org/licenses/>.
+#  along with Nerogram.  If not, see <http://www.gnu.org/licenses/>.
 
 from io import BytesIO
 
@@ -33,20 +33,20 @@ from typing import List, Optional, Any
 class UpdateMessageReactions(TLObject):  # type: ignore
     """Telegram API type.
 
-    Constructor of :obj:`~pyrogram.raw.base.Update`.
+    Constructor of :obj:`~nerogram.raw.base.Update`.
 
     Details:
         - Layer: ``166``
         - ID: ``5E1B3CB8``
 
     Parameters:
-        peer (:obj:`Peer <pyrogram.raw.base.Peer>`):
+        peer (:obj:`Peer <nerogram.raw.base.Peer>`):
             N/A
 
         msg_id (``int`` ``32-bit``):
             N/A
 
-        reactions (:obj:`MessageReactions <pyrogram.raw.base.MessageReactions>`):
+        reactions (:obj:`MessageReactions <nerogram.raw.base.MessageReactions>`):
             N/A
 
         top_msg_id (``int`` ``32-bit``, *optional*):

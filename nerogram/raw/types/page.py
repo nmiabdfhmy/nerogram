@@ -1,20 +1,20 @@
-#  Pyrogram - Telegram MTProto API Client Library for Python
+#  Nerogram - Telegram MTProto API Client Library for Python
 #  Copyright (C) 2017-present Dan <https://github.com/delivrance>
 #
-#  This file is part of Pyrogram.
+#  This file is part of Nerogram.
 #
-#  Pyrogram is free software: you can redistribute it and/or modify
+#  Nerogram is free software: you can redistribute it and/or modify
 #  it under the terms of the GNU Lesser General Public License as published
 #  by the Free Software Foundation, either version 3 of the License, or
 #  (at your option) any later version.
 #
-#  Pyrogram is distributed in the hope that it will be useful,
+#  Nerogram is distributed in the hope that it will be useful,
 #  but WITHOUT ANY WARRANTY; without even the implied warranty of
 #  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
 #  GNU Lesser General Public License for more details.
 #
 #  You should have received a copy of the GNU Lesser General Public License
-#  along with Pyrogram.  If not, see <http://www.gnu.org/licenses/>.
+#  along with Nerogram.  If not, see <http://www.gnu.org/licenses/>.
 
 from io import BytesIO
 
@@ -33,7 +33,7 @@ from typing import List, Optional, Any
 class Page(TLObject):  # type: ignore
     """Telegram API type.
 
-    Constructor of :obj:`~pyrogram.raw.base.Page`.
+    Constructor of :obj:`~nerogram.raw.base.Page`.
 
     Details:
         - Layer: ``166``
@@ -43,13 +43,13 @@ class Page(TLObject):  # type: ignore
         url (``str``):
             N/A
 
-        blocks (List of :obj:`PageBlock <pyrogram.raw.base.PageBlock>`):
+        blocks (List of :obj:`PageBlock <nerogram.raw.base.PageBlock>`):
             N/A
 
-        photos (List of :obj:`Photo <pyrogram.raw.base.Photo>`):
+        photos (List of :obj:`Photo <nerogram.raw.base.Photo>`):
             N/A
 
-        documents (List of :obj:`Document <pyrogram.raw.base.Document>`):
+        documents (List of :obj:`Document <nerogram.raw.base.Document>`):
             N/A
 
         part (``bool``, *optional*):

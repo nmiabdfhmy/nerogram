@@ -1,20 +1,20 @@
-#  Pyrogram - Telegram MTProto API Client Library for Python
+#  Nerogram - Telegram MTProto API Client Library for Python
 #  Copyright (C) 2017-present Dan <https://github.com/delivrance>
 #
-#  This file is part of Pyrogram.
+#  This file is part of Nerogram.
 #
-#  Pyrogram is free software: you can redistribute it and/or modify
+#  Nerogram is free software: you can redistribute it and/or modify
 #  it under the terms of the GNU Lesser General Public License as published
 #  by the Free Software Foundation, either version 3 of the License, or
 #  (at your option) any later version.
 #
-#  Pyrogram is distributed in the hope that it will be useful,
+#  Nerogram is distributed in the hope that it will be useful,
 #  but WITHOUT ANY WARRANTY; without even the implied warranty of
 #  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
 #  GNU Lesser General Public License for more details.
 #
 #  You should have received a copy of the GNU Lesser General Public License
-#  along with Pyrogram.  If not, see <http://www.gnu.org/licenses/>.
+#  along with Nerogram.  If not, see <http://www.gnu.org/licenses/>.
 
 import asyncio
 import inspect
@@ -31,14 +31,14 @@ class Run:
         """Start the client, idle the main script and finally stop the client.
 
         When calling this method without any argument it acts as a convenience method that calls
-        :meth:`~pyrogram.Client.start`, :meth:`~pyrogram.idle` and :meth:`~pyrogram.Client.stop` in sequence.
+        :meth:`~nerogram.Client.start`, :meth:`~nerogram.idle` and :meth:`~nerogram.Client.stop` in sequence.
         It makes running a single client less verbose.
 
         In case a coroutine is passed as argument, runs the coroutine until it's completed and doesn't do any client
-        operation. This is almost the same as :py:obj:`asyncio.run` except for the fact that Pyrogram's ``run`` uses the
+        operation. This is almost the same as :py:obj:`asyncio.run` except for the fact that Nerogram's ``run`` uses the
         current event loop instead of a new one.
 
-        If you want to run multiple clients at once, see :meth:`pyrogram.compose`.
+        If you want to run multiple clients at once, see :meth:`nerogram.compose`.
 
         Parameters:
             coroutine (``Coroutine``, *optional*):
@@ -50,7 +50,7 @@ class Run:
         Example:
             .. code-block:: python
 
-                from pyrogram import Client
+                from nerogram import Client
 
                 app = Client("my_account")
                 ...  # Set handlers up
@@ -58,7 +58,7 @@ class Run:
 
             .. code-block:: python
 
-                from pyrogram import Client
+                from nerogram import Client
 
                 app = Client("my_account")
 

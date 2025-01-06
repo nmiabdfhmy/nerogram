@@ -1,20 +1,20 @@
-#  Pyrogram - Telegram MTProto API Client Library for Python
+#  Nerogram - Telegram MTProto API Client Library for Python
 #  Copyright (C) 2017-present Dan <https://github.com/delivrance>
 #
-#  This file is part of Pyrogram.
+#  This file is part of Nerogram.
 #
-#  Pyrogram is free software: you can redistribute it and/or modify
+#  Nerogram is free software: you can redistribute it and/or modify
 #  it under the terms of the GNU Lesser General Public License as published
 #  by the Free Software Foundation, either version 3 of the License, or
 #  (at your option) any later version.
 #
-#  Pyrogram is distributed in the hope that it will be useful,
+#  Nerogram is distributed in the hope that it will be useful,
 #  but WITHOUT ANY WARRANTY; without even the implied warranty of
 #  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
 #  GNU Lesser General Public License for more details.
 #
 #  You should have received a copy of the GNU Lesser General Public License
-#  along with Pyrogram.  If not, see <http://www.gnu.org/licenses/>.
+#  along with Nerogram.  If not, see <http://www.gnu.org/licenses/>.
 
 from io import BytesIO
 
@@ -33,7 +33,7 @@ from typing import List, Optional, Any
 class ChannelFull(TLObject):  # type: ignore
     """Telegram API type.
 
-    Constructor of :obj:`~pyrogram.raw.base.ChatFull`.
+    Constructor of :obj:`~nerogram.raw.base.ChatFull`.
 
     Details:
         - Layer: ``166``
@@ -55,13 +55,13 @@ class ChannelFull(TLObject):  # type: ignore
         unread_count (``int`` ``32-bit``):
             N/A
 
-        chat_photo (:obj:`Photo <pyrogram.raw.base.Photo>`):
+        chat_photo (:obj:`Photo <nerogram.raw.base.Photo>`):
             N/A
 
-        notify_settings (:obj:`PeerNotifySettings <pyrogram.raw.base.PeerNotifySettings>`):
+        notify_settings (:obj:`PeerNotifySettings <nerogram.raw.base.PeerNotifySettings>`):
             N/A
 
-        bot_info (List of :obj:`BotInfo <pyrogram.raw.base.BotInfo>`):
+        bot_info (List of :obj:`BotInfo <nerogram.raw.base.BotInfo>`):
             N/A
 
         pts (``int`` ``32-bit``):
@@ -121,7 +121,7 @@ class ChannelFull(TLObject):  # type: ignore
         online_count (``int`` ``32-bit``, *optional*):
             N/A
 
-        exported_invite (:obj:`ExportedChatInvite <pyrogram.raw.base.ExportedChatInvite>`, *optional*):
+        exported_invite (:obj:`ExportedChatInvite <nerogram.raw.base.ExportedChatInvite>`, *optional*):
             N/A
 
         migrated_from_chat_id (``int`` ``64-bit``, *optional*):
@@ -133,7 +133,7 @@ class ChannelFull(TLObject):  # type: ignore
         pinned_msg_id (``int`` ``32-bit``, *optional*):
             N/A
 
-        stickerset (:obj:`StickerSet <pyrogram.raw.base.StickerSet>`, *optional*):
+        stickerset (:obj:`StickerSet <nerogram.raw.base.StickerSet>`, *optional*):
             N/A
 
         available_min_id (``int`` ``32-bit``, *optional*):
@@ -145,7 +145,7 @@ class ChannelFull(TLObject):  # type: ignore
         linked_chat_id (``int`` ``64-bit``, *optional*):
             N/A
 
-        location (:obj:`ChannelLocation <pyrogram.raw.base.ChannelLocation>`, *optional*):
+        location (:obj:`ChannelLocation <nerogram.raw.base.ChannelLocation>`, *optional*):
             N/A
 
         slowmode_seconds (``int`` ``32-bit``, *optional*):
@@ -157,7 +157,7 @@ class ChannelFull(TLObject):  # type: ignore
         stats_dc (``int`` ``32-bit``, *optional*):
             N/A
 
-        call (:obj:`InputGroupCall <pyrogram.raw.base.InputGroupCall>`, *optional*):
+        call (:obj:`InputGroupCall <nerogram.raw.base.InputGroupCall>`, *optional*):
             N/A
 
         ttl_period (``int`` ``32-bit``, *optional*):
@@ -166,7 +166,7 @@ class ChannelFull(TLObject):  # type: ignore
         pending_suggestions (List of ``str``, *optional*):
             N/A
 
-        groupcall_default_join_as (:obj:`Peer <pyrogram.raw.base.Peer>`, *optional*):
+        groupcall_default_join_as (:obj:`Peer <nerogram.raw.base.Peer>`, *optional*):
             N/A
 
         theme_emoticon (``str``, *optional*):
@@ -178,13 +178,13 @@ class ChannelFull(TLObject):  # type: ignore
         recent_requesters (List of ``int`` ``64-bit``, *optional*):
             N/A
 
-        default_send_as (:obj:`Peer <pyrogram.raw.base.Peer>`, *optional*):
+        default_send_as (:obj:`Peer <nerogram.raw.base.Peer>`, *optional*):
             N/A
 
-        available_reactions (:obj:`ChatReactions <pyrogram.raw.base.ChatReactions>`, *optional*):
+        available_reactions (:obj:`ChatReactions <nerogram.raw.base.ChatReactions>`, *optional*):
             N/A
 
-        stories (:obj:`PeerStories <pyrogram.raw.base.PeerStories>`, *optional*):
+        stories (:obj:`PeerStories <nerogram.raw.base.PeerStories>`, *optional*):
             N/A
 
     """

@@ -1,20 +1,20 @@
-#  Pyrogram - Telegram MTProto API Client Library for Python
+#  Nerogram - Telegram MTProto API Client Library for Python
 #  Copyright (C) 2017-present Dan <https://github.com/delivrance>
 #
-#  This file is part of Pyrogram.
+#  This file is part of Nerogram.
 #
-#  Pyrogram is free software: you can redistribute it and/or modify
+#  Nerogram is free software: you can redistribute it and/or modify
 #  it under the terms of the GNU Lesser General Public License as published
 #  by the Free Software Foundation, either version 3 of the License, or
 #  (at your option) any later version.
 #
-#  Pyrogram is distributed in the hope that it will be useful,
+#  Nerogram is distributed in the hope that it will be useful,
 #  but WITHOUT ANY WARRANTY; without even the implied warranty of
 #  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
 #  GNU Lesser General Public License for more details.
 #
 #  You should have received a copy of the GNU Lesser General Public License
-#  along with Pyrogram.  If not, see <http://www.gnu.org/licenses/>.
+#  along with Nerogram.  If not, see <http://www.gnu.org/licenses/>.
 
 from typing import Union
 
@@ -32,7 +32,7 @@ class SearchMessagesCount:
     ) -> int:
         """Get the count of messages resulting from a search inside a chat.
 
-        If you want to get the actual messages, see :meth:`~pyrogram.Client.search_messages`.
+        If you want to get the actual messages, see :meth:`~nerogram.Client.search_messages`.
 
         .. include:: /_includes/usable-by/users.rst
 
@@ -48,7 +48,7 @@ class SearchMessagesCount:
                 When passed while searching for media messages, the query will be applied to captions.
                 Defaults to "" (empty string).
 
-            filter (:obj:`~pyrogram.enums.MessagesFilter`, *optional*):
+            filter (:obj:`~nerogram.enums.MessagesFilter`, *optional*):
                 Pass a filter in order to search for specific kind of messages only:
 
             from_user (``int`` | ``str``, *optional*):

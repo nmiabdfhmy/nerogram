@@ -1,20 +1,20 @@
-#  Pyrogram - Telegram MTProto API Client Library for Python
+#  Nerogram - Telegram MTProto API Client Library for Python
 #  Copyright (C) 2017-present Dan <https://github.com/delivrance>
 #
-#  This file is part of Pyrogram.
+#  This file is part of Nerogram.
 #
-#  Pyrogram is free software: you can redistribute it and/or modify
+#  Nerogram is free software: you can redistribute it and/or modify
 #  it under the terms of the GNU Lesser General Public License as published
 #  by the Free Software Foundation, either version 3 of the License, or
 #  (at your option) any later version.
 #
-#  Pyrogram is distributed in the hope that it will be useful,
+#  Nerogram is distributed in the hope that it will be useful,
 #  but WITHOUT ANY WARRANTY; without even the implied warranty of
 #  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
 #  GNU Lesser General Public License for more details.
 #
 #  You should have received a copy of the GNU Lesser General Public License
-#  along with Pyrogram.  If not, see <http://www.gnu.org/licenses/>.
+#  along with Nerogram.  If not, see <http://www.gnu.org/licenses/>.
 
 import asyncio
 from typing import List
@@ -29,12 +29,12 @@ async def compose(
 ):
     """Run multiple clients at once.
 
-    This method can be used to run multiple clients at once and can be found directly in the ``pyrogram`` package.
+    This method can be used to run multiple clients at once and can be found directly in the ``nerogram`` package.
 
-    If you want to run a single client, you can use Client's bound method :meth:`~pyrogram.Client.run`.
+    If you want to run a single client, you can use Client's bound method :meth:`~nerogram.Client.run`.
 
     Parameters:
-        clients (List of :obj:`~pyrogram.Client`):
+        clients (List of :obj:`~nerogram.Client`):
             A list of client objects to run.
 
         sequential (``bool``, *optional*):
@@ -45,7 +45,7 @@ async def compose(
         .. code-block:: python
 
             import asyncio
-            from pyrogram import Client, compose
+            from nerogram import Client, compose
 
 
             async def main():

@@ -1,20 +1,20 @@
-#  Pyrogram - Telegram MTProto API Client Library for Python
+#  Nerogram - Telegram MTProto API Client Library for Python
 #  Copyright (C) 2017-present Dan <https://github.com/delivrance>
 #
-#  This file is part of Pyrogram.
+#  This file is part of Nerogram.
 #
-#  Pyrogram is free software: you can redistribute it and/or modify
+#  Nerogram is free software: you can redistribute it and/or modify
 #  it under the terms of the GNU Lesser General Public License as published
 #  by the Free Software Foundation, either version 3 of the License, or
 #  (at your option) any later version.
 #
-#  Pyrogram is distributed in the hope that it will be useful,
+#  Nerogram is distributed in the hope that it will be useful,
 #  but WITHOUT ANY WARRANTY; without even the implied warranty of
 #  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
 #  GNU Lesser General Public License for more details.
 #
 #  You should have received a copy of the GNU Lesser General Public License
-#  along with Pyrogram.  If not, see <http://www.gnu.org/licenses/>.
+#  along with Nerogram.  If not, see <http://www.gnu.org/licenses/>.
 
 from io import BytesIO
 
@@ -33,68 +33,68 @@ from typing import List, Optional, Any
 class MegagroupStats(TLObject):  # type: ignore
     """Telegram API type.
 
-    Constructor of :obj:`~pyrogram.raw.base.stats.MegagroupStats`.
+    Constructor of :obj:`~nerogram.raw.base.stats.MegagroupStats`.
 
     Details:
         - Layer: ``166``
         - ID: ``EF7FF916``
 
     Parameters:
-        period (:obj:`StatsDateRangeDays <pyrogram.raw.base.StatsDateRangeDays>`):
+        period (:obj:`StatsDateRangeDays <nerogram.raw.base.StatsDateRangeDays>`):
             N/A
 
-        members (:obj:`StatsAbsValueAndPrev <pyrogram.raw.base.StatsAbsValueAndPrev>`):
+        members (:obj:`StatsAbsValueAndPrev <nerogram.raw.base.StatsAbsValueAndPrev>`):
             N/A
 
-        messages (:obj:`StatsAbsValueAndPrev <pyrogram.raw.base.StatsAbsValueAndPrev>`):
+        messages (:obj:`StatsAbsValueAndPrev <nerogram.raw.base.StatsAbsValueAndPrev>`):
             N/A
 
-        viewers (:obj:`StatsAbsValueAndPrev <pyrogram.raw.base.StatsAbsValueAndPrev>`):
+        viewers (:obj:`StatsAbsValueAndPrev <nerogram.raw.base.StatsAbsValueAndPrev>`):
             N/A
 
-        posters (:obj:`StatsAbsValueAndPrev <pyrogram.raw.base.StatsAbsValueAndPrev>`):
+        posters (:obj:`StatsAbsValueAndPrev <nerogram.raw.base.StatsAbsValueAndPrev>`):
             N/A
 
-        growth_graph (:obj:`StatsGraph <pyrogram.raw.base.StatsGraph>`):
+        growth_graph (:obj:`StatsGraph <nerogram.raw.base.StatsGraph>`):
             N/A
 
-        members_graph (:obj:`StatsGraph <pyrogram.raw.base.StatsGraph>`):
+        members_graph (:obj:`StatsGraph <nerogram.raw.base.StatsGraph>`):
             N/A
 
-        new_members_by_source_graph (:obj:`StatsGraph <pyrogram.raw.base.StatsGraph>`):
+        new_members_by_source_graph (:obj:`StatsGraph <nerogram.raw.base.StatsGraph>`):
             N/A
 
-        languages_graph (:obj:`StatsGraph <pyrogram.raw.base.StatsGraph>`):
+        languages_graph (:obj:`StatsGraph <nerogram.raw.base.StatsGraph>`):
             N/A
 
-        messages_graph (:obj:`StatsGraph <pyrogram.raw.base.StatsGraph>`):
+        messages_graph (:obj:`StatsGraph <nerogram.raw.base.StatsGraph>`):
             N/A
 
-        actions_graph (:obj:`StatsGraph <pyrogram.raw.base.StatsGraph>`):
+        actions_graph (:obj:`StatsGraph <nerogram.raw.base.StatsGraph>`):
             N/A
 
-        top_hours_graph (:obj:`StatsGraph <pyrogram.raw.base.StatsGraph>`):
+        top_hours_graph (:obj:`StatsGraph <nerogram.raw.base.StatsGraph>`):
             N/A
 
-        weekdays_graph (:obj:`StatsGraph <pyrogram.raw.base.StatsGraph>`):
+        weekdays_graph (:obj:`StatsGraph <nerogram.raw.base.StatsGraph>`):
             N/A
 
-        top_posters (List of :obj:`StatsGroupTopPoster <pyrogram.raw.base.StatsGroupTopPoster>`):
+        top_posters (List of :obj:`StatsGroupTopPoster <nerogram.raw.base.StatsGroupTopPoster>`):
             N/A
 
-        top_admins (List of :obj:`StatsGroupTopAdmin <pyrogram.raw.base.StatsGroupTopAdmin>`):
+        top_admins (List of :obj:`StatsGroupTopAdmin <nerogram.raw.base.StatsGroupTopAdmin>`):
             N/A
 
-        top_inviters (List of :obj:`StatsGroupTopInviter <pyrogram.raw.base.StatsGroupTopInviter>`):
+        top_inviters (List of :obj:`StatsGroupTopInviter <nerogram.raw.base.StatsGroupTopInviter>`):
             N/A
 
-        users (List of :obj:`User <pyrogram.raw.base.User>`):
+        users (List of :obj:`User <nerogram.raw.base.User>`):
             N/A
 
     Functions:
         This object can be returned by 1 function.
 
-        .. currentmodule:: pyrogram.raw.functions
+        .. currentmodule:: nerogram.raw.functions
 
         .. autosummary::
             :nosignatures:

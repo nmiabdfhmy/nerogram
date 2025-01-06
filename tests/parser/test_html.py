@@ -1,20 +1,20 @@
-#  Pyrogram - Telegram MTProto API Client Library for Python
+#  Nerogram - Telegram MTProto API Client Library for Python
 #  Copyright (C) 2017-present Dan <https://github.com/delivrance>
 #
-#  This file is part of Pyrogram.
+#  This file is part of Nerogram.
 #
-#  Pyrogram is free software: you can redistribute it and/or modify
+#  Nerogram is free software: you can redistribute it and/or modify
 #  it under the terms of the GNU Lesser General Public License as published
 #  by the Free Software Foundation, either version 3 of the License, or
 #  (at your option) any later version.
 #
-#  Pyrogram is distributed in the hope that it will be useful,
+#  Nerogram is distributed in the hope that it will be useful,
 #  but WITHOUT ANY WARRANTY; without even the implied warranty of
 #  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
 #  GNU Lesser General Public License for more details.
 #
 #  You should have received a copy of the GNU Lesser General Public License
-#  along with Pyrogram.  If not, see <http://www.gnu.org/licenses/>.
+#  along with Nerogram.  If not, see <http://www.gnu.org/licenses/>.
 
 import nerogram
 from nerogram.parser.html import HTML
@@ -70,10 +70,10 @@ def test_html_unparse_spoiler():
 
 
 def test_html_unparse_url():
-    expected = '<a href="https://pyrogram.org/">URL</a>'
+    expected = '<a href="https://nerogram.org/">URL</a>'
     text = "URL"
     entities = nerogram.types.List([nerogram.types.MessageEntity(type=nerogram.enums.MessageEntityType.TEXT_LINK,
-                                                                 offset=0, length=3, url='https://pyrogram.org/')])
+                                                                 offset=0, length=3, url='https://nerogram.org/')])
 
     assert HTML.unparse(text=text, entities=entities) == expected
 

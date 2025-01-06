@@ -1,20 +1,20 @@
-#  Pyrogram - Telegram MTProto API Client Library for Python
+#  Nerogram - Telegram MTProto API Client Library for Python
 #  Copyright (C) 2017-present Dan <https://github.com/delivrance>
 #
-#  This file is part of Pyrogram.
+#  This file is part of Nerogram.
 #
-#  Pyrogram is free software: you can redistribute it and/or modify
+#  Nerogram is free software: you can redistribute it and/or modify
 #  it under the terms of the GNU Lesser General Public License as published
 #  by the Free Software Foundation, either version 3 of the License, or
 #  (at your option) any later version.
 #
-#  Pyrogram is distributed in the hope that it will be useful,
+#  Nerogram is distributed in the hope that it will be useful,
 #  but WITHOUT ANY WARRANTY; without even the implied warranty of
 #  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
 #  GNU Lesser General Public License for more details.
 #
 #  You should have received a copy of the GNU Lesser General Public License
-#  along with Pyrogram.  If not, see <http://www.gnu.org/licenses/>.
+#  along with Nerogram.  If not, see <http://www.gnu.org/licenses/>.
 
 from io import BytesIO
 
@@ -33,7 +33,7 @@ from typing import List, Optional, Any
 class Config(TLObject):  # type: ignore
     """Telegram API type.
 
-    Constructor of :obj:`~pyrogram.raw.base.Config`.
+    Constructor of :obj:`~nerogram.raw.base.Config`.
 
     Details:
         - Layer: ``166``
@@ -52,7 +52,7 @@ class Config(TLObject):  # type: ignore
         this_dc (``int`` ``32-bit``):
             N/A
 
-        dc_options (List of :obj:`DcOption <pyrogram.raw.base.DcOption>`):
+        dc_options (List of :obj:`DcOption <nerogram.raw.base.DcOption>`):
             N/A
 
         dc_txt_domain_name (``str``):
@@ -175,7 +175,7 @@ class Config(TLObject):  # type: ignore
         base_lang_pack_version (``int`` ``32-bit``, *optional*):
             N/A
 
-        reactions_default (:obj:`Reaction <pyrogram.raw.base.Reaction>`, *optional*):
+        reactions_default (:obj:`Reaction <nerogram.raw.base.Reaction>`, *optional*):
             N/A
 
         autologin_token (``str``, *optional*):
@@ -184,7 +184,7 @@ class Config(TLObject):  # type: ignore
     Functions:
         This object can be returned by 1 function.
 
-        .. currentmodule:: pyrogram.raw.functions
+        .. currentmodule:: nerogram.raw.functions
 
         .. autosummary::
             :nosignatures:

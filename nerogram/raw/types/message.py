@@ -1,20 +1,20 @@
-#  Pyrogram - Telegram MTProto API Client Library for Python
+#  Nerogram - Telegram MTProto API Client Library for Python
 #  Copyright (C) 2017-present Dan <https://github.com/delivrance>
 #
-#  This file is part of Pyrogram.
+#  This file is part of Nerogram.
 #
-#  Pyrogram is free software: you can redistribute it and/or modify
+#  Nerogram is free software: you can redistribute it and/or modify
 #  it under the terms of the GNU Lesser General Public License as published
 #  by the Free Software Foundation, either version 3 of the License, or
 #  (at your option) any later version.
 #
-#  Pyrogram is distributed in the hope that it will be useful,
+#  Nerogram is distributed in the hope that it will be useful,
 #  but WITHOUT ANY WARRANTY; without even the implied warranty of
 #  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
 #  GNU Lesser General Public License for more details.
 #
 #  You should have received a copy of the GNU Lesser General Public License
-#  along with Pyrogram.  If not, see <http://www.gnu.org/licenses/>.
+#  along with Nerogram.  If not, see <http://www.gnu.org/licenses/>.
 
 from io import BytesIO
 
@@ -33,7 +33,7 @@ from typing import List, Optional, Any
 class Message(TLObject):  # type: ignore
     """Telegram API type.
 
-    Constructor of :obj:`~pyrogram.raw.base.Message`.
+    Constructor of :obj:`~nerogram.raw.base.Message`.
 
     Details:
         - Layer: ``166``
@@ -43,7 +43,7 @@ class Message(TLObject):  # type: ignore
         id (``int`` ``32-bit``):
             N/A
 
-        peer_id (:obj:`Peer <pyrogram.raw.base.Peer>`):
+        peer_id (:obj:`Peer <nerogram.raw.base.Peer>`):
             N/A
 
         date (``int`` ``32-bit``):
@@ -85,25 +85,25 @@ class Message(TLObject):  # type: ignore
         invert_media (``bool``, *optional*):
             N/A
 
-        from_id (:obj:`Peer <pyrogram.raw.base.Peer>`, *optional*):
+        from_id (:obj:`Peer <nerogram.raw.base.Peer>`, *optional*):
             N/A
 
-        fwd_from (:obj:`MessageFwdHeader <pyrogram.raw.base.MessageFwdHeader>`, *optional*):
+        fwd_from (:obj:`MessageFwdHeader <nerogram.raw.base.MessageFwdHeader>`, *optional*):
             N/A
 
         via_bot_id (``int`` ``64-bit``, *optional*):
             N/A
 
-        reply_to (:obj:`MessageReplyHeader <pyrogram.raw.base.MessageReplyHeader>`, *optional*):
+        reply_to (:obj:`MessageReplyHeader <nerogram.raw.base.MessageReplyHeader>`, *optional*):
             N/A
 
-        media (:obj:`MessageMedia <pyrogram.raw.base.MessageMedia>`, *optional*):
+        media (:obj:`MessageMedia <nerogram.raw.base.MessageMedia>`, *optional*):
             N/A
 
-        reply_markup (:obj:`ReplyMarkup <pyrogram.raw.base.ReplyMarkup>`, *optional*):
+        reply_markup (:obj:`ReplyMarkup <nerogram.raw.base.ReplyMarkup>`, *optional*):
             N/A
 
-        entities (List of :obj:`MessageEntity <pyrogram.raw.base.MessageEntity>`, *optional*):
+        entities (List of :obj:`MessageEntity <nerogram.raw.base.MessageEntity>`, *optional*):
             N/A
 
         views (``int`` ``32-bit``, *optional*):
@@ -112,7 +112,7 @@ class Message(TLObject):  # type: ignore
         forwards (``int`` ``32-bit``, *optional*):
             N/A
 
-        replies (:obj:`MessageReplies <pyrogram.raw.base.MessageReplies>`, *optional*):
+        replies (:obj:`MessageReplies <nerogram.raw.base.MessageReplies>`, *optional*):
             N/A
 
         edit_date (``int`` ``32-bit``, *optional*):
@@ -124,10 +124,10 @@ class Message(TLObject):  # type: ignore
         grouped_id (``int`` ``64-bit``, *optional*):
             N/A
 
-        reactions (:obj:`MessageReactions <pyrogram.raw.base.MessageReactions>`, *optional*):
+        reactions (:obj:`MessageReactions <nerogram.raw.base.MessageReactions>`, *optional*):
             N/A
 
-        restriction_reason (List of :obj:`RestrictionReason <pyrogram.raw.base.RestrictionReason>`, *optional*):
+        restriction_reason (List of :obj:`RestrictionReason <nerogram.raw.base.RestrictionReason>`, *optional*):
             N/A
 
         ttl_period (``int`` ``32-bit``, *optional*):

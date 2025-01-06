@@ -1,20 +1,20 @@
-#  Pyrogram - Telegram MTProto API Client Library for Python
+#  Nerogram - Telegram MTProto API Client Library for Python
 #  Copyright (C) 2017-present Dan <https://github.com/delivrance>
 #
-#  This file is part of Pyrogram.
+#  This file is part of Nerogram.
 #
-#  Pyrogram is free software: you can redistribute it and/or modify
+#  Nerogram is free software: you can redistribute it and/or modify
 #  it under the terms of the GNU Lesser General Public License as published
 #  by the Free Software Foundation, either version 3 of the License, or
 #  (at your option) any later version.
 #
-#  Pyrogram is distributed in the hope that it will be useful,
+#  Nerogram is distributed in the hope that it will be useful,
 #  but WITHOUT ANY WARRANTY; without even the implied warranty of
 #  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
 #  GNU Lesser General Public License for more details.
 #
 #  You should have received a copy of the GNU Lesser General Public License
-#  along with Pyrogram.  If not, see <http://www.gnu.org/licenses/>.
+#  along with Nerogram.  If not, see <http://www.gnu.org/licenses/>.
 
 from typing import Union, List, AsyncGenerator, Optional
 
@@ -70,7 +70,7 @@ class SearchMessages:
     ) -> Optional[AsyncGenerator["types.Message", None]]:
         """Search for text and media messages inside a specific chat.
 
-        If you want to get the messages count only, see :meth:`~pyrogram.Client.search_messages_count`.
+        If you want to get the messages count only, see :meth:`~nerogram.Client.search_messages_count`.
 
         .. include:: /_includes/usable-by/users.rst
 
@@ -90,7 +90,7 @@ class SearchMessages:
                 Sequential number of the first message to be returned.
                 Defaults to 0.
 
-            filter (:obj:`~pyrogram.enums.MessagesFilter`, *optional*):
+            filter (:obj:`~nerogram.enums.MessagesFilter`, *optional*):
                 Pass a filter in order to search for specific kind of messages only.
                 Defaults to any message (no filter).
 
@@ -102,12 +102,12 @@ class SearchMessages:
                 Unique identifier (int) or username (str) of the target user you want to search for messages from.
 
         Returns:
-            ``Generator``: A generator yielding :obj:`~pyrogram.types.Message` objects.
+            ``Generator``: A generator yielding :obj:`~nerogram.types.Message` objects.
 
         Example:
             .. code-block:: python
 
-                from pyrogram import enums
+                from nerogram import enums
 
                 # Search for text messages in chat. Get the last 120 results
                 async for message in app.search_messages(chat_id, query="hello", limit=120):

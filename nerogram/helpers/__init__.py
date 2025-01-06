@@ -1,5 +1,5 @@
 """
-pyromod - A monkeypatcher add-on for Pyrogram
+pyromod - A monkeypatcher add-on for Nerogram
 Copyright (C) 2020 Cezar H. <https://github.com/usernein>
 This file is part of pyromod.
 pyromod is free software: you can redistribute it and/or modify

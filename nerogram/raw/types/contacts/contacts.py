@@ -1,20 +1,20 @@
-#  Pyrogram - Telegram MTProto API Client Library for Python
+#  Nerogram - Telegram MTProto API Client Library for Python
 #  Copyright (C) 2017-present Dan <https://github.com/delivrance>
 #
-#  This file is part of Pyrogram.
+#  This file is part of Nerogram.
 #
-#  Pyrogram is free software: you can redistribute it and/or modify
+#  Nerogram is free software: you can redistribute it and/or modify
 #  it under the terms of the GNU Lesser General Public License as published
 #  by the Free Software Foundation, either version 3 of the License, or
 #  (at your option) any later version.
 #
-#  Pyrogram is distributed in the hope that it will be useful,
+#  Nerogram is distributed in the hope that it will be useful,
 #  but WITHOUT ANY WARRANTY; without even the implied warranty of
 #  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
 #  GNU Lesser General Public License for more details.
 #
 #  You should have received a copy of the GNU Lesser General Public License
-#  along with Pyrogram.  If not, see <http://www.gnu.org/licenses/>.
+#  along with Nerogram.  If not, see <http://www.gnu.org/licenses/>.
 
 from io import BytesIO
 
@@ -33,26 +33,26 @@ from typing import List, Optional, Any
 class Contacts(TLObject):  # type: ignore
     """Telegram API type.
 
-    Constructor of :obj:`~pyrogram.raw.base.contacts.Contacts`.
+    Constructor of :obj:`~nerogram.raw.base.contacts.Contacts`.
 
     Details:
         - Layer: ``166``
         - ID: ``EAE87E42``
 
     Parameters:
-        contacts (List of :obj:`Contact <pyrogram.raw.base.Contact>`):
+        contacts (List of :obj:`Contact <nerogram.raw.base.Contact>`):
             N/A
 
         saved_count (``int`` ``32-bit``):
             N/A
 
-        users (List of :obj:`User <pyrogram.raw.base.User>`):
+        users (List of :obj:`User <nerogram.raw.base.User>`):
             N/A
 
     Functions:
         This object can be returned by 1 function.
 
-        .. currentmodule:: pyrogram.raw.functions
+        .. currentmodule:: nerogram.raw.functions
 
         .. autosummary::
             :nosignatures:

@@ -1,20 +1,20 @@
-#  Pyrogram - Telegram MTProto API Client Library for Python
+#  Nerogram - Telegram MTProto API Client Library for Python
 #  Copyright (C) 2017-present Dan <https://github.com/delivrance>
 #
-#  This file is part of Pyrogram.
+#  This file is part of Nerogram.
 #
-#  Pyrogram is free software: you can redistribute it and/or modify
+#  Nerogram is free software: you can redistribute it and/or modify
 #  it under the terms of the GNU Lesser General Public License as published
 #  by the Free Software Foundation, either version 3 of the License, or
 #  (at your option) any later version.
 #
-#  Pyrogram is distributed in the hope that it will be useful,
+#  Nerogram is distributed in the hope that it will be useful,
 #  but WITHOUT ANY WARRANTY; without even the implied warranty of
 #  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
 #  GNU Lesser General Public License for more details.
 #
 #  You should have received a copy of the GNU Lesser General Public License
-#  along with Pyrogram.  If not, see <http://www.gnu.org/licenses/>.
+#  along with Nerogram.  If not, see <http://www.gnu.org/licenses/>.
 
 from io import BytesIO
 
@@ -38,7 +38,7 @@ class SendEncryptedFile(TLObject):  # type: ignore
         - ID: ``5559481D``
 
     Parameters:
-        peer (:obj:`InputEncryptedChat <pyrogram.raw.base.InputEncryptedChat>`):
+        peer (:obj:`InputEncryptedChat <nerogram.raw.base.InputEncryptedChat>`):
             N/A
 
         random_id (``int`` ``64-bit``):
@@ -47,14 +47,14 @@ class SendEncryptedFile(TLObject):  # type: ignore
         data (``bytes``):
             N/A
 
-        file (:obj:`InputEncryptedFile <pyrogram.raw.base.InputEncryptedFile>`):
+        file (:obj:`InputEncryptedFile <nerogram.raw.base.InputEncryptedFile>`):
             N/A
 
         silent (``bool``, *optional*):
             N/A
 
     Returns:
-        :obj:`messages.SentEncryptedMessage <pyrogram.raw.base.messages.SentEncryptedMessage>`
+        :obj:`messages.SentEncryptedMessage <nerogram.raw.base.messages.SentEncryptedMessage>`
     """
 
     __slots__: List[str] = ["peer", "random_id", "data", "file", "silent"]

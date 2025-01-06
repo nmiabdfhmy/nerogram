@@ -1,20 +1,20 @@
-#  Pyrogram - Telegram MTProto API Client Library for Python
+#  Nerogram - Telegram MTProto API Client Library for Python
 #  Copyright (C) 2017-present Dan <https://github.com/delivrance>
 #
-#  This file is part of Pyrogram.
+#  This file is part of Nerogram.
 #
-#  Pyrogram is free software: you can redistribute it and/or modify
+#  Nerogram is free software: you can redistribute it and/or modify
 #  it under the terms of the GNU Lesser General Public License as published
 #  by the Free Software Foundation, either version 3 of the License, or
 #  (at your option) any later version.
 #
-#  Pyrogram is distributed in the hope that it will be useful,
+#  Nerogram is distributed in the hope that it will be useful,
 #  but WITHOUT ANY WARRANTY; without even the implied warranty of
 #  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
 #  GNU Lesser General Public License for more details.
 #
 #  You should have received a copy of the GNU Lesser General Public License
-#  along with Pyrogram.  If not, see <http://www.gnu.org/licenses/>.
+#  along with Nerogram.  If not, see <http://www.gnu.org/licenses/>.
 
 from io import BytesIO
 
@@ -41,7 +41,7 @@ class SetInlineBotResults(TLObject):  # type: ignore
         query_id (``int`` ``64-bit``):
             N/A
 
-        results (List of :obj:`InputBotInlineResult <pyrogram.raw.base.InputBotInlineResult>`):
+        results (List of :obj:`InputBotInlineResult <nerogram.raw.base.InputBotInlineResult>`):
             N/A
 
         cache_time (``int`` ``32-bit``):
@@ -56,10 +56,10 @@ class SetInlineBotResults(TLObject):  # type: ignore
         next_offset (``str``, *optional*):
             N/A
 
-        switch_pm (:obj:`InlineBotSwitchPM <pyrogram.raw.base.InlineBotSwitchPM>`, *optional*):
+        switch_pm (:obj:`InlineBotSwitchPM <nerogram.raw.base.InlineBotSwitchPM>`, *optional*):
             N/A
 
-        switch_webview (:obj:`InlineBotWebView <pyrogram.raw.base.InlineBotWebView>`, *optional*):
+        switch_webview (:obj:`InlineBotWebView <nerogram.raw.base.InlineBotWebView>`, *optional*):
             N/A
 
     Returns:

@@ -1,20 +1,20 @@
-#  Pyrogram - Telegram MTProto API Client Library for Python
+#  Nerogram - Telegram MTProto API Client Library for Python
 #  Copyright (C) 2017-present Dan <https://github.com/delivrance>
 #
-#  This file is part of Pyrogram.
+#  This file is part of Nerogram.
 #
-#  Pyrogram is free software: you can redistribute it and/or modify
+#  Nerogram is free software: you can redistribute it and/or modify
 #  it under the terms of the GNU Lesser General Public License as published
 #  by the Free Software Foundation, either version 3 of the License, or
 #  (at your option) any later version.
 #
-#  Pyrogram is distributed in the hope that it will be useful,
+#  Nerogram is distributed in the hope that it will be useful,
 #  but WITHOUT ANY WARRANTY; without even the implied warranty of
 #  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
 #  GNU Lesser General Public License for more details.
 #
 #  You should have received a copy of the GNU Lesser General Public License
-#  along with Pyrogram.  If not, see <http://www.gnu.org/licenses/>.
+#  along with Nerogram.  If not, see <http://www.gnu.org/licenses/>.
 
 from io import BytesIO
 
@@ -33,7 +33,7 @@ from typing import List, Optional, Any
 class Theme(TLObject):  # type: ignore
     """Telegram API type.
 
-    Constructor of :obj:`~pyrogram.raw.base.Theme`.
+    Constructor of :obj:`~nerogram.raw.base.Theme`.
 
     Details:
         - Layer: ``166``
@@ -61,10 +61,10 @@ class Theme(TLObject):  # type: ignore
         for_chat (``bool``, *optional*):
             N/A
 
-        document (:obj:`Document <pyrogram.raw.base.Document>`, *optional*):
+        document (:obj:`Document <nerogram.raw.base.Document>`, *optional*):
             N/A
 
-        settings (List of :obj:`ThemeSettings <pyrogram.raw.base.ThemeSettings>`, *optional*):
+        settings (List of :obj:`ThemeSettings <nerogram.raw.base.ThemeSettings>`, *optional*):
             N/A
 
         emoticon (``str``, *optional*):
@@ -76,7 +76,7 @@ class Theme(TLObject):  # type: ignore
     Functions:
         This object can be returned by 3 functions.
 
-        .. currentmodule:: pyrogram.raw.functions
+        .. currentmodule:: nerogram.raw.functions
 
         .. autosummary::
             :nosignatures:

@@ -1,20 +1,20 @@
-#  Pyrogram - Telegram MTProto API Client Library for Python
+#  Nerogram - Telegram MTProto API Client Library for Python
 #  Copyright (C) 2017-present Dan <https://github.com/delivrance>
 #
-#  This file is part of Pyrogram.
+#  This file is part of Nerogram.
 #
-#  Pyrogram is free software: you can redistribute it and/or modify
+#  Nerogram is free software: you can redistribute it and/or modify
 #  it under the terms of the GNU Lesser General Public License as published
 #  by the Free Software Foundation, either version 3 of the License, or
 #  (at your option) any later version.
 #
-#  Pyrogram is distributed in the hope that it will be useful,
+#  Nerogram is distributed in the hope that it will be useful,
 #  but WITHOUT ANY WARRANTY; without even the implied warranty of
 #  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
 #  GNU Lesser General Public License for more details.
 #
 #  You should have received a copy of the GNU Lesser General Public License
-#  along with Pyrogram.  If not, see <http://www.gnu.org/licenses/>.
+#  along with Nerogram.  If not, see <http://www.gnu.org/licenses/>.
 
 from io import BytesIO
 
@@ -38,11 +38,11 @@ class GetMultiWallPapers(TLObject):  # type: ignore
         - ID: ``65AD71DC``
 
     Parameters:
-        wallpapers (List of :obj:`InputWallPaper <pyrogram.raw.base.InputWallPaper>`):
+        wallpapers (List of :obj:`InputWallPaper <nerogram.raw.base.InputWallPaper>`):
             N/A
 
     Returns:
-        List of :obj:`WallPaper <pyrogram.raw.base.WallPaper>`
+        List of :obj:`WallPaper <nerogram.raw.base.WallPaper>`
     """
 
     __slots__: List[str] = ["wallpapers"]

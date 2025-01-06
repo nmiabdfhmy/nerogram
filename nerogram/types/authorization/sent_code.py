@@ -1,20 +1,20 @@
-#  Pyrogram - Telegram MTProto API Client Library for Python
+#  Nerogram - Telegram MTProto API Client Library for Python
 #  Copyright (C) 2017-present Dan <https://github.com/delivrance>
 #
-#  This file is part of Pyrogram.
+#  This file is part of Nerogram.
 #
-#  Pyrogram is free software: you can redistribute it and/or modify
+#  Nerogram is free software: you can redistribute it and/or modify
 #  it under the terms of the GNU Lesser General Public License as published
 #  by the Free Software Foundation, either version 3 of the License, or
 #  (at your option) any later version.
 #
-#  Pyrogram is distributed in the hope that it will be useful,
+#  Nerogram is distributed in the hope that it will be useful,
 #  but WITHOUT ANY WARRANTY; without even the implied warranty of
 #  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
 #  GNU Lesser General Public License for more details.
 #
 #  You should have received a copy of the GNU Lesser General Public License
-#  along with Pyrogram.  If not, see <http://www.gnu.org/licenses/>.
+#  along with Nerogram.  If not, see <http://www.gnu.org/licenses/>.
 
 from nerogram import raw, enums
 from ..object import Object
@@ -24,18 +24,18 @@ class SentCode(Object):
     """Contains info on a sent confirmation code.
 
     Parameters:
-        type (:obj:`~pyrogram.enums.SentCodeType`):
+        type (:obj:`~nerogram.enums.SentCodeType`):
             Type of the current sent code.
 
         phone_code_hash (``str``):
             Confirmation code identifier useful for the next authorization steps (either
-            :meth:`~pyrogram.Client.sign_in` or :meth:`~pyrogram.Client.sign_up`).
+            :meth:`~nerogram.Client.sign_in` or :meth:`~nerogram.Client.sign_up`).
 
-        next_type (:obj:`~pyrogram.enums.NextCodeType`, *optional*):
-            Type of the next code to be sent with :meth:`~pyrogram.Client.resend_code`.
+        next_type (:obj:`~nerogram.enums.NextCodeType`, *optional*):
+            Type of the next code to be sent with :meth:`~nerogram.Client.resend_code`.
 
         timeout (``int``, *optional*):
-            Delay in seconds before calling :meth:`~pyrogram.Client.resend_code`.
+            Delay in seconds before calling :meth:`~nerogram.Client.resend_code`.
     """
 
     def __init__(

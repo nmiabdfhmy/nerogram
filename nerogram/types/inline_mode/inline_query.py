@@ -1,20 +1,20 @@
-#  Pyrogram - Telegram MTProto API Client Library for Python
+#  Nerogram - Telegram MTProto API Client Library for Python
 #  Copyright (C) 2017-present Dan <https://github.com/delivrance>
 #
-#  This file is part of Pyrogram.
+#  This file is part of Nerogram.
 #
-#  Pyrogram is free software: you can redistribute it and/or modify
+#  Nerogram is free software: you can redistribute it and/or modify
 #  it under the terms of the GNU Lesser General Public License as published
 #  by the Free Software Foundation, either version 3 of the License, or
 #  (at your option) any later version.
 #
-#  Pyrogram is distributed in the hope that it will be useful,
+#  Nerogram is distributed in the hope that it will be useful,
 #  but WITHOUT ANY WARRANTY; without even the implied warranty of
 #  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
 #  GNU Lesser General Public License for more details.
 #
 #  You should have received a copy of the GNU Lesser General Public License
-#  along with Pyrogram.  If not, see <http://www.gnu.org/licenses/>.
+#  along with Nerogram.  If not, see <http://www.gnu.org/licenses/>.
 
 from typing import List, Match
 
@@ -34,7 +34,7 @@ class InlineQuery(Object, Update):
         id (``str``):
             Unique identifier for this query.
 
-        from_user (:obj:`~pyrogram.types.User`):
+        from_user (:obj:`~nerogram.types.User`):
             Sender.
 
         query (``str``):
@@ -43,15 +43,15 @@ class InlineQuery(Object, Update):
         offset (``str``):
             Offset of the results to be returned, can be controlled by the bot.
 
-        chat_type (:obj:`~pyrogram.enums.ChatType`, *optional*):
+        chat_type (:obj:`~nerogram.enums.ChatType`, *optional*):
             Type of the chat, from which the inline query was sent.
 
-        location (:obj:`~pyrogram.types.Location`. *optional*):
+        location (:obj:`~nerogram.types.Location`. *optional*):
             Sender location, only for bots that request user location.
 
         matches (List of regex Matches, *optional*):
             A list containing all `Match Objects <https://docs.python.org/3/library/re.html#match-objects>`_ that match
-            the query of this inline query. Only applicable when using :obj:`Filters.regex <pyrogram.Filters.regex>`.
+            the query of this inline query. Only applicable when using :obj:`Filters.regex <nerogram.Filters.regex>`.
     """
 
     def __init__(
@@ -116,7 +116,7 @@ class InlineQuery(Object, Update):
         switch_pm_text: str = "",
         switch_pm_parameter: str = ""
     ):
-        """Bound method *answer* of :obj:`~pyrogram.types.InlineQuery`.
+        """Bound method *answer* of :obj:`~nerogram.types.InlineQuery`.
 
         Use this method as a shortcut for:
 
@@ -133,7 +133,7 @@ class InlineQuery(Object, Update):
                 await inline_query.answer([...])
 
         Parameters:
-            results (List of :obj:`~pyrogram.types.InlineQueryResult`):
+            results (List of :obj:`~nerogram.types.InlineQueryResult`):
                 A list of results for the inline query.
 
             cache_time (``int``, *optional*):

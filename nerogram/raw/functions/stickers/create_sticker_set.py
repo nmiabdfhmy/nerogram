@@ -1,20 +1,20 @@
-#  Pyrogram - Telegram MTProto API Client Library for Python
+#  Nerogram - Telegram MTProto API Client Library for Python
 #  Copyright (C) 2017-present Dan <https://github.com/delivrance>
 #
-#  This file is part of Pyrogram.
+#  This file is part of Nerogram.
 #
-#  Pyrogram is free software: you can redistribute it and/or modify
+#  Nerogram is free software: you can redistribute it and/or modify
 #  it under the terms of the GNU Lesser General Public License as published
 #  by the Free Software Foundation, either version 3 of the License, or
 #  (at your option) any later version.
 #
-#  Pyrogram is distributed in the hope that it will be useful,
+#  Nerogram is distributed in the hope that it will be useful,
 #  but WITHOUT ANY WARRANTY; without even the implied warranty of
 #  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
 #  GNU Lesser General Public License for more details.
 #
 #  You should have received a copy of the GNU Lesser General Public License
-#  along with Pyrogram.  If not, see <http://www.gnu.org/licenses/>.
+#  along with Nerogram.  If not, see <http://www.gnu.org/licenses/>.
 
 from io import BytesIO
 
@@ -38,7 +38,7 @@ class CreateStickerSet(TLObject):  # type: ignore
         - ID: ``9021AB67``
 
     Parameters:
-        user_id (:obj:`InputUser <pyrogram.raw.base.InputUser>`):
+        user_id (:obj:`InputUser <nerogram.raw.base.InputUser>`):
             N/A
 
         title (``str``):
@@ -47,7 +47,7 @@ class CreateStickerSet(TLObject):  # type: ignore
         short_name (``str``):
             N/A
 
-        stickers (List of :obj:`InputStickerSetItem <pyrogram.raw.base.InputStickerSetItem>`):
+        stickers (List of :obj:`InputStickerSetItem <nerogram.raw.base.InputStickerSetItem>`):
             N/A
 
         masks (``bool``, *optional*):
@@ -65,14 +65,14 @@ class CreateStickerSet(TLObject):  # type: ignore
         text_color (``bool``, *optional*):
             N/A
 
-        thumb (:obj:`InputDocument <pyrogram.raw.base.InputDocument>`, *optional*):
+        thumb (:obj:`InputDocument <nerogram.raw.base.InputDocument>`, *optional*):
             N/A
 
         software (``str``, *optional*):
             N/A
 
     Returns:
-        :obj:`messages.StickerSet <pyrogram.raw.base.messages.StickerSet>`
+        :obj:`messages.StickerSet <nerogram.raw.base.messages.StickerSet>`
     """
 
     __slots__: List[str] = ["user_id", "title", "short_name", "stickers", "masks", "animated", "videos", "emojis", "text_color", "thumb", "software"]

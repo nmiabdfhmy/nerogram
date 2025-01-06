@@ -1,20 +1,20 @@
-#  Pyrogram - Telegram MTProto API Client Library for Python
+#  Nerogram - Telegram MTProto API Client Library for Python
 #  Copyright (C) 2017-present Dan <https://github.com/delivrance>
 #
-#  This file is part of Pyrogram.
+#  This file is part of Nerogram.
 #
-#  Pyrogram is free software: you can redistribute it and/or modify
+#  Nerogram is free software: you can redistribute it and/or modify
 #  it under the terms of the GNU Lesser General Public License as published
 #  by the Free Software Foundation, either version 3 of the License, or
 #  (at your option) any later version.
 #
-#  Pyrogram is distributed in the hope that it will be useful,
+#  Nerogram is distributed in the hope that it will be useful,
 #  but WITHOUT ANY WARRANTY; without even the implied warranty of
 #  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
 #  GNU Lesser General Public License for more details.
 #
 #  You should have received a copy of the GNU Lesser General Public License
-#  along with Pyrogram.  If not, see <http://www.gnu.org/licenses/>.
+#  along with Nerogram.  If not, see <http://www.gnu.org/licenses/>.
 
 from io import BytesIO
 
@@ -33,35 +33,35 @@ from typing import List, Optional, Any
 class InputSecureValue(TLObject):  # type: ignore
     """Telegram API type.
 
-    Constructor of :obj:`~pyrogram.raw.base.InputSecureValue`.
+    Constructor of :obj:`~nerogram.raw.base.InputSecureValue`.
 
     Details:
         - Layer: ``166``
         - ID: ``DB21D0A7``
 
     Parameters:
-        type (:obj:`SecureValueType <pyrogram.raw.base.SecureValueType>`):
+        type (:obj:`SecureValueType <nerogram.raw.base.SecureValueType>`):
             N/A
 
-        data (:obj:`SecureData <pyrogram.raw.base.SecureData>`, *optional*):
+        data (:obj:`SecureData <nerogram.raw.base.SecureData>`, *optional*):
             N/A
 
-        front_side (:obj:`InputSecureFile <pyrogram.raw.base.InputSecureFile>`, *optional*):
+        front_side (:obj:`InputSecureFile <nerogram.raw.base.InputSecureFile>`, *optional*):
             N/A
 
-        reverse_side (:obj:`InputSecureFile <pyrogram.raw.base.InputSecureFile>`, *optional*):
+        reverse_side (:obj:`InputSecureFile <nerogram.raw.base.InputSecureFile>`, *optional*):
             N/A
 
-        selfie (:obj:`InputSecureFile <pyrogram.raw.base.InputSecureFile>`, *optional*):
+        selfie (:obj:`InputSecureFile <nerogram.raw.base.InputSecureFile>`, *optional*):
             N/A
 
-        translation (List of :obj:`InputSecureFile <pyrogram.raw.base.InputSecureFile>`, *optional*):
+        translation (List of :obj:`InputSecureFile <nerogram.raw.base.InputSecureFile>`, *optional*):
             N/A
 
-        files (List of :obj:`InputSecureFile <pyrogram.raw.base.InputSecureFile>`, *optional*):
+        files (List of :obj:`InputSecureFile <nerogram.raw.base.InputSecureFile>`, *optional*):
             N/A
 
-        plain_data (:obj:`SecurePlainData <pyrogram.raw.base.SecurePlainData>`, *optional*):
+        plain_data (:obj:`SecurePlainData <nerogram.raw.base.SecurePlainData>`, *optional*):
             N/A
 
     """

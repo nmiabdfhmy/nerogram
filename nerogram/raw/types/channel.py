@@ -1,20 +1,20 @@
-#  Pyrogram - Telegram MTProto API Client Library for Python
+#  Nerogram - Telegram MTProto API Client Library for Python
 #  Copyright (C) 2017-present Dan <https://github.com/delivrance>
 #
-#  This file is part of Pyrogram.
+#  This file is part of Nerogram.
 #
-#  Pyrogram is free software: you can redistribute it and/or modify
+#  Nerogram is free software: you can redistribute it and/or modify
 #  it under the terms of the GNU Lesser General Public License as published
 #  by the Free Software Foundation, either version 3 of the License, or
 #  (at your option) any later version.
 #
-#  Pyrogram is distributed in the hope that it will be useful,
+#  Nerogram is distributed in the hope that it will be useful,
 #  but WITHOUT ANY WARRANTY; without even the implied warranty of
 #  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
 #  GNU Lesser General Public License for more details.
 #
 #  You should have received a copy of the GNU Lesser General Public License
-#  along with Pyrogram.  If not, see <http://www.gnu.org/licenses/>.
+#  along with Nerogram.  If not, see <http://www.gnu.org/licenses/>.
 
 from io import BytesIO
 
@@ -33,7 +33,7 @@ from typing import List, Optional, Any
 class Channel(TLObject):  # type: ignore
     """Telegram API type.
 
-    Constructor of :obj:`~pyrogram.raw.base.Chat`.
+    Constructor of :obj:`~nerogram.raw.base.Chat`.
 
     Details:
         - Layer: ``166``
@@ -46,7 +46,7 @@ class Channel(TLObject):  # type: ignore
         title (``str``):
             N/A
 
-        photo (:obj:`ChatPhoto <pyrogram.raw.base.ChatPhoto>`):
+        photo (:obj:`ChatPhoto <nerogram.raw.base.ChatPhoto>`):
             N/A
 
         date (``int`` ``32-bit``):
@@ -127,22 +127,22 @@ class Channel(TLObject):  # type: ignore
         username (``str``, *optional*):
             N/A
 
-        restriction_reason (List of :obj:`RestrictionReason <pyrogram.raw.base.RestrictionReason>`, *optional*):
+        restriction_reason (List of :obj:`RestrictionReason <nerogram.raw.base.RestrictionReason>`, *optional*):
             N/A
 
-        admin_rights (:obj:`ChatAdminRights <pyrogram.raw.base.ChatAdminRights>`, *optional*):
+        admin_rights (:obj:`ChatAdminRights <nerogram.raw.base.ChatAdminRights>`, *optional*):
             N/A
 
-        banned_rights (:obj:`ChatBannedRights <pyrogram.raw.base.ChatBannedRights>`, *optional*):
+        banned_rights (:obj:`ChatBannedRights <nerogram.raw.base.ChatBannedRights>`, *optional*):
             N/A
 
-        default_banned_rights (:obj:`ChatBannedRights <pyrogram.raw.base.ChatBannedRights>`, *optional*):
+        default_banned_rights (:obj:`ChatBannedRights <nerogram.raw.base.ChatBannedRights>`, *optional*):
             N/A
 
         participants_count (``int`` ``32-bit``, *optional*):
             N/A
 
-        usernames (List of :obj:`Username <pyrogram.raw.base.Username>`, *optional*):
+        usernames (List of :obj:`Username <nerogram.raw.base.Username>`, *optional*):
             N/A
 
         stories_max_id (``int`` ``32-bit``, *optional*):

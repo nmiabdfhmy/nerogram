@@ -1,20 +1,20 @@
-#  Pyrogram - Telegram MTProto API Client Library for Python
+#  Nerogram - Telegram MTProto API Client Library for Python
 #  Copyright (C) 2017-present Dan <https://github.com/delivrance>
 #
-#  This file is part of Pyrogram.
+#  This file is part of Nerogram.
 #
-#  Pyrogram is free software: you can redistribute it and/or modify
+#  Nerogram is free software: you can redistribute it and/or modify
 #  it under the terms of the GNU Lesser General Public License as published
 #  by the Free Software Foundation, either version 3 of the License, or
 #  (at your option) any later version.
 #
-#  Pyrogram is distributed in the hope that it will be useful,
+#  Nerogram is distributed in the hope that it will be useful,
 #  but WITHOUT ANY WARRANTY; without even the implied warranty of
 #  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
 #  GNU Lesser General Public License for more details.
 #
 #  You should have received a copy of the GNU Lesser General Public License
-#  along with Pyrogram.  If not, see <http://www.gnu.org/licenses/>.
+#  along with Nerogram.  If not, see <http://www.gnu.org/licenses/>.
 
 from io import BytesIO
 
@@ -33,7 +33,7 @@ from typing import List, Optional, Any
 class UserFull(TLObject):  # type: ignore
     """Telegram API type.
 
-    Constructor of :obj:`~pyrogram.raw.base.UserFull`.
+    Constructor of :obj:`~nerogram.raw.base.UserFull`.
 
     Details:
         - Layer: ``166``
@@ -43,10 +43,10 @@ class UserFull(TLObject):  # type: ignore
         id (``int`` ``64-bit``):
             N/A
 
-        settings (:obj:`PeerSettings <pyrogram.raw.base.PeerSettings>`):
+        settings (:obj:`PeerSettings <nerogram.raw.base.PeerSettings>`):
             N/A
 
-        notify_settings (:obj:`PeerNotifySettings <pyrogram.raw.base.PeerNotifySettings>`):
+        notify_settings (:obj:`PeerNotifySettings <nerogram.raw.base.PeerNotifySettings>`):
             N/A
 
         common_chats_count (``int`` ``32-bit``):
@@ -85,16 +85,16 @@ class UserFull(TLObject):  # type: ignore
         about (``str``, *optional*):
             N/A
 
-        personal_photo (:obj:`Photo <pyrogram.raw.base.Photo>`, *optional*):
+        personal_photo (:obj:`Photo <nerogram.raw.base.Photo>`, *optional*):
             N/A
 
-        profile_photo (:obj:`Photo <pyrogram.raw.base.Photo>`, *optional*):
+        profile_photo (:obj:`Photo <nerogram.raw.base.Photo>`, *optional*):
             N/A
 
-        fallback_photo (:obj:`Photo <pyrogram.raw.base.Photo>`, *optional*):
+        fallback_photo (:obj:`Photo <nerogram.raw.base.Photo>`, *optional*):
             N/A
 
-        bot_info (:obj:`BotInfo <pyrogram.raw.base.BotInfo>`, *optional*):
+        bot_info (:obj:`BotInfo <nerogram.raw.base.BotInfo>`, *optional*):
             N/A
 
         pinned_msg_id (``int`` ``32-bit``, *optional*):
@@ -112,19 +112,19 @@ class UserFull(TLObject):  # type: ignore
         private_forward_name (``str``, *optional*):
             N/A
 
-        bot_group_admin_rights (:obj:`ChatAdminRights <pyrogram.raw.base.ChatAdminRights>`, *optional*):
+        bot_group_admin_rights (:obj:`ChatAdminRights <nerogram.raw.base.ChatAdminRights>`, *optional*):
             N/A
 
-        bot_broadcast_admin_rights (:obj:`ChatAdminRights <pyrogram.raw.base.ChatAdminRights>`, *optional*):
+        bot_broadcast_admin_rights (:obj:`ChatAdminRights <nerogram.raw.base.ChatAdminRights>`, *optional*):
             N/A
 
-        premium_gifts (List of :obj:`PremiumGiftOption <pyrogram.raw.base.PremiumGiftOption>`, *optional*):
+        premium_gifts (List of :obj:`PremiumGiftOption <nerogram.raw.base.PremiumGiftOption>`, *optional*):
             N/A
 
-        wallpaper (:obj:`WallPaper <pyrogram.raw.base.WallPaper>`, *optional*):
+        wallpaper (:obj:`WallPaper <nerogram.raw.base.WallPaper>`, *optional*):
             N/A
 
-        stories (:obj:`PeerStories <pyrogram.raw.base.PeerStories>`, *optional*):
+        stories (:obj:`PeerStories <nerogram.raw.base.PeerStories>`, *optional*):
             N/A
 
     """

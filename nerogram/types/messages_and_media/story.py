@@ -1,20 +1,20 @@
-#  Pyrogram - Telegram MTProto API Client Library for Python
+#  Nerogram - Telegram MTProto API Client Library for Python
 #  Copyright (C) 2017-present Dan <https://github.com/delivrance>
 #
-#  This file is part of Pyrogram.
+#  This file is part of Nerogram.
 #
-#  Pyrogram is free software: you can redistribute it and/or modify
+#  Nerogram is free software: you can redistribute it and/or modify
 #  it under the terms of the GNU Lesser General Public License as published
 #  by the Free Software Foundation, either version 3 of the License, or
 #  (at your option) any later version.
 #
-#  Pyrogram is distributed in the hope that it will be useful,
+#  Nerogram is distributed in the hope that it will be useful,
 #  but WITHOUT ANY WARRANTY; without even the implied warranty of
 #  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
 #  GNU Lesser General Public License for more details.
 #
 #  You should have received a copy of the GNU Lesser General Public License
-#  along with Pyrogram.  If not, see <http://www.gnu.org/licenses/>.
+#  along with Nerogram.  If not, see <http://www.gnu.org/licenses/>.
 
 import nerogram
 
@@ -33,13 +33,13 @@ class Story(Object, Update):
         id (``int``):
             Unique story identifier.
 
-        from_user (:obj:`~pyrogram.types.User`, *optional*):
+        from_user (:obj:`~nerogram.types.User`, *optional*):
             Sender of the story.
 
-        sender_chat (:obj:`~pyrogram.types.Chat`, *optional*):
+        sender_chat (:obj:`~nerogram.types.Chat`, *optional*):
             Sender of the story, sent on behalf of a chat.
 
-        chat (:obj:`~pyrogram.types.Chat`, *optional*):
+        chat (:obj:`~nerogram.types.Chat`, *optional*):
             Conversation the story belongs to.
 
         date (:py:obj:`~datetime.datetime`, *optional*):
@@ -48,7 +48,7 @@ class Story(Object, Update):
         expire_date (:py:obj:`~datetime.datetime`, *optional*):
             Date the story will be expired.
 
-        media (:obj:`~pyrogram.enums.MessageMediaType`, *optional*):
+        media (:obj:`~nerogram.enums.MessageMediaType`, *optional*):
             The media type of the Story.
             This field will contain the enumeration type of the media message.
             You can use ``media = getattr(message, message.media.value)`` to access the media message.
@@ -56,10 +56,10 @@ class Story(Object, Update):
         has_protected_content (``bool``, *optional*):
             True, if the story can't be forwarded.
 
-        photo (:obj:`~pyrogram.types.Photo`, *optional*):
+        photo (:obj:`~nerogram.types.Photo`, *optional*):
             Story is a photo, information about the photo.
 
-        video (:obj:`~pyrogram.types.Video`, *optional*):
+        video (:obj:`~nerogram.types.Video`, *optional*):
             Story is a video, information about the video.
 
         edited (``bool``, *optional*):
@@ -83,13 +83,13 @@ class Story(Object, Update):
         caption (``str``, *optional*):
             Caption for the Story, 0-1024 characters.
 
-        caption_entities (List of :obj:`~pyrogram.types.MessageEntity`, *optional*):
+        caption_entities (List of :obj:`~nerogram.types.MessageEntity`, *optional*):
             For text messages, special entities like usernames, URLs, bot commands, etc. that appear in the caption.
 
-        views (:obj:`~pyrogram.types.StoryViews`, *optional*):
+        views (:obj:`~nerogram.types.StoryViews`, *optional*):
             Stories views.
 
-        privacy (:obj:`~pyrogram.enums.StoryPrivacyRules`, *optional*):
+        privacy (:obj:`~nerogram.enums.StoryPrivacyRules`, *optional*):
             Story privacy.
 
         allowed_users (List of ``int`` | ``str``, *optional*):
@@ -276,7 +276,7 @@ class Story(Object, Update):
         protect_content: bool = None,
         reply_markup=None
     ) -> "types.Message":
-        """Bound method *reply_text* of :obj:`~pyrogram.types.Story`.
+        """Bound method *reply_text* of :obj:`~nerogram.types.Story`.
 
         An alias exists as *reply*.
 
@@ -299,11 +299,11 @@ class Story(Object, Update):
             text (``str``):
                 Text of the message to be sent.
 
-            parse_mode (:obj:`~pyrogram.enums.ParseMode`, *optional*):
+            parse_mode (:obj:`~nerogram.enums.ParseMode`, *optional*):
                 By default, texts are parsed using both Markdown and HTML styles.
                 You can combine both syntaxes together.
 
-            entities (List of :obj:`~pyrogram.types.MessageEntity`):
+            entities (List of :obj:`~nerogram.types.MessageEntity`):
                 List of special entities that appear in message text, which can be specified instead of *parse_mode*.
 
             disable_web_page_preview (``bool``, *optional*):
@@ -319,7 +319,7 @@ class Story(Object, Update):
             protect_content (``bool``, *optional*):
                 Protects the contents of the sent message from forwarding and saving.
 
-            reply_markup (:obj:`~pyrogram.types.InlineKeyboardMarkup` | :obj:`~pyrogram.types.ReplyKeyboardMarkup` | :obj:`~pyrogram.types.ReplyKeyboardRemove` | :obj:`~pyrogram.types.ForceReply`, *optional*):
+            reply_markup (:obj:`~nerogram.types.InlineKeyboardMarkup` | :obj:`~nerogram.types.ReplyKeyboardMarkup` | :obj:`~nerogram.types.ReplyKeyboardRemove` | :obj:`~nerogram.types.ForceReply`, *optional*):
                 Additional interface options. An object for an inline keyboard, custom reply keyboard,
                 instructions to remove reply keyboard or to force a reply from the user.
 
@@ -364,7 +364,7 @@ class Story(Object, Update):
         progress: Callable = None,
         progress_args: tuple = ()
     ) -> "types.Message":
-        """Bound method *reply_animation* :obj:`~pyrogram.types.Story`.
+        """Bound method *reply_animation* :obj:`~nerogram.types.Story`.
 
         Use as a shortcut for:
 
@@ -391,11 +391,11 @@ class Story(Object, Update):
             caption (``str``, *optional*):
                 Animation caption, 0-1024 characters.
 
-            parse_mode (:obj:`~pyrogram.enums.ParseMode`, *optional*):
+            parse_mode (:obj:`~nerogram.enums.ParseMode`, *optional*):
                 By default, texts are parsed using both Markdown and HTML styles.
                 You can combine both syntaxes together.
 
-            caption_entities (List of :obj:`~pyrogram.types.MessageEntity`):
+            caption_entities (List of :obj:`~nerogram.types.MessageEntity`):
                 List of special entities that appear in the caption, which can be specified instead of *parse_mode*.
 
             has_spoiler (``bool``, *optional*):
@@ -424,7 +424,7 @@ class Story(Object, Update):
                 Sends the message silently.
                 Users will receive a notification with no sound.
 
-            reply_markup (:obj:`~pyrogram.types.InlineKeyboardMarkup` | :obj:`~pyrogram.types.ReplyKeyboardMarkup` | :obj:`~pyrogram.types.ReplyKeyboardRemove` | :obj:`~pyrogram.types.ForceReply`, *optional*):
+            reply_markup (:obj:`~nerogram.types.InlineKeyboardMarkup` | :obj:`~nerogram.types.ReplyKeyboardMarkup` | :obj:`~nerogram.types.ReplyKeyboardRemove` | :obj:`~nerogram.types.ForceReply`, *optional*):
                 Additional interface options. An object for an inline keyboard, custom reply keyboard,
                 instructions to remove reply keyboard or to force a reply from the user.
 
@@ -451,8 +451,8 @@ class Story(Object, Update):
                 You can either keep ``*args`` or add every single extra argument in your function signature.
 
         Returns:
-            On success, the sent :obj:`~pyrogram.types.Message` is returned.
-            In case the upload is deliberately stopped with :meth:`~pyrogram.Client.stop_transmission`, None is returned
+            On success, the sent :obj:`~nerogram.types.Message` is returned.
+            In case the upload is deliberately stopped with :meth:`~nerogram.Client.stop_transmission`, None is returned
             instead.
 
         Raises:
@@ -498,7 +498,7 @@ class Story(Object, Update):
         progress: Callable = None,
         progress_args: tuple = ()
     ) -> "types.Message":
-        """Bound method *reply_audio* of :obj:`~pyrogram.types.Story`.
+        """Bound method *reply_audio* of :obj:`~nerogram.types.Story`.
 
         Use as a shortcut for:
 
@@ -525,11 +525,11 @@ class Story(Object, Update):
             caption (``str``, *optional*):
                 Audio caption, 0-1024 characters.
 
-            parse_mode (:obj:`~pyrogram.enums.ParseMode`, *optional*):
+            parse_mode (:obj:`~nerogram.enums.ParseMode`, *optional*):
                 By default, texts are parsed using both Markdown and HTML styles.
                 You can combine both syntaxes together.
 
-            caption_entities (List of :obj:`~pyrogram.types.MessageEntity`):
+            caption_entities (List of :obj:`~nerogram.types.MessageEntity`):
                 List of special entities that appear in the caption, which can be specified instead of *parse_mode*.
 
             duration (``int``, *optional*):
@@ -555,7 +555,7 @@ class Story(Object, Update):
                 Sends the message silently.
                 Users will receive a notification with no sound.
 
-            reply_markup (:obj:`~pyrogram.types.InlineKeyboardMarkup` | :obj:`~pyrogram.types.ReplyKeyboardMarkup` | :obj:`~pyrogram.types.ReplyKeyboardRemove` | :obj:`~pyrogram.types.ForceReply`, *optional*):
+            reply_markup (:obj:`~nerogram.types.InlineKeyboardMarkup` | :obj:`~nerogram.types.ReplyKeyboardMarkup` | :obj:`~nerogram.types.ReplyKeyboardRemove` | :obj:`~nerogram.types.ForceReply`, *optional*):
                 Additional interface options. An object for an inline keyboard, custom reply keyboard,
                 instructions to remove reply keyboard or to force a reply from the user.
 
@@ -582,8 +582,8 @@ class Story(Object, Update):
                 You can either keep ``*args`` or add every single extra argument in your function signature.
 
         Returns:
-            On success, the sent :obj:`~pyrogram.types.Message` is returned.
-            In case the upload is deliberately stopped with :meth:`~pyrogram.Client.stop_transmission`, None is returned
+            On success, the sent :obj:`~nerogram.types.Message` is returned.
+            In case the upload is deliberately stopped with :meth:`~nerogram.Client.stop_transmission`, None is returned
             instead.
 
         Raises:
@@ -621,7 +621,7 @@ class Story(Object, Update):
             "types.ForceReply"
         ] = None
     ) -> "types.Message":
-        """Bound method *reply_cached_media* of :obj:`~pyrogram.types.Story`.
+        """Bound method *reply_cached_media* of :obj:`~nerogram.types.Story`.
 
         Use as a shortcut for:
 
@@ -646,23 +646,23 @@ class Story(Object, Update):
             caption (``bool``, *optional*):
                 Media caption, 0-1024 characters.
 
-            parse_mode (:obj:`~pyrogram.enums.ParseMode`, *optional*):
+            parse_mode (:obj:`~nerogram.enums.ParseMode`, *optional*):
                 By default, texts are parsed using both Markdown and HTML styles.
                 You can combine both syntaxes together.
 
-            caption_entities (List of :obj:`~pyrogram.types.MessageEntity`):
+            caption_entities (List of :obj:`~nerogram.types.MessageEntity`):
                 List of special entities that appear in the caption, which can be specified instead of *parse_mode*.
 
             disable_notification (``bool``, *optional*):
                 Sends the message silently.
                 Users will receive a notification with no sound.
 
-            reply_markup (:obj:`~pyrogram.types.InlineKeyboardMarkup` | :obj:`~pyrogram.types.ReplyKeyboardMarkup` | :obj:`~pyrogram.types.ReplyKeyboardRemove` | :obj:`~pyrogram.types.ForceReply`, *optional*):
+            reply_markup (:obj:`~nerogram.types.InlineKeyboardMarkup` | :obj:`~nerogram.types.ReplyKeyboardMarkup` | :obj:`~nerogram.types.ReplyKeyboardRemove` | :obj:`~nerogram.types.ForceReply`, *optional*):
                 Additional interface options. An object for an inline keyboard, custom reply keyboard,
                 instructions to remove reply keyboard or to force a reply from the user.
 
         Returns:
-            On success, the sent :obj:`~pyrogram.types.Message` is returned.
+            On success, the sent :obj:`~nerogram.types.Message` is returned.
 
         Raises:
             RPCError: In case of a Telegram RPC error.
@@ -688,7 +688,7 @@ class Story(Object, Update):
         ]],
         disable_notification: bool = None,
     ) -> List["types.Message"]:
-        """Bound method *reply_media_group* of :obj:`~pyrogram.types.Story`.
+        """Bound method *reply_media_group* of :obj:`~nerogram.types.Story`.
 
         Use as a shortcut for:
 
@@ -707,8 +707,8 @@ class Story(Object, Update):
 
         Parameters:
             media (``list``):
-                A list containing either :obj:`~pyrogram.types.InputMediaPhoto` or
-                :obj:`~pyrogram.types.InputMediaVideo` objects
+                A list containing either :obj:`~nerogram.types.InputMediaPhoto` or
+                :obj:`~nerogram.types.InputMediaVideo` objects
                 describing photos and videos to be sent, must include 2–10 items.
 
             disable_notification (``bool``, *optional*):
@@ -716,7 +716,7 @@ class Story(Object, Update):
                 Users will receive a notification with no sound.
 
         Returns:
-            On success, a :obj:`~pyrogram.types.Messages` object is returned containing all the
+            On success, a :obj:`~nerogram.types.Messages` object is returned containing all the
             single messages sent.
 
         Raises:
@@ -747,7 +747,7 @@ class Story(Object, Update):
         progress: Callable = None,
         progress_args: tuple = ()
     ) -> "types.Message":
-        """Bound method *reply_photo* of :obj:`~pyrogram.types.Story`.
+        """Bound method *reply_photo* of :obj:`~nerogram.types.Story`.
 
         Use as a shortcut for:
 
@@ -774,11 +774,11 @@ class Story(Object, Update):
             caption (``str``, *optional*):
                 Photo caption, 0-1024 characters.
 
-            parse_mode (:obj:`~pyrogram.enums.ParseMode`, *optional*):
+            parse_mode (:obj:`~nerogram.enums.ParseMode`, *optional*):
                 By default, texts are parsed using both Markdown and HTML styles.
                 You can combine both syntaxes together.
 
-            caption_entities (List of :obj:`~pyrogram.types.MessageEntity`):
+            caption_entities (List of :obj:`~nerogram.types.MessageEntity`):
                 List of special entities that appear in the caption, which can be specified instead of *parse_mode*.
 
             has_spoiler (``bool``, *optional*):
@@ -793,7 +793,7 @@ class Story(Object, Update):
                 Sends the message silently.
                 Users will receive a notification with no sound.
 
-            reply_markup (:obj:`~pyrogram.types.InlineKeyboardMarkup` | :obj:`~pyrogram.types.ReplyKeyboardMarkup` | :obj:`~pyrogram.types.ReplyKeyboardRemove` | :obj:`~pyrogram.types.ForceReply`, *optional*):
+            reply_markup (:obj:`~nerogram.types.InlineKeyboardMarkup` | :obj:`~nerogram.types.ReplyKeyboardMarkup` | :obj:`~nerogram.types.ReplyKeyboardRemove` | :obj:`~nerogram.types.ForceReply`, *optional*):
                 Additional interface options. An object for an inline keyboard, custom reply keyboard,
                 instructions to remove reply keyboard or to force a reply from the user.
 
@@ -820,8 +820,8 @@ class Story(Object, Update):
                 You can either keep ``*args`` or add every single extra argument in your function signature.
 
         Returns:
-            On success, the sent :obj:`~pyrogram.types.Message` is returned.
-            In case the upload is deliberately stopped with :meth:`~pyrogram.Client.stop_transmission`, None is returned
+            On success, the sent :obj:`~nerogram.types.Message` is returned.
+            In case the upload is deliberately stopped with :meth:`~nerogram.Client.stop_transmission`, None is returned
             instead.
 
         Raises:
@@ -855,7 +855,7 @@ class Story(Object, Update):
         progress: Callable = None,
         progress_args: tuple = ()
     ) -> "types.Message":
-        """Bound method *reply_sticker* of :obj:`~pyrogram.types.Story`.
+        """Bound method *reply_sticker* of :obj:`~nerogram.types.Story`.
 
         Use as a shortcut for:
 
@@ -886,7 +886,7 @@ class Story(Object, Update):
             reply_to_story_id (``int``, *optional*):
                 If the message is a reply, ID of the original message.
 
-            reply_markup (:obj:`~pyrogram.types.InlineKeyboardMarkup` | :obj:`~pyrogram.types.ReplyKeyboardMarkup` | :obj:`~pyrogram.types.ReplyKeyboardRemove` | :obj:`~pyrogram.types.ForceReply`, *optional*):
+            reply_markup (:obj:`~nerogram.types.InlineKeyboardMarkup` | :obj:`~nerogram.types.ReplyKeyboardMarkup` | :obj:`~nerogram.types.ReplyKeyboardRemove` | :obj:`~nerogram.types.ForceReply`, *optional*):
                 Additional interface options. An object for an inline keyboard, custom reply keyboard,
                 instructions to remove reply keyboard or to force a reply from the user.
 
@@ -913,8 +913,8 @@ class Story(Object, Update):
                 You can either keep ``*args`` or add every single extra argument in your function signature.
 
         Returns:
-            On success, the sent :obj:`~pyrogram.types.Message` is returned.
-            In case the upload is deliberately stopped with :meth:`~pyrogram.Client.stop_transmission`, None is returned
+            On success, the sent :obj:`~nerogram.types.Message` is returned.
+            In case the upload is deliberately stopped with :meth:`~nerogram.Client.stop_transmission`, None is returned
             instead.
 
         Raises:
@@ -954,7 +954,7 @@ class Story(Object, Update):
         progress: Callable = None,
         progress_args: tuple = ()
     ) -> "types.Message":
-        """Bound method *reply_video* of :obj:`~pyrogram.types.Story`.
+        """Bound method *reply_video* of :obj:`~nerogram.types.Story`.
 
         Use as a shortcut for:
 
@@ -981,11 +981,11 @@ class Story(Object, Update):
             caption (``str``, *optional*):
                 Video caption, 0-1024 characters.
 
-            parse_mode (:obj:`~pyrogram.enums.ParseMode`, *optional*):
+            parse_mode (:obj:`~nerogram.enums.ParseMode`, *optional*):
                 By default, texts are parsed using both Markdown and HTML styles.
                 You can combine both syntaxes together.
 
-            caption_entities (List of :obj:`~pyrogram.types.MessageEntity`):
+            caption_entities (List of :obj:`~nerogram.types.MessageEntity`):
                 List of special entities that appear in the caption, which can be specified instead of *parse_mode*.
 
             has_spoiler (``bool``, *optional*):
@@ -1022,7 +1022,7 @@ class Story(Object, Update):
                 Sends the message silently.
                 Users will receive a notification with no sound.
 
-            reply_markup (:obj:`~pyrogram.types.InlineKeyboardMarkup` | :obj:`~pyrogram.types.ReplyKeyboardMarkup` | :obj:`~pyrogram.types.ReplyKeyboardRemove` | :obj:`~pyrogram.types.ForceReply`, *optional*):
+            reply_markup (:obj:`~nerogram.types.InlineKeyboardMarkup` | :obj:`~nerogram.types.ReplyKeyboardMarkup` | :obj:`~nerogram.types.ReplyKeyboardRemove` | :obj:`~nerogram.types.ForceReply`, *optional*):
                 Additional interface options. An object for an inline keyboard, custom reply keyboard,
                 instructions to remove reply keyboard or to force a reply from the user.
 
@@ -1049,8 +1049,8 @@ class Story(Object, Update):
                 You can either keep ``*args`` or add every single extra argument in your function signature.
 
         Returns:
-            On success, the sent :obj:`~pyrogram.types.Message` is returned.
-            In case the upload is deliberately stopped with :meth:`~pyrogram.Client.stop_transmission`, None is returned
+            On success, the sent :obj:`~nerogram.types.Message` is returned.
+            In case the upload is deliberately stopped with :meth:`~nerogram.Client.stop_transmission`, None is returned
             instead.
 
         Raises:
@@ -1093,7 +1093,7 @@ class Story(Object, Update):
         progress: Callable = None,
         progress_args: tuple = ()
     ) -> "types.Message":
-        """Bound method *reply_video_note* of :obj:`~pyrogram.types.Story`.
+        """Bound method *reply_video_note* of :obj:`~nerogram.types.Story`.
 
         Use as a shortcut for:
 
@@ -1133,7 +1133,7 @@ class Story(Object, Update):
                 Sends the message silently.
                 Users will receive a notification with no sound.
 
-            reply_markup (:obj:`~pyrogram.types.InlineKeyboardMarkup` | :obj:`~pyrogram.types.ReplyKeyboardMarkup` | :obj:`~pyrogram.types.ReplyKeyboardRemove` | :obj:`~pyrogram.types.ForceReply`, *optional*):
+            reply_markup (:obj:`~nerogram.types.InlineKeyboardMarkup` | :obj:`~nerogram.types.ReplyKeyboardMarkup` | :obj:`~nerogram.types.ReplyKeyboardRemove` | :obj:`~nerogram.types.ForceReply`, *optional*):
                 Additional interface options. An object for an inline keyboard, custom reply keyboard,
                 instructions to remove reply keyboard or to force a reply from the user.
 
@@ -1160,8 +1160,8 @@ class Story(Object, Update):
                 You can either keep ``*args`` or add every single extra argument in your function signature.
 
         Returns:
-            On success, the sent :obj:`~pyrogram.types.Message` is returned.
-            In case the upload is deliberately stopped with :meth:`~pyrogram.Client.stop_transmission`, None is returned
+            On success, the sent :obj:`~nerogram.types.Message` is returned.
+            In case the upload is deliberately stopped with :meth:`~nerogram.Client.stop_transmission`, None is returned
             instead.
 
         Raises:
@@ -1197,7 +1197,7 @@ class Story(Object, Update):
         progress: Callable = None,
         progress_args: tuple = ()
     ) -> "types.Message":
-        """Bound method *reply_voice* of :obj:`~pyrogram.types.Story`.
+        """Bound method *reply_voice* of :obj:`~nerogram.types.Story`.
 
         Use as a shortcut for:
 
@@ -1224,11 +1224,11 @@ class Story(Object, Update):
             caption (``str``, *optional*):
                 Voice message caption, 0-1024 characters.
 
-            parse_mode (:obj:`~pyrogram.enums.ParseMode`, *optional*):
+            parse_mode (:obj:`~nerogram.enums.ParseMode`, *optional*):
                 By default, texts are parsed using both Markdown and HTML styles.
                 You can combine both syntaxes together.
 
-            caption_entities (List of :obj:`~pyrogram.types.MessageEntity`):
+            caption_entities (List of :obj:`~nerogram.types.MessageEntity`):
                 List of special entities that appear in the caption, which can be specified instead of *parse_mode*.
 
             duration (``int``, *optional*):
@@ -1238,7 +1238,7 @@ class Story(Object, Update):
                 Sends the message silently.
                 Users will receive a notification with no sound.
 
-            reply_markup (:obj:`~pyrogram.types.InlineKeyboardMarkup` | :obj:`~pyrogram.types.ReplyKeyboardMarkup` | :obj:`~pyrogram.types.ReplyKeyboardRemove` | :obj:`~pyrogram.types.ForceReply`, *optional*):
+            reply_markup (:obj:`~nerogram.types.InlineKeyboardMarkup` | :obj:`~nerogram.types.ReplyKeyboardMarkup` | :obj:`~nerogram.types.ReplyKeyboardRemove` | :obj:`~nerogram.types.ForceReply`, *optional*):
                 Additional interface options. An object for an inline keyboard, custom reply keyboard,
                 instructions to remove reply keyboard or to force a reply from the user.
 
@@ -1265,8 +1265,8 @@ class Story(Object, Update):
                 You can either keep ``*args`` or add every single extra argument in your function signature.
 
         Returns:
-            On success, the sent :obj:`~pyrogram.types.Message` is returned.
-            In case the upload is deliberately stopped with :meth:`~pyrogram.Client.stop_transmission`, None is returned
+            On success, the sent :obj:`~nerogram.types.Message` is returned.
+            In case the upload is deliberately stopped with :meth:`~nerogram.Client.stop_transmission`, None is returned
             instead.
 
         Raises:
@@ -1298,7 +1298,7 @@ class Story(Object, Update):
         disallowed_users: List[int] = None,
         protect_content: bool = None
     ) -> "types.Story":
-        """Bound method *copy* of :obj:`~pyrogram.types.Story`.
+        """Bound method *copy* of :obj:`~nerogram.types.Story`.
 
         Use as a shortcut for:
 
@@ -1329,33 +1329,33 @@ class Story(Object, Update):
                 How long the story will posted, in secs.
                 only for premium users.
 
-            privacy (:obj:`~pyrogram.enums.StoriesPrivacyRules`, *optional*):
+            privacy (:obj:`~nerogram.enums.StoriesPrivacyRules`, *optional*):
                 Story privacy.
-                Defaults to :obj:`~pyrogram.enums.StoriesPrivacyRules.PUBLIC`
+                Defaults to :obj:`~nerogram.enums.StoriesPrivacyRules.PUBLIC`
 
             allowed_users (List of ``int``, *optional*):
                 List of user_id or chat_id of chat users who are allowed to view stories.
-                Note: chat_id available only with :obj:`~pyrogram.enums.StoriesPrivacyRules.SELECTED_USERS`.
-                Works with :obj:`~pyrogram.enums.StoriesPrivacyRules.CLOSE_FRIENDS`
-                and :obj:`~pyrogram.enums.StoriesPrivacyRules.SELECTED_USERS` only
+                Note: chat_id available only with :obj:`~nerogram.enums.StoriesPrivacyRules.SELECTED_USERS`.
+                Works with :obj:`~nerogram.enums.StoriesPrivacyRules.CLOSE_FRIENDS`
+                and :obj:`~nerogram.enums.StoriesPrivacyRules.SELECTED_USERS` only
 
             disallowed_users (List of ``int``, *optional*):
                 List of user_id whos disallow to view the stories.
-                Note: Works with :obj:`~pyrogram.enums.StoriesPrivacyRules.PUBLIC`
-                and :obj:`~pyrogram.enums.StoriesPrivacyRules.CONTACTS` only
+                Note: Works with :obj:`~nerogram.enums.StoriesPrivacyRules.PUBLIC`
+                and :obj:`~nerogram.enums.StoriesPrivacyRules.CONTACTS` only
 
             protect_content (``bool``, *optional*):
                 Protects the contents of the sent story from forwarding and saving.
 
-            parse_mode (:obj:`~pyrogram.enums.ParseMode`, *optional*):
+            parse_mode (:obj:`~nerogram.enums.ParseMode`, *optional*):
                 By default, texts are parsed using both Markdown and HTML styles.
                 You can combine both syntaxes together.
 
-            caption_entities (List of :obj:`~pyrogram.types.MessageEntity`):
+            caption_entities (List of :obj:`~nerogram.types.MessageEntity`):
                 List of special entities that appear in the new caption, which can be specified instead of *parse_mode*.
 
         Returns:
-            :obj:`~pyrogram.types.Story`: On success, the copied story is returned.
+            :obj:`~nerogram.types.Story`: On success, the copied story is returned.
 
         Raises:
             RPCError: In case of a Telegram RPC error.
@@ -1378,7 +1378,7 @@ class Story(Object, Update):
         )
 
     async def delete(self):
-        """Bound method *delete* of :obj:`~pyrogram.types.Story`.
+        """Bound method *delete* of :obj:`~nerogram.types.Story`.
 
         Use as a shortcut for:
 
@@ -1411,7 +1411,7 @@ class Story(Object, Update):
         parse_mode: "enums.ParseMode" = None,
         caption_entities: List["types.MessageEntity"] = None
     ) -> "types.Story":
-        """Bound method *edit* of :obj:`~pyrogram.types.Story`.
+        """Bound method *edit* of :obj:`~nerogram.types.Story`.
 
         Use as a shortcut for:
 
@@ -1438,32 +1438,32 @@ class Story(Object, Update):
                 pass a file path as string to upload a new photo that exists on your local machine, or
                 pass a binary file-like object with its attribute ".name" set for in-memory uploads.
 
-            privacy (:obj:`~pyrogram.enums.StoriesPrivacyRules`, *optional*):
+            privacy (:obj:`~nerogram.enums.StoriesPrivacyRules`, *optional*):
                 Story privacy.
 
             allowed_users (List of ``int``, *optional*):
                 List of user_id or chat_id of chat users who are allowed to view stories.
-                Note: chat_id available only with :obj:`~pyrogram.enums.StoriesPrivacyRules.SELECTED_USERS`.
-                Works with :obj:`~pyrogram.enums.StoriesPrivacyRules.CLOSE_FRIENDS`
-                and :obj:`~pyrogram.enums.StoriesPrivacyRules.SELECTED_USERS` only
+                Note: chat_id available only with :obj:`~nerogram.enums.StoriesPrivacyRules.SELECTED_USERS`.
+                Works with :obj:`~nerogram.enums.StoriesPrivacyRules.CLOSE_FRIENDS`
+                and :obj:`~nerogram.enums.StoriesPrivacyRules.SELECTED_USERS` only
 
             disallowed_users (List of ``int``, *optional*):
                 List of user_id whos disallow to view the stories.
-                Note: Works with :obj:`~pyrogram.enums.StoriesPrivacyRules.PUBLIC`
-                and :obj:`~pyrogram.enums.StoriesPrivacyRules.CONTACTS` only
+                Note: Works with :obj:`~nerogram.enums.StoriesPrivacyRules.PUBLIC`
+                and :obj:`~nerogram.enums.StoriesPrivacyRules.CONTACTS` only
 
             caption (``str``, *optional*):
                 Story caption, 0-1024 characters.
 
-            parse_mode (:obj:`~pyrogram.enums.ParseMode`, *optional*):
+            parse_mode (:obj:`~nerogram.enums.ParseMode`, *optional*):
                 By default, texts are parsed using both Markdown and HTML styles.
                 You can combine both syntaxes together.
 
-            caption_entities (List of :obj:`~pyrogram.types.MessageEntity`):
+            caption_entities (List of :obj:`~nerogram.types.MessageEntity`):
                 List of special entities that appear in the caption, which can be specified instead of *parse_mode*.
 
         Returns:
-            On success, the edited :obj:`~pyrogram.types.Story` is returned.
+            On success, the edited :obj:`~nerogram.types.Story` is returned.
 
         Raises:
             RPCError: In case of a Telegram RPC error.
@@ -1486,7 +1486,7 @@ class Story(Object, Update):
         parse_mode: Optional["enums.ParseMode"] = None,
         caption_entities: List["types.MessageEntity"] = None
     ) -> "types.Story":
-        """Bound method *edit_caption* of :obj:`~pyrogram.types.Story`.
+        """Bound method *edit_caption* of :obj:`~nerogram.types.Story`.
 
         Use as a shortcut for:
 
@@ -1506,15 +1506,15 @@ class Story(Object, Update):
             caption (``str``):
                 New caption of the story.
 
-            parse_mode (:obj:`~pyrogram.enums.ParseMode`, *optional*):
+            parse_mode (:obj:`~nerogram.enums.ParseMode`, *optional*):
                 By default, texts are parsed using both Markdown and HTML styles.
                 You can combine both syntaxes together.
 
-            caption_entities (List of :obj:`~pyrogram.types.MessageEntity`):
+            caption_entities (List of :obj:`~nerogram.types.MessageEntity`):
                 List of special entities that appear in the caption, which can be specified instead of *parse_mode*.
 
         Returns:
-            On success, the edited :obj:`~pyrogram.types.Story` is returned.
+            On success, the edited :obj:`~nerogram.types.Story` is returned.
 
         Raises:
             RPCError: In case of a Telegram RPC error.
@@ -1533,7 +1533,7 @@ class Story(Object, Update):
         allowed_users: List[Union[int, str]] = None,
         disallowed_users: List[Union[int, str]] = None,
     ) -> "types.Story":
-        """Bound method *edit_privacy* of :obj:`~pyrogram.types.Story`.
+        """Bound method *edit_privacy* of :obj:`~nerogram.types.Story`.
 
         Use as a shortcut for:
 
@@ -1550,22 +1550,22 @@ class Story(Object, Update):
                 await story.edit_privacy(enums.StoriesPrivacyRules.PUBLIC)
 
         Parameters:
-            privacy (:obj:`~pyrogram.enums.StoriesPrivacyRules`, *optional*):
+            privacy (:obj:`~nerogram.enums.StoriesPrivacyRules`, *optional*):
                 Story privacy.
 
             allowed_users (List of ``int``, *optional*):
                 List of user_id or chat_id of chat users who are allowed to view stories.
-                Note: chat_id available only with :obj:`~pyrogram.enums.StoriesPrivacyRules.SELECTED_USERS`.
-                Works with :obj:`~pyrogram.enums.StoriesPrivacyRules.CLOSE_FRIENDS`
-                and :obj:`~pyrogram.enums.StoriesPrivacyRules.SELECTED_USERS` only
+                Note: chat_id available only with :obj:`~nerogram.enums.StoriesPrivacyRules.SELECTED_USERS`.
+                Works with :obj:`~nerogram.enums.StoriesPrivacyRules.CLOSE_FRIENDS`
+                and :obj:`~nerogram.enums.StoriesPrivacyRules.SELECTED_USERS` only
 
             disallowed_users (List of ``int``, *optional*):
                 List of user_id whos disallow to view the stories.
-                Note: Works with :obj:`~pyrogram.enums.StoriesPrivacyRules.PUBLIC`
-                and :obj:`~pyrogram.enums.StoriesPrivacyRules.CONTACTS` only
+                Note: Works with :obj:`~nerogram.enums.StoriesPrivacyRules.PUBLIC`
+                and :obj:`~nerogram.enums.StoriesPrivacyRules.CONTACTS` only
 
         Returns:
-            On success, the edited :obj:`~pyrogram.types.Story` is returned.
+            On success, the edited :obj:`~nerogram.types.Story` is returned.
 
         Raises:
             RPCError: In case of a Telegram RPC error.
@@ -1579,7 +1579,7 @@ class Story(Object, Update):
         )
 
     async def export_link(self) -> "types.ExportedStoryLink":
-        """Bound method *export_link* of :obj:`~pyrogram.types.Story`.
+        """Bound method *export_link* of :obj:`~nerogram.types.Story`.
 
         Use as a shortcut for:
 
@@ -1604,7 +1604,7 @@ class Story(Object, Update):
         return await self._client.export_story_link(chat_id=self.chat.id, story_id=self.id)
 
     async def react(self, emoji: Union[int, str] = None) -> bool:
-        """Bound method *react* of :obj:`~pyrogram.types.Story`.
+        """Bound method *react* of :obj:`~nerogram.types.Story`.
 
         Use as a shortcut for:
 
@@ -1645,7 +1645,7 @@ class Story(Object, Update):
         disable_notification: bool = None,
         schedule_date: datetime = None
     ) -> Union["types.Message", List["types.Message"]]:
-        """Bound method *forward* of :obj:`~pyrogram.types.Story`.
+        """Bound method *forward* of :obj:`~nerogram.types.Story`.
 
         Use as a shortcut for:
 
@@ -1701,7 +1701,7 @@ class Story(Object, Update):
         progress: Callable = None,
         progress_args: tuple = ()
     ) -> str:
-        """Bound method *download* of :obj:`~pyrogram.types.Story`.
+        """Bound method *download* of :obj:`~nerogram.types.Story`.
 
         Use as a shortcut for:
 
@@ -1769,7 +1769,7 @@ class Story(Object, Update):
         )
 
     async def read(self) -> List[int]:
-        """Bound method *read* of :obj:`~pyrogram.types.Story`.
+        """Bound method *read* of :obj:`~nerogram.types.Story`.
 
         Example:
             .. code-block:: python

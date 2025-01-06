@@ -1,20 +1,20 @@
-#  Pyrogram - Telegram MTProto API Client Library for Python
+#  Nerogram - Telegram MTProto API Client Library for Python
 #  Copyright (C) 2017-present Dan <https://github.com/delivrance>
 #
-#  This file is part of Pyrogram.
+#  This file is part of Nerogram.
 #
-#  Pyrogram is free software: you can redistribute it and/or modify
+#  Nerogram is free software: you can redistribute it and/or modify
 #  it under the terms of the GNU Lesser General Public License as published
 #  by the Free Software Foundation, either version 3 of the License, or
 #  (at your option) any later version.
 #
-#  Pyrogram is distributed in the hope that it will be useful,
+#  Nerogram is distributed in the hope that it will be useful,
 #  but WITHOUT ANY WARRANTY; without even the implied warranty of
 #  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
 #  GNU Lesser General Public License for more details.
 #
 #  You should have received a copy of the GNU Lesser General Public License
-#  along with Pyrogram.  If not, see <http://www.gnu.org/licenses/>.
+#  along with Nerogram.  If not, see <http://www.gnu.org/licenses/>.
 
 from io import BytesIO
 
@@ -33,14 +33,14 @@ from typing import List, Optional, Any
 class MessageReactions(TLObject):  # type: ignore
     """Telegram API type.
 
-    Constructor of :obj:`~pyrogram.raw.base.MessageReactions`.
+    Constructor of :obj:`~nerogram.raw.base.MessageReactions`.
 
     Details:
         - Layer: ``166``
         - ID: ``4F2B9479``
 
     Parameters:
-        results (List of :obj:`ReactionCount <pyrogram.raw.base.ReactionCount>`):
+        results (List of :obj:`ReactionCount <nerogram.raw.base.ReactionCount>`):
             N/A
 
         min (``bool``, *optional*):
@@ -49,7 +49,7 @@ class MessageReactions(TLObject):  # type: ignore
         can_see_list (``bool``, *optional*):
             N/A
 
-        recent_reactions (List of :obj:`MessagePeerReaction <pyrogram.raw.base.MessagePeerReaction>`, *optional*):
+        recent_reactions (List of :obj:`MessagePeerReaction <nerogram.raw.base.MessagePeerReaction>`, *optional*):
             N/A
 
     """

@@ -1,20 +1,20 @@
-#  Pyrogram - Telegram MTProto API Client Library for Python
+#  Nerogram - Telegram MTProto API Client Library for Python
 #  Copyright (C) 2017-present Dan <https://github.com/delivrance>
 #
-#  This file is part of Pyrogram.
+#  This file is part of Nerogram.
 #
-#  Pyrogram is free software: you can redistribute it and/or modify
+#  Nerogram is free software: you can redistribute it and/or modify
 #  it under the terms of the GNU Lesser General Public License as published
 #  by the Free Software Foundation, either version 3 of the License, or
 #  (at your option) any later version.
 #
-#  Pyrogram is distributed in the hope that it will be useful,
+#  Nerogram is distributed in the hope that it will be useful,
 #  but WITHOUT ANY WARRANTY; without even the implied warranty of
 #  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
 #  GNU Lesser General Public License for more details.
 #
 #  You should have received a copy of the GNU Lesser General Public License
-#  along with Pyrogram.  If not, see <http://www.gnu.org/licenses/>.
+#  along with Nerogram.  If not, see <http://www.gnu.org/licenses/>.
 
 from io import BytesIO
 
@@ -38,7 +38,7 @@ class RequestCall(TLObject):  # type: ignore
         - ID: ``42FF96ED``
 
     Parameters:
-        user_id (:obj:`InputUser <pyrogram.raw.base.InputUser>`):
+        user_id (:obj:`InputUser <nerogram.raw.base.InputUser>`):
             N/A
 
         random_id (``int`` ``32-bit``):
@@ -47,14 +47,14 @@ class RequestCall(TLObject):  # type: ignore
         g_a_hash (``bytes``):
             N/A
 
-        protocol (:obj:`PhoneCallProtocol <pyrogram.raw.base.PhoneCallProtocol>`):
+        protocol (:obj:`PhoneCallProtocol <nerogram.raw.base.PhoneCallProtocol>`):
             N/A
 
         video (``bool``, *optional*):
             N/A
 
     Returns:
-        :obj:`phone.PhoneCall <pyrogram.raw.base.phone.PhoneCall>`
+        :obj:`phone.PhoneCall <nerogram.raw.base.phone.PhoneCall>`
     """
 
     __slots__: List[str] = ["user_id", "random_id", "g_a_hash", "protocol", "video"]

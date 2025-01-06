@@ -1,20 +1,20 @@
-#  Pyrogram - Telegram MTProto API Client Library for Python
+#  Nerogram - Telegram MTProto API Client Library for Python
 #  Copyright (C) 2017-present Dan <https://github.com/delivrance>
 #
-#  This file is part of Pyrogram.
+#  This file is part of Nerogram.
 #
-#  Pyrogram is free software: you can redistribute it and/or modify
+#  Nerogram is free software: you can redistribute it and/or modify
 #  it under the terms of the GNU Lesser General Public License as published
 #  by the Free Software Foundation, either version 3 of the License, or
 #  (at your option) any later version.
 #
-#  Pyrogram is distributed in the hope that it will be useful,
+#  Nerogram is distributed in the hope that it will be useful,
 #  but WITHOUT ANY WARRANTY; without even the implied warranty of
 #  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
 #  GNU Lesser General Public License for more details.
 #
 #  You should have received a copy of the GNU Lesser General Public License
-#  along with Pyrogram.  If not, see <http://www.gnu.org/licenses/>.
+#  along with Nerogram.  If not, see <http://www.gnu.org/licenses/>.
 
 from io import BytesIO
 
@@ -38,7 +38,7 @@ class UploadContactProfilePhoto(TLObject):  # type: ignore
         - ID: ``E14C4A71``
 
     Parameters:
-        user_id (:obj:`InputUser <pyrogram.raw.base.InputUser>`):
+        user_id (:obj:`InputUser <nerogram.raw.base.InputUser>`):
             N/A
 
         suggest (``bool``, *optional*):
@@ -47,20 +47,20 @@ class UploadContactProfilePhoto(TLObject):  # type: ignore
         save (``bool``, *optional*):
             N/A
 
-        file (:obj:`InputFile <pyrogram.raw.base.InputFile>`, *optional*):
+        file (:obj:`InputFile <nerogram.raw.base.InputFile>`, *optional*):
             N/A
 
-        video (:obj:`InputFile <pyrogram.raw.base.InputFile>`, *optional*):
+        video (:obj:`InputFile <nerogram.raw.base.InputFile>`, *optional*):
             N/A
 
         video_start_ts (``float`` ``64-bit``, *optional*):
             N/A
 
-        video_emoji_markup (:obj:`VideoSize <pyrogram.raw.base.VideoSize>`, *optional*):
+        video_emoji_markup (:obj:`VideoSize <nerogram.raw.base.VideoSize>`, *optional*):
             N/A
 
     Returns:
-        :obj:`photos.Photo <pyrogram.raw.base.photos.Photo>`
+        :obj:`photos.Photo <nerogram.raw.base.photos.Photo>`
     """
 
     __slots__: List[str] = ["user_id", "suggest", "save", "file", "video", "video_start_ts", "video_emoji_markup"]

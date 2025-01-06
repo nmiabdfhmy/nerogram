@@ -1,20 +1,20 @@
-#  Pyrogram - Telegram MTProto API Client Library for Python
+#  Nerogram - Telegram MTProto API Client Library for Python
 #  Copyright (C) 2017-present Dan <https://github.com/delivrance>
 #
-#  This file is part of Pyrogram.
+#  This file is part of Nerogram.
 #
-#  Pyrogram is free software: you can redistribute it and/or modify
+#  Nerogram is free software: you can redistribute it and/or modify
 #  it under the terms of the GNU Lesser General Public License as published
 #  by the Free Software Foundation, either version 3 of the License, or
 #  (at your option) any later version.
 #
-#  Pyrogram is distributed in the hope that it will be useful,
+#  Nerogram is distributed in the hope that it will be useful,
 #  but WITHOUT ANY WARRANTY; without even the implied warranty of
 #  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
 #  GNU Lesser General Public License for more details.
 #
 #  You should have received a copy of the GNU Lesser General Public License
-#  along with Pyrogram.  If not, see <http://www.gnu.org/licenses/>.
+#  along with Nerogram.  If not, see <http://www.gnu.org/licenses/>.
 
 from typing import Union, List, Match, Optional
 
@@ -37,14 +37,14 @@ class CallbackQuery(Object, Update):
         id (``str``):
             Unique identifier for this query.
 
-        from_user (:obj:`~pyrogram.types.User`):
+        from_user (:obj:`~nerogram.types.User`):
             Sender.
 
         chat_instance (``str``, *optional*):
             Global identifier, uniquely corresponding to the chat to which the message with the callback button was
             sent. Useful for high scores in games.
 
-        message (:obj:`~pyrogram.types.Message`, *optional*):
+        message (:obj:`~nerogram.types.Message`, *optional*):
             Message with the callback button that originated the query. Note that message content and message date will
             not be available if the message is too old.
 
@@ -59,7 +59,7 @@ class CallbackQuery(Object, Update):
 
         matches (List of regex Matches, *optional*):
             A list containing all `Match Objects <https://docs.python.org/3/library/re.html#match-objects>`_ that match
-            the data of this callback query. Only applicable when using :obj:`Filters.regex <pyrogram.Filters.regex>`.
+            the data of this callback query. Only applicable when using :obj:`Filters.regex <nerogram.Filters.regex>`.
     """
 
     def __init__(
@@ -148,7 +148,7 @@ class CallbackQuery(Object, Update):
         )
 
     async def answer(self, text: str = None, show_alert: bool = None, url: str = None, cache_time: int = 0):
-        """Bound method *answer* of :obj:`~pyrogram.types.CallbackQuery`.
+        """Bound method *answer* of :obj:`~nerogram.types.CallbackQuery`.
 
         Use this method as a shortcut for:
 
@@ -200,24 +200,24 @@ class CallbackQuery(Object, Update):
     ) -> Union["types.Message", bool]:
         """Edit the text of messages attached to callback queries.
 
-        Bound method *edit_message_text* of :obj:`~pyrogram.types.CallbackQuery`.
+        Bound method *edit_message_text* of :obj:`~nerogram.types.CallbackQuery`.
 
         Parameters:
             text (``str``):
                 New text of the message.
 
-            parse_mode (:obj:`~pyrogram.enums.ParseMode`, *optional*):
+            parse_mode (:obj:`~nerogram.enums.ParseMode`, *optional*):
                 By default, texts are parsed using both Markdown and HTML styles.
                 You can combine both syntaxes together.
 
             disable_web_page_preview (``bool``, *optional*):
                 Disables link previews for links in this message.
 
-            reply_markup (:obj:`~pyrogram.types.InlineKeyboardMarkup`, *optional*):
+            reply_markup (:obj:`~nerogram.types.InlineKeyboardMarkup`, *optional*):
                 An InlineKeyboardMarkup object.
 
         Returns:
-            :obj:`~pyrogram.types.Message` | ``bool``: On success, if the edited message was sent by the bot, the edited
+            :obj:`~nerogram.types.Message` | ``bool``: On success, if the edited message was sent by the bot, the edited
             message is returned, otherwise True is returned (message sent via the bot, as inline query result).
 
         Raises:
@@ -249,21 +249,21 @@ class CallbackQuery(Object, Update):
     ) -> Union["types.Message", bool]:
         """Edit the caption of media messages attached to callback queries.
 
-        Bound method *edit_message_caption* of :obj:`~pyrogram.types.CallbackQuery`.
+        Bound method *edit_message_caption* of :obj:`~nerogram.types.CallbackQuery`.
 
         Parameters:
             caption (``str``):
                 New caption of the message.
 
-            parse_mode (:obj:`~pyrogram.enums.ParseMode`, *optional*):
+            parse_mode (:obj:`~nerogram.enums.ParseMode`, *optional*):
                 By default, texts are parsed using both Markdown and HTML styles.
                 You can combine both syntaxes together.
 
-            reply_markup (:obj:`~pyrogram.types.InlineKeyboardMarkup`, *optional*):
+            reply_markup (:obj:`~nerogram.types.InlineKeyboardMarkup`, *optional*):
                 An InlineKeyboardMarkup object.
 
         Returns:
-            :obj:`~pyrogram.types.Message` | ``bool``: On success, if the edited message was sent by the bot, the edited
+            :obj:`~nerogram.types.Message` | ``bool``: On success, if the edited message was sent by the bot, the edited
             message is returned, otherwise True is returned (message sent via the bot, as inline query result).
 
         Raises:
@@ -278,17 +278,17 @@ class CallbackQuery(Object, Update):
     ) -> Union["types.Message", bool]:
         """Edit animation, audio, document, photo or video messages attached to callback queries.
 
-        Bound method *edit_message_media* of :obj:`~pyrogram.types.CallbackQuery`.
+        Bound method *edit_message_media* of :obj:`~nerogram.types.CallbackQuery`.
 
         Parameters:
-            media (:obj:`~pyrogram.types.InputMedia`):
+            media (:obj:`~nerogram.types.InputMedia`):
                 One of the InputMedia objects describing an animation, audio, document, photo or video.
 
-            reply_markup (:obj:`~pyrogram.types.InlineKeyboardMarkup`, *optional*):
+            reply_markup (:obj:`~nerogram.types.InlineKeyboardMarkup`, *optional*):
                 An InlineKeyboardMarkup object.
 
         Returns:
-            :obj:`~pyrogram.types.Message` | ``bool``: On success, if the edited message was sent by the bot, the edited
+            :obj:`~nerogram.types.Message` | ``bool``: On success, if the edited message was sent by the bot, the edited
             message is returned, otherwise True is returned (message sent via the bot, as inline query result).
 
         Raises:
@@ -314,14 +314,14 @@ class CallbackQuery(Object, Update):
     ) -> Union["types.Message", bool]:
         """Edit only the reply markup of messages attached to callback queries.
 
-        Bound method *edit_message_reply_markup* of :obj:`~pyrogram.types.CallbackQuery`.
+        Bound method *edit_message_reply_markup* of :obj:`~nerogram.types.CallbackQuery`.
 
         Parameters:
-            reply_markup (:obj:`~pyrogram.types.InlineKeyboardMarkup`):
+            reply_markup (:obj:`~nerogram.types.InlineKeyboardMarkup`):
                 An InlineKeyboardMarkup object.
 
         Returns:
-            :obj:`~pyrogram.types.Message` | ``bool``: On success, if the edited message was sent by the bot, the edited
+            :obj:`~nerogram.types.Message` | ``bool``: On success, if the edited message was sent by the bot, the edited
             message is returned, otherwise True is returned (message sent via the bot, as inline query result).
 
         Raises:

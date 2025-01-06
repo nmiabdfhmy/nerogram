@@ -1,20 +1,20 @@
-#  Pyrogram - Telegram MTProto API Client Library for Python
+#  Nerogram - Telegram MTProto API Client Library for Python
 #  Copyright (C) 2017-present Dan <https://github.com/delivrance>
 #
-#  This file is part of Pyrogram.
+#  This file is part of Nerogram.
 #
-#  Pyrogram is free software: you can redistribute it and/or modify
+#  Nerogram is free software: you can redistribute it and/or modify
 #  it under the terms of the GNU Lesser General Public License as published
 #  by the Free Software Foundation, either version 3 of the License, or
 #  (at your option) any later version.
 #
-#  Pyrogram is distributed in the hope that it will be useful,
+#  Nerogram is distributed in the hope that it will be useful,
 #  but WITHOUT ANY WARRANTY; without even the implied warranty of
 #  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
 #  GNU Lesser General Public License for more details.
 #
 #  You should have received a copy of the GNU Lesser General Public License
-#  along with Pyrogram.  If not, see <http://www.gnu.org/licenses/>.
+#  along with Nerogram.  If not, see <http://www.gnu.org/licenses/>.
 
 import ast
 import os
@@ -25,9 +25,9 @@ HOME = "compiler/docs"
 DESTINATION = "docs/source/telegram"
 PYROGRAM_API_DEST = "docs/source/api"
 
-FUNCTIONS_PATH = "pyrogram/raw/functions"
-TYPES_PATH = "pyrogram/raw/types"
-BASE_PATH = "pyrogram/raw/base"
+FUNCTIONS_PATH = "nerogram/raw/functions"
+TYPES_PATH = "nerogram/raw/types"
+BASE_PATH = "nerogram/raw/base"
 
 FUNCTIONS_BASE = "functions"
 TYPES_BASE = "types"
@@ -78,7 +78,7 @@ def generate(source_path, base):
                         page_template.format(
                             title=full_name,
                             title_markup="=" * len(full_name),
-                            full_class_path="pyrogram.raw.{}".format(
+                            full_class_path="nerogram.raw.{}".format(
                                 ".".join(full_path.split("/")[:-1]) + "." + name
                             )
                         )
@@ -100,14 +100,14 @@ def generate(source_path, base):
 
         if k != base:
             inner_path = base + "/" + k + "/index" + ".rst"
-            module = "pyrogram.raw.{}.{}".format(base, k)
+            module = "nerogram.raw.{}.{}".format(base, k)
         else:
             for i in sorted(list(all_entities), reverse=True):
                 if i != base:
                     entities.insert(0, "{0}/index".format(i))
 
             inner_path = base + "/index" + ".rst"
-            module = "pyrogram.raw.{}".format(base)
+            module = "nerogram.raw.{}".format(base)
 
         with open(DESTINATION + "/" + inner_path, "w", encoding="utf-8") as f:
             if k == base:
@@ -353,7 +353,7 @@ def pyrogram_api():
                     title = "{}()".format(method)
 
                     f2.write(title + "\n" + "=" * len(title) + "\n\n")
-                    f2.write(".. automethod:: pyrogram.Client.{}()".format(method))
+                    f2.write(".. automethod:: nerogram.Client.{}()".format(method))
 
             functions = ["idle", "compose"]
 
@@ -362,7 +362,7 @@ def pyrogram_api():
                     title = "{}()".format(func)
 
                     f2.write(title + "\n" + "=" * len(title) + "\n\n")
-                    f2.write(".. autofunction:: pyrogram.{}()".format(func))
+                    f2.write(".. autofunction:: nerogram.{}()".format(func))
 
         f.write(template.format(**fmt_keys))
 
@@ -518,7 +518,7 @@ def pyrogram_api():
                     title = "{}".format(type)
 
                     f2.write(title + "\n" + "=" * len(title) + "\n\n")
-                    f2.write(".. autoclass:: pyrogram.types.{}()\n".format(type))
+                    f2.write(".. autoclass:: nerogram.types.{}()\n".format(type))
 
         f.write(template.format(**fmt_keys))
 
@@ -632,7 +632,7 @@ def pyrogram_api():
                     title = "{}()".format(bm)
 
                     f2.write(title + "\n" + "=" * len(title) + "\n\n")
-                    f2.write(".. automethod:: pyrogram.types.{}()".format(bm))
+                    f2.write(".. automethod:: nerogram.types.{}()".format(bm))
 
         f.write(template.format(**fmt_keys))
 
@@ -656,9 +656,9 @@ def start():
 
 
 if "__main__" == __name__:
-    FUNCTIONS_PATH = "../../pyrogram/raw/functions"
-    TYPES_PATH = "../../pyrogram/raw/types"
-    BASE_PATH = "../../pyrogram/raw/base"
+    FUNCTIONS_PATH = "../../nerogram/raw/functions"
+    TYPES_PATH = "../../nerogram/raw/types"
+    BASE_PATH = "../../nerogram/raw/base"
     HOME = "."
     DESTINATION = "../../docs/source/telegram"
     PYROGRAM_API_DEST = "../../docs/source/api"

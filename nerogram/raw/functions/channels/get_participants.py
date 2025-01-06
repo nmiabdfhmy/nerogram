@@ -1,20 +1,20 @@
-#  Pyrogram - Telegram MTProto API Client Library for Python
+#  Nerogram - Telegram MTProto API Client Library for Python
 #  Copyright (C) 2017-present Dan <https://github.com/delivrance>
 #
-#  This file is part of Pyrogram.
+#  This file is part of Nerogram.
 #
-#  Pyrogram is free software: you can redistribute it and/or modify
+#  Nerogram is free software: you can redistribute it and/or modify
 #  it under the terms of the GNU Lesser General Public License as published
 #  by the Free Software Foundation, either version 3 of the License, or
 #  (at your option) any later version.
 #
-#  Pyrogram is distributed in the hope that it will be useful,
+#  Nerogram is distributed in the hope that it will be useful,
 #  but WITHOUT ANY WARRANTY; without even the implied warranty of
 #  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
 #  GNU Lesser General Public License for more details.
 #
 #  You should have received a copy of the GNU Lesser General Public License
-#  along with Pyrogram.  If not, see <http://www.gnu.org/licenses/>.
+#  along with Nerogram.  If not, see <http://www.gnu.org/licenses/>.
 
 from io import BytesIO
 
@@ -38,10 +38,10 @@ class GetParticipants(TLObject):  # type: ignore
         - ID: ``77CED9D0``
 
     Parameters:
-        channel (:obj:`InputChannel <pyrogram.raw.base.InputChannel>`):
+        channel (:obj:`InputChannel <nerogram.raw.base.InputChannel>`):
             N/A
 
-        filter (:obj:`ChannelParticipantsFilter <pyrogram.raw.base.ChannelParticipantsFilter>`):
+        filter (:obj:`ChannelParticipantsFilter <nerogram.raw.base.ChannelParticipantsFilter>`):
             N/A
 
         offset (``int`` ``32-bit``):
@@ -54,7 +54,7 @@ class GetParticipants(TLObject):  # type: ignore
             N/A
 
     Returns:
-        :obj:`channels.ChannelParticipants <pyrogram.raw.base.channels.ChannelParticipants>`
+        :obj:`channels.ChannelParticipants <nerogram.raw.base.channels.ChannelParticipants>`
     """
 
     __slots__: List[str] = ["channel", "filter", "offset", "limit", "hash"]

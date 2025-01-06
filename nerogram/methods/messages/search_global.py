@@ -1,20 +1,20 @@
-#  Pyrogram - Telegram MTProto API Client Library for Python
+#  Nerogram - Telegram MTProto API Client Library for Python
 #  Copyright (C) 2017-present Dan <https://github.com/delivrance>
 #
-#  This file is part of Pyrogram.
+#  This file is part of Nerogram.
 #
-#  Pyrogram is free software: you can redistribute it and/or modify
+#  Nerogram is free software: you can redistribute it and/or modify
 #  it under the terms of the GNU Lesser General Public License as published
 #  by the Free Software Foundation, either version 3 of the License, or
 #  (at your option) any later version.
 #
-#  Pyrogram is distributed in the hope that it will be useful,
+#  Nerogram is distributed in the hope that it will be useful,
 #  but WITHOUT ANY WARRANTY; without even the implied warranty of
 #  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
 #  GNU Lesser General Public License for more details.
 #
 #  You should have received a copy of the GNU Lesser General Public License
-#  along with Pyrogram.  If not, see <http://www.gnu.org/licenses/>.
+#  along with Nerogram.  If not, see <http://www.gnu.org/licenses/>.
 
 from typing import AsyncGenerator, Optional
 
@@ -33,7 +33,7 @@ class SearchGlobal:
     ) -> Optional[AsyncGenerator["types.Message", None]]:
         """Search messages globally from all of your chats.
 
-        If you want to get the messages count only, see :meth:`~pyrogram.Client.search_global_count`.
+        If you want to get the messages count only, see :meth:`~nerogram.Client.search_global_count`.
 
         .. note::
 
@@ -47,7 +47,7 @@ class SearchGlobal:
                 Text query string.
                 Use "@" to search for mentions.
             
-            filter (:obj:`~pyrogram.enums.MessagesFilter`, *optional*):
+            filter (:obj:`~nerogram.enums.MessagesFilter`, *optional*):
                 Pass a filter in order to search for specific kind of messages only.
                 Defaults to any message (no filter).
 
@@ -56,15 +56,15 @@ class SearchGlobal:
                 By default, no limit is applied and all messages are returned.
 
         Returns:
-            ``Generator``: A generator yielding :obj:`~pyrogram.types.Message` objects.
+            ``Generator``: A generator yielding :obj:`~nerogram.types.Message` objects.
 
         Example:
             .. code-block:: python
 
-                from pyrogram import enums
+                from nerogram import enums
 
-                # Search for "pyrogram". Get the first 50 results
-                async for message in app.search_global("pyrogram", limit=50):
+                # Search for "nerogram". Get the first 50 results
+                async for message in app.search_global("nerogram", limit=50):
                     print(message.text)
 
                 # Search for recent photos from Global. Get the first 20 results

@@ -1,20 +1,20 @@
-#  Pyrogram - Telegram MTProto API Client Library for Python
+#  Nerogram - Telegram MTProto API Client Library for Python
 #  Copyright (C) 2017-present Dan <https://github.com/delivrance>
 #
-#  This file is part of Pyrogram.
+#  This file is part of Nerogram.
 #
-#  Pyrogram is free software: you can redistribute it and/or modify
+#  Nerogram is free software: you can redistribute it and/or modify
 #  it under the terms of the GNU Lesser General Public License as published
 #  by the Free Software Foundation, either version 3 of the License, or
 #  (at your option) any later version.
 #
-#  Pyrogram is distributed in the hope that it will be useful,
+#  Nerogram is distributed in the hope that it will be useful,
 #  but WITHOUT ANY WARRANTY; without even the implied warranty of
 #  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
 #  GNU Lesser General Public License for more details.
 #
 #  You should have received a copy of the GNU Lesser General Public License
-#  along with Pyrogram.  If not, see <http://www.gnu.org/licenses/>.
+#  along with Nerogram.  If not, see <http://www.gnu.org/licenses/>.
 
 from typing import Callable
 
@@ -23,9 +23,9 @@ from .handler import Handler
 
 class UserStatusHandler(Handler):
     """The UserStatus handler class. Used to handle user status updates (user going online or offline).
-    It is intended to be used with :meth:`~pyrogram.Client.add_handler`.
+    It is intended to be used with :meth:`~nerogram.Client.add_handler`.
 
-    For a nicer way to register this handler, have a look at the :meth:`~pyrogram.Client.on_user_status` decorator.
+    For a nicer way to register this handler, have a look at the :meth:`~nerogram.Client.on_user_status` decorator.
 
     Parameters:
         callback (``Callable``):
@@ -36,10 +36,10 @@ class UserStatusHandler(Handler):
             Pass one or more filters to allow only a subset of users to be passed in your callback function.
 
     Other parameters:
-        client (:obj:`~pyrogram.Client`):
+        client (:obj:`~nerogram.Client`):
             The Client itself, useful when you want to call other API methods inside the user status handler.
 
-        user (:obj:`~pyrogram.types.User`):
+        user (:obj:`~nerogram.types.User`):
             The user containing the updated status.
     """
 

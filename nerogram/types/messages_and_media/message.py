@@ -1,20 +1,20 @@
-#  Pyrogram - Telegram MTProto API Client Library for Python
+#  Nerogram - Telegram MTProto API Client Library for Python
 #  Copyright (C) 2017-present Dan <https://github.com/delivrance>
 #
-#  This file is part of Pyrogram.
+#  This file is part of Nerogram.
 #
-#  Pyrogram is free software: you can redistribute it and/or modify
+#  Nerogram is free software: you can redistribute it and/or modify
 #  it under the terms of the GNU Lesser General Public License as published
 #  by the Free Software Foundation, either version 3 of the License, or
 #  (at your option) any later version.
 #
-#  Pyrogram is distributed in the hope that it will be useful,
+#  Nerogram is distributed in the hope that it will be useful,
 #  but WITHOUT ANY WARRANTY; without even the implied warranty of
 #  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
 #  GNU Lesser General Public License for more details.
 #
 #  You should have received a copy of the GNU Lesser General Public License
-#  along with Pyrogram.  If not, see <http://www.gnu.org/licenses/>.
+#  along with Nerogram.  If not, see <http://www.gnu.org/licenses/>.
 
 import logging
 from datetime import datetime
@@ -63,10 +63,10 @@ class Message(Object, Update):
         id (``int``):
             Unique message identifier inside this chat.
 
-        from_user (:obj:`~pyrogram.types.User`, *optional*):
+        from_user (:obj:`~nerogram.types.User`, *optional*):
             Sender, empty for messages sent to channels.
 
-        sender_chat (:obj:`~pyrogram.types.Chat`, *optional*):
+        sender_chat (:obj:`~nerogram.types.Chat`, *optional*):
             Sender of the message, sent on behalf of a chat.
             The channel itself for channel messages.
             The supergroup itself for messages from anonymous group administrators.
@@ -75,19 +75,19 @@ class Message(Object, Update):
         date (:py:obj:`~datetime.datetime`, *optional*):
             Date the message was sent.
 
-        chat (:obj:`~pyrogram.types.Chat`, *optional*):
+        chat (:obj:`~nerogram.types.Chat`, *optional*):
             Conversation the message belongs to.
 
-        topics (:obj:`~pyrogram.types.ForumTopic`, *optional*):
+        topics (:obj:`~nerogram.types.ForumTopic`, *optional*):
             Topic the message belongs to.
 
-        forward_from (:obj:`~pyrogram.types.User`, *optional*):
+        forward_from (:obj:`~nerogram.types.User`, *optional*):
             For forwarded messages, sender of the original message.
 
         forward_sender_name (``str``, *optional*):
             For messages forwarded from users who have hidden their accounts, name of the user.
 
-        forward_from_chat (:obj:`~pyrogram.types.Chat`, *optional*):
+        forward_from_chat (:obj:`~nerogram.types.Chat`, *optional*):
             For messages forwarded from channels, information about the original channel. For messages forwarded from anonymous group administrators, information about the original supergroup.
 
         forward_from_message_id (``int``, *optional*):
@@ -118,11 +118,11 @@ class Message(Object, Update):
         reply_to_top_message_id (``int``, *optional*):
             The id of the first message which started this message thread.
 
-        reply_to_message (:obj:`~pyrogram.types.Message`, *optional*):
+        reply_to_message (:obj:`~nerogram.types.Message`, *optional*):
             For replies, the original message. Note that the Message object in this field will not contain
             further reply_to_message fields even if it itself is a reply.
 
-        reply_to_story (:obj:`~pyrogram.types.Story`, *optional*):
+        reply_to_story (:obj:`~nerogram.types.Story`, *optional*):
             For replies, the original story.
 
         mentioned (``bool``, *optional*):
@@ -132,12 +132,12 @@ class Message(Object, Update):
             The message is empty.
             A message can be empty in case it was deleted or you tried to retrieve a message that doesn't exist yet.
 
-        service (:obj:`~pyrogram.enums.MessageServiceType`, *optional*):
+        service (:obj:`~nerogram.enums.MessageServiceType`, *optional*):
             The message is a service message.
             This field will contain the enumeration type of the service message.
             You can use ``service = getattr(message, message.service.value)`` to access the service message.
 
-        media (:obj:`~pyrogram.enums.MessageMediaType`, *optional*):
+        media (:obj:`~nerogram.enums.MessageMediaType`, *optional*):
             The message is a media message.
             This field will contain the enumeration type of the media message.
             You can use ``media = getattr(message, message.media.value)`` to access the media message.
@@ -173,44 +173,44 @@ class Message(Object, Update):
             *text.html* to get the marked up message text. In case there is no entity, the fields
             will contain the same text as *text*.
 
-        entities (List of :obj:`~pyrogram.types.MessageEntity`, *optional*):
+        entities (List of :obj:`~nerogram.types.MessageEntity`, *optional*):
             For text messages, special entities like usernames, URLs, bot commands, etc. that appear in the text.
 
-        caption_entities (List of :obj:`~pyrogram.types.MessageEntity`, *optional*):
+        caption_entities (List of :obj:`~nerogram.types.MessageEntity`, *optional*):
             For messages with a caption, special entities like usernames, URLs, bot commands, etc. that appear
             in the caption.
 
-        quote_entities (List of :obj:`~pyrogram.types.MessageEntity`, *optional*):
+        quote_entities (List of :obj:`~nerogram.types.MessageEntity`, *optional*):
             For quote messages, special entities like usernames, URLs, bot commands, etc. that appear in the text.
 
-        audio (:obj:`~pyrogram.types.Audio`, *optional*):
+        audio (:obj:`~nerogram.types.Audio`, *optional*):
             Message is an audio file, information about the file.
 
-        document (:obj:`~pyrogram.types.Document`, *optional*):
+        document (:obj:`~nerogram.types.Document`, *optional*):
             Message is a general file, information about the file.
 
-        photo (:obj:`~pyrogram.types.Photo`, *optional*):
+        photo (:obj:`~nerogram.types.Photo`, *optional*):
             Message is a photo, information about the photo.
 
-        sticker (:obj:`~pyrogram.types.Sticker`, *optional*):
+        sticker (:obj:`~nerogram.types.Sticker`, *optional*):
             Message is a sticker, information about the sticker.
 
-        animation (:obj:`~pyrogram.types.Animation`, *optional*):
+        animation (:obj:`~nerogram.types.Animation`, *optional*):
             Message is an animation, information about the animation.
 
-        game (:obj:`~pyrogram.types.Game`, *optional*):
+        game (:obj:`~nerogram.types.Game`, *optional*):
             Message is a game, information about the game.
 
-        story (:obj:`~pyrogram.types.MessageStory`, *optional*):
+        story (:obj:`~nerogram.types.MessageStory`, *optional*):
             Message is a story, information about the story.
 
-        video (:obj:`~pyrogram.types.Video`, *optional*):
+        video (:obj:`~nerogram.types.Video`, *optional*):
             Message is a video, information about the video.
 
-        voice (:obj:`~pyrogram.types.Voice`, *optional*):
+        voice (:obj:`~nerogram.types.Voice`, *optional*):
             Message is a voice message, information about the file.
 
-        video_note (:obj:`~pyrogram.types.VideoNote`, *optional*):
+        video_note (:obj:`~nerogram.types.VideoNote`, *optional*):
             Message is a video note, information about the video message.
 
         caption (``str``, *optional*):
@@ -219,35 +219,35 @@ class Message(Object, Update):
             *caption.html* to get the marked up caption text. In case there is no caption entity, the fields
             will contain the same text as *caption*.
 
-        contact (:obj:`~pyrogram.types.Contact`, *optional*):
+        contact (:obj:`~nerogram.types.Contact`, *optional*):
             Message is a shared contact, information about the contact.
 
-        location (:obj:`~pyrogram.types.Location`, *optional*):
+        location (:obj:`~nerogram.types.Location`, *optional*):
             Message is a shared location, information about the location.
 
-        venue (:obj:`~pyrogram.types.Venue`, *optional*):
+        venue (:obj:`~nerogram.types.Venue`, *optional*):
             Message is a venue, information about the venue.
 
-        web_page (:obj:`~pyrogram.types.WebPage`, *optional*):
+        web_page (:obj:`~nerogram.types.WebPage`, *optional*):
             Message was sent with a webpage preview.
 
-        poll (:obj:`~pyrogram.types.Poll`, *optional*):
+        poll (:obj:`~nerogram.types.Poll`, *optional*):
             Message is a native poll, information about the poll.
 
-        dice (:obj:`~pyrogram.types.Dice`, *optional*):
+        dice (:obj:`~nerogram.types.Dice`, *optional*):
             A dice containing a value that is randomly generated by Telegram.
 
-        new_chat_members (List of :obj:`~pyrogram.types.User`, *optional*):
+        new_chat_members (List of :obj:`~nerogram.types.User`, *optional*):
             New members that were added to the group or supergroup and information about them
             (the bot itself may be one of these members).
 
-        left_chat_member (:obj:`~pyrogram.types.User`, *optional*):
+        left_chat_member (:obj:`~nerogram.types.User`, *optional*):
             A member was removed from the group, information about them (this member may be the bot itself).
 
         new_chat_title (``str``, *optional*):
             A chat title was changed to this value.
 
-        new_chat_photo (:obj:`~pyrogram.types.Photo`, *optional*):
+        new_chat_photo (:obj:`~nerogram.types.Photo`, *optional*):
             A chat photo was change to this value.
 
         delete_chat_photo (``bool``, *optional*):
@@ -280,12 +280,12 @@ class Message(Object, Update):
             in interpreting it. But it is smaller than 52 bits, so a signed 64 bit integer or double-precision float
             type are safe for storing this identifier.
 
-        pinned_message (:obj:`~pyrogram.types.Message`, *optional*):
+        pinned_message (:obj:`~nerogram.types.Message`, *optional*):
             Specified message was pinned.
             Note that the Message object in this field will not contain further reply_to_message fields even if it
             is itself a reply.
 
-        game_high_score (:obj:`~pyrogram.types.GameHighScore`, *optional*):
+        game_high_score (:obj:`~nerogram.types.GameHighScore`, *optional*):
             The game score for a user.
             The reply_to_message field will contain the game Message.
 
@@ -295,7 +295,7 @@ class Message(Object, Update):
         forwards (``int``, *optional*):
             Channel post forwards.
 
-        via_bot (:obj:`~pyrogram.types.User`):
+        via_bot (:obj:`~nerogram.types.User`):
             The information of the bot that generated the message from an inline query of a user.
 
         outgoing (``bool``, *optional*):
@@ -309,51 +309,51 @@ class Message(Object, Update):
 
         matches (List of regex Matches, *optional*):
             A list containing all `Match Objects <https://docs.python.org/3/library/re.html#match-objects>`_ that match
-            the text of this message. Only applicable when using :obj:`Filters.regex <pyrogram.Filters.regex>`.
+            the text of this message. Only applicable when using :obj:`Filters.regex <nerogram.Filters.regex>`.
 
         command (List of ``str``, *optional*):
             A list containing the command and its arguments, if any.
             E.g.: "/start 1 2 3" would produce ["start", "1", "2", "3"].
-            Only applicable when using :obj:`~pyrogram.filters.command`.
+            Only applicable when using :obj:`~nerogram.filters.command`.
 
-        forum_topic_created (:obj:`~pyrogram.types.ForumTopicCreated`, *optional*):
+        forum_topic_created (:obj:`~nerogram.types.ForumTopicCreated`, *optional*):
             Service message: forum topic created
 
-        forum_topic_closed (:obj:`~pyrogram.types.ForumTopicClosed`, *optional*):
+        forum_topic_closed (:obj:`~nerogram.types.ForumTopicClosed`, *optional*):
             Service message: forum topic closed
 
-        forum_topic_reopened (:obj:`~pyrogram.types.ForumTopicReopened`, *optional*):
+        forum_topic_reopened (:obj:`~nerogram.types.ForumTopicReopened`, *optional*):
             Service message: forum topic reopened
 
-        forum_topic_edited (:obj:`~pyrogram.types.ForumTopicEdited`, *optional*):
+        forum_topic_edited (:obj:`~nerogram.types.ForumTopicEdited`, *optional*):
             Service message: forum topic edited
 
-        general_topic_hidden (:obj:`~pyrogram.types.GeneralTopicHidden`, *optional*):
+        general_topic_hidden (:obj:`~nerogram.types.GeneralTopicHidden`, *optional*):
             Service message: forum general topic hidden
 
-        general_topic_unhidden (:obj:`~pyrogram.types.GeneralTopicUnhidden`, *optional*):
+        general_topic_unhidden (:obj:`~nerogram.types.GeneralTopicUnhidden`, *optional*):
             Service message: forum general topic unhidden
 
-        video_chat_scheduled (:obj:`~pyrogram.types.VideoChatScheduled`, *optional*):
+        video_chat_scheduled (:obj:`~nerogram.types.VideoChatScheduled`, *optional*):
             Service message: voice chat scheduled.
 
-        video_chat_started (:obj:`~pyrogram.types.VideoChatStarted`, *optional*):
+        video_chat_started (:obj:`~nerogram.types.VideoChatStarted`, *optional*):
             Service message: the voice chat started.
 
-        video_chat_ended (:obj:`~pyrogram.types.VideoChatEnded`, *optional*):
+        video_chat_ended (:obj:`~nerogram.types.VideoChatEnded`, *optional*):
             Service message: the voice chat has ended.
 
-        video_chat_members_invited (:obj:`~pyrogram.types.VoiceChatParticipantsInvited`, *optional*):
+        video_chat_members_invited (:obj:`~nerogram.types.VoiceChatParticipantsInvited`, *optional*):
             Service message: new members were invited to the voice chat.
 
-        web_app_data (:obj:`~pyrogram.types.WebAppData`, *optional*):
+        web_app_data (:obj:`~nerogram.types.WebAppData`, *optional*):
             Service message: web app data sent to the bot.
 
-        reply_markup (:obj:`~pyrogram.types.InlineKeyboardMarkup` | :obj:`~pyrogram.types.ReplyKeyboardMarkup` | :obj:`~pyrogram.types.ReplyKeyboardRemove` | :obj:`~pyrogram.types.ForceReply`, *optional*):
+        reply_markup (:obj:`~nerogram.types.InlineKeyboardMarkup` | :obj:`~nerogram.types.ReplyKeyboardMarkup` | :obj:`~nerogram.types.ReplyKeyboardRemove` | :obj:`~nerogram.types.ForceReply`, *optional*):
             Additional interface options. An object for an inline keyboard, custom reply keyboard,
             instructions to remove reply keyboard or to force a reply from the user.
 
-        reactions (List of :obj:`~pyrogram.types.Reaction`):
+        reactions (List of :obj:`~nerogram.types.Reaction`):
             List of the reactions to this message.
 
         link (``str``, *property*):
@@ -1080,7 +1080,7 @@ class Message(Object, Update):
             return f"https://t.me/c/{utils.get_channel_id(self.chat.id)}/{self.id}"
 
     async def get_media_group(self) -> List["types.Message"]:
-        """Bound method *get_media_group* of :obj:`~pyrogram.types.Message`.
+        """Bound method *get_media_group* of :obj:`~nerogram.types.Message`.
 
         Use as a shortcut for:
 
@@ -1097,7 +1097,7 @@ class Message(Object, Update):
                 await message.get_media_group()
 
         Returns:
-            List of :obj:`~pyrogram.types.Message`: On success, a list of messages of the media group is returned.
+            List of :obj:`~nerogram.types.Message`: On success, a list of messages of the media group is returned.
 
         Raises:
             ValueError: In case the passed message id doesn't belong to a media group.
@@ -1124,7 +1124,7 @@ class Message(Object, Update):
         protect_content: bool = None,
         reply_markup=None
     ) -> "Message":
-        """Bound method *reply_text* of :obj:`~pyrogram.types.Message`.
+        """Bound method *reply_text* of :obj:`~nerogram.types.Message`.
 
         An alias exists as *reply*.
 
@@ -1152,11 +1152,11 @@ class Message(Object, Update):
                 If *reply_to_message_id* is passed, this parameter will be ignored.
                 Defaults to ``True`` in group chats and ``False`` in private chats.
 
-            parse_mode (:obj:`~pyrogram.enums.ParseMode`, *optional*):
+            parse_mode (:obj:`~nerogram.enums.ParseMode`, *optional*):
                 By default, texts are parsed using both Markdown and HTML styles.
                 You can combine both syntaxes together.
 
-            entities (List of :obj:`~pyrogram.types.MessageEntity`):
+            entities (List of :obj:`~nerogram.types.MessageEntity`):
                 List of special entities that appear in message text, which can be specified instead of *parse_mode*.
 
             disable_web_page_preview (``bool``, *optional*):
@@ -1175,7 +1175,7 @@ class Message(Object, Update):
             quote_text (``str``):
                 Text of the quote to be sent.
 
-            quote_entities (List of :obj:`~pyrogram.types.MessageEntity`):
+            quote_entities (List of :obj:`~nerogram.types.MessageEntity`):
                 List of special entities that appear in quote text, which can be specified instead of *parse_mode*.
 
             schedule_date (:py:obj:`~datetime.datetime`, *optional*):
@@ -1184,7 +1184,7 @@ class Message(Object, Update):
             protect_content (``bool``, *optional*):
                 Protects the contents of the sent message from forwarding and saving.
 
-            reply_markup (:obj:`~pyrogram.types.InlineKeyboardMarkup` | :obj:`~pyrogram.types.ReplyKeyboardMarkup` | :obj:`~pyrogram.types.ReplyKeyboardRemove` | :obj:`~pyrogram.types.ForceReply`, *optional*):
+            reply_markup (:obj:`~nerogram.types.InlineKeyboardMarkup` | :obj:`~nerogram.types.ReplyKeyboardMarkup` | :obj:`~nerogram.types.ReplyKeyboardRemove` | :obj:`~nerogram.types.ForceReply`, *optional*):
                 Additional interface options. An object for an inline keyboard, custom reply keyboard,
                 instructions to remove reply keyboard or to force a reply from the user.
 
@@ -1244,7 +1244,7 @@ class Message(Object, Update):
         progress: Callable = None,
         progress_args: tuple = ()
     ) -> "Message":
-        """Bound method *reply_animation* :obj:`~pyrogram.types.Message`.
+        """Bound method *reply_animation* :obj:`~nerogram.types.Message`.
 
         Use as a shortcut for:
 
@@ -1275,11 +1275,11 @@ class Message(Object, Update):
             caption (``str``, *optional*):
                 Animation caption, 0-1024 characters.
 
-            parse_mode (:obj:`~pyrogram.enums.ParseMode`, *optional*):
+            parse_mode (:obj:`~nerogram.enums.ParseMode`, *optional*):
                 By default, texts are parsed using both Markdown and HTML styles.
                 You can combine both syntaxes together.
 
-            caption_entities (List of :obj:`~pyrogram.types.MessageEntity`):
+            caption_entities (List of :obj:`~nerogram.types.MessageEntity`):
                 List of special entities that appear in the caption, which can be specified instead of *parse_mode*.
 
             has_spoiler (``bool``, *optional*):
@@ -1313,10 +1313,10 @@ class Message(Object, Update):
             quote_text (``str``):
                 Text of the quote to be sent.
 
-            quote_entities (List of :obj:`~pyrogram.types.MessageEntity`):
+            quote_entities (List of :obj:`~nerogram.types.MessageEntity`):
                 List of special entities that appear in quote text, which can be specified instead of *parse_mode*.
 
-            reply_markup (:obj:`~pyrogram.types.InlineKeyboardMarkup` | :obj:`~pyrogram.types.ReplyKeyboardMarkup` | :obj:`~pyrogram.types.ReplyKeyboardRemove` | :obj:`~pyrogram.types.ForceReply`, *optional*):
+            reply_markup (:obj:`~nerogram.types.InlineKeyboardMarkup` | :obj:`~nerogram.types.ReplyKeyboardMarkup` | :obj:`~nerogram.types.ReplyKeyboardRemove` | :obj:`~nerogram.types.ForceReply`, *optional*):
                 Additional interface options. An object for an inline keyboard, custom reply keyboard,
                 instructions to remove reply keyboard or to force a reply from the user.
 
@@ -1343,8 +1343,8 @@ class Message(Object, Update):
                 You can either keep ``*args`` or add every single extra argument in your function signature.
 
         Returns:
-            On success, the sent :obj:`~pyrogram.types.Message` is returned.
-            In case the upload is deliberately stopped with :meth:`~pyrogram.Client.stop_transmission`, None is returned
+            On success, the sent :obj:`~nerogram.types.Message` is returned.
+            In case the upload is deliberately stopped with :meth:`~nerogram.Client.stop_transmission`, None is returned
             instead.
 
         Raises:
@@ -1402,7 +1402,7 @@ class Message(Object, Update):
         progress: Callable = None,
         progress_args: tuple = ()
     ) -> "Message":
-        """Bound method *reply_audio* of :obj:`~pyrogram.types.Message`.
+        """Bound method *reply_audio* of :obj:`~nerogram.types.Message`.
 
         Use as a shortcut for:
 
@@ -1433,11 +1433,11 @@ class Message(Object, Update):
             caption (``str``, *optional*):
                 Audio caption, 0-1024 characters.
 
-            parse_mode (:obj:`~pyrogram.enums.ParseMode`, *optional*):
+            parse_mode (:obj:`~nerogram.enums.ParseMode`, *optional*):
                 By default, texts are parsed using both Markdown and HTML styles.
                 You can combine both syntaxes together.
 
-            caption_entities (List of :obj:`~pyrogram.types.MessageEntity`):
+            caption_entities (List of :obj:`~nerogram.types.MessageEntity`):
                 List of special entities that appear in the caption, which can be specified instead of *parse_mode*.
 
             duration (``int``, *optional*):
@@ -1468,10 +1468,10 @@ class Message(Object, Update):
             quote_text (``str``):
                 Text of the quote to be sent.
 
-            quote_entities (List of :obj:`~pyrogram.types.MessageEntity`):
+            quote_entities (List of :obj:`~nerogram.types.MessageEntity`):
                 List of special entities that appear in quote text, which can be specified instead of *parse_mode*.
 
-            reply_markup (:obj:`~pyrogram.types.InlineKeyboardMarkup` | :obj:`~pyrogram.types.ReplyKeyboardMarkup` | :obj:`~pyrogram.types.ReplyKeyboardRemove` | :obj:`~pyrogram.types.ForceReply`, *optional*):
+            reply_markup (:obj:`~nerogram.types.InlineKeyboardMarkup` | :obj:`~nerogram.types.ReplyKeyboardMarkup` | :obj:`~nerogram.types.ReplyKeyboardRemove` | :obj:`~nerogram.types.ForceReply`, *optional*):
                 Additional interface options. An object for an inline keyboard, custom reply keyboard,
                 instructions to remove reply keyboard or to force a reply from the user.
 
@@ -1498,8 +1498,8 @@ class Message(Object, Update):
                 You can either keep ``*args`` or add every single extra argument in your function signature.
 
         Returns:
-            On success, the sent :obj:`~pyrogram.types.Message` is returned.
-            In case the upload is deliberately stopped with :meth:`~pyrogram.Client.stop_transmission`, None is returned
+            On success, the sent :obj:`~nerogram.types.Message` is returned.
+            In case the upload is deliberately stopped with :meth:`~nerogram.Client.stop_transmission`, None is returned
             instead.
 
         Raises:
@@ -1550,7 +1550,7 @@ class Message(Object, Update):
             "types.ForceReply"
         ] = None
     ) -> "Message":
-        """Bound method *reply_cached_media* of :obj:`~pyrogram.types.Message`.
+        """Bound method *reply_cached_media* of :obj:`~nerogram.types.Message`.
 
         Use as a shortcut for:
 
@@ -1579,11 +1579,11 @@ class Message(Object, Update):
             caption (``bool``, *optional*):
                 Media caption, 0-1024 characters.
 
-            parse_mode (:obj:`~pyrogram.enums.ParseMode`, *optional*):
+            parse_mode (:obj:`~nerogram.enums.ParseMode`, *optional*):
                 By default, texts are parsed using both Markdown and HTML styles.
                 You can combine both syntaxes together.
 
-            caption_entities (List of :obj:`~pyrogram.types.MessageEntity`):
+            caption_entities (List of :obj:`~nerogram.types.MessageEntity`):
                 List of special entities that appear in the caption, which can be specified instead of *parse_mode*.
 
             disable_notification (``bool``, *optional*):
@@ -1599,15 +1599,15 @@ class Message(Object, Update):
             quote_text (``str``):
                 Text of the quote to be sent.
 
-            quote_entities (List of :obj:`~pyrogram.types.MessageEntity`):
+            quote_entities (List of :obj:`~nerogram.types.MessageEntity`):
                 List of special entities that appear in quote text, which can be specified instead of *parse_mode*.
 
-            reply_markup (:obj:`~pyrogram.types.InlineKeyboardMarkup` | :obj:`~pyrogram.types.ReplyKeyboardMarkup` | :obj:`~pyrogram.types.ReplyKeyboardRemove` | :obj:`~pyrogram.types.ForceReply`, *optional*):
+            reply_markup (:obj:`~nerogram.types.InlineKeyboardMarkup` | :obj:`~nerogram.types.ReplyKeyboardMarkup` | :obj:`~nerogram.types.ReplyKeyboardRemove` | :obj:`~nerogram.types.ForceReply`, *optional*):
                 Additional interface options. An object for an inline keyboard, custom reply keyboard,
                 instructions to remove reply keyboard or to force a reply from the user.
 
         Returns:
-            On success, the sent :obj:`~pyrogram.types.Message` is returned.
+            On success, the sent :obj:`~nerogram.types.Message` is returned.
 
         Raises:
             RPCError: In case of a Telegram RPC error.
@@ -1633,13 +1633,13 @@ class Message(Object, Update):
         )
 
     async def reply_chat_action(self, action: "enums.ChatAction") -> bool:
-        """Bound method *reply_chat_action* of :obj:`~pyrogram.types.Message`.
+        """Bound method *reply_chat_action* of :obj:`~nerogram.types.Message`.
 
         Use as a shortcut for:
 
         .. code-block:: python
 
-            from pyrogram import enums
+            from nerogram import enums
 
             await client.send_chat_action(
                 chat_id=message.chat.id,
@@ -1649,12 +1649,12 @@ class Message(Object, Update):
         Example:
             .. code-block:: python
 
-                from pyrogram import enums
+                from nerogram import enums
 
                 await message.reply_chat_action(enums.ChatAction.TYPING)
 
         Parameters:
-            action (:obj:`~pyrogram.enums.ChatAction`):
+            action (:obj:`~nerogram.enums.ChatAction`):
                 Type of action to broadcast.
 
         Returns:
@@ -1689,7 +1689,7 @@ class Message(Object, Update):
             "types.ForceReply"
         ] = None
     ) -> "Message":
-        """Bound method *reply_contact* of :obj:`~pyrogram.types.Message`.
+        """Bound method *reply_contact* of :obj:`~nerogram.types.Message`.
 
         Use as a shortcut for:
 
@@ -1737,19 +1737,19 @@ class Message(Object, Update):
             quote_text (``str``):
                 Text of the quote to be sent.
 
-            parse_mode (:obj:`~pyrogram.enums.ParseMode`, *optional*):
+            parse_mode (:obj:`~nerogram.enums.ParseMode`, *optional*):
                 By default, texts are parsed using both Markdown and HTML styles.
                 You can combine both syntaxes together.
 
-            quote_entities (List of :obj:`~pyrogram.types.MessageEntity`):
+            quote_entities (List of :obj:`~nerogram.types.MessageEntity`):
                 List of special entities that appear in quote text, which can be specified instead of *parse_mode*.
 
-            reply_markup (:obj:`~pyrogram.types.InlineKeyboardMarkup` | :obj:`~pyrogram.types.ReplyKeyboardMarkup` | :obj:`~pyrogram.types.ReplyKeyboardRemove` | :obj:`~pyrogram.types.ForceReply`, *optional*):
+            reply_markup (:obj:`~nerogram.types.InlineKeyboardMarkup` | :obj:`~nerogram.types.ReplyKeyboardMarkup` | :obj:`~nerogram.types.ReplyKeyboardRemove` | :obj:`~nerogram.types.ForceReply`, *optional*):
                 Additional interface options. An object for an inline keyboard, custom reply keyboard,
                 instructions to remove reply keyboard or to force a reply from the user.
 
         Returns:
-            On success, the sent :obj:`~pyrogram.types.Message` is returned.
+            On success, the sent :obj:`~nerogram.types.Message` is returned.
 
         Raises:
             RPCError: In case of a Telegram RPC error.
@@ -1800,7 +1800,7 @@ class Message(Object, Update):
         progress: Callable = None,
         progress_args: tuple = ()
     ) -> "Message":
-        """Bound method *reply_document* of :obj:`~pyrogram.types.Message`.
+        """Bound method *reply_document* of :obj:`~nerogram.types.Message`.
 
         Use as a shortcut for:
 
@@ -1837,11 +1837,11 @@ class Message(Object, Update):
             caption (``str``, *optional*):
                 Document caption, 0-1024 characters.
 
-            parse_mode (:obj:`~pyrogram.enums.ParseMode`, *optional*):
+            parse_mode (:obj:`~nerogram.enums.ParseMode`, *optional*):
                 By default, texts are parsed using both Markdown and HTML styles.
                 You can combine both syntaxes together.
 
-            caption_entities (List of :obj:`~pyrogram.types.MessageEntity`):
+            caption_entities (List of :obj:`~nerogram.types.MessageEntity`):
                 List of special entities that appear in the caption, which can be specified instead of *parse_mode*.
 
             file_name (``str``, *optional*):
@@ -1866,17 +1866,17 @@ class Message(Object, Update):
             quote_text (``str``):
                 Text of the quote to be sent.
 
-            parse_mode (:obj:`~pyrogram.enums.ParseMode`, *optional*):
+            parse_mode (:obj:`~nerogram.enums.ParseMode`, *optional*):
                 By default, texts are parsed using both Markdown and HTML styles.
                 You can combine both syntaxes together.
 
-            quote_entities (List of :obj:`~pyrogram.types.MessageEntity`):
+            quote_entities (List of :obj:`~nerogram.types.MessageEntity`):
                 List of special entities that appear in quote text, which can be specified instead of *parse_mode*.
 
             schedule_date (:py:obj:`~datetime.datetime`, *optional*):
                 Date when the message will be automatically sent.
 
-            reply_markup (:obj:`~pyrogram.types.InlineKeyboardMarkup` | :obj:`~pyrogram.types.ReplyKeyboardMarkup` | :obj:`~pyrogram.types.ReplyKeyboardRemove` | :obj:`~pyrogram.types.ForceReply`, *optional*):
+            reply_markup (:obj:`~nerogram.types.InlineKeyboardMarkup` | :obj:`~nerogram.types.ReplyKeyboardMarkup` | :obj:`~nerogram.types.ReplyKeyboardRemove` | :obj:`~nerogram.types.ForceReply`, *optional*):
                 Additional interface options. An object for an inline keyboard, custom reply keyboard,
                 instructions to remove reply keyboard or to force a reply from the user.
 
@@ -1903,8 +1903,8 @@ class Message(Object, Update):
                 You can either keep ``*args`` or add every single extra argument in your function signature.
 
         Returns:
-            On success, the sent :obj:`~pyrogram.types.Message` is returned.
-            In case the upload is deliberately stopped with :meth:`~pyrogram.Client.stop_transmission`, None is returned
+            On success, the sent :obj:`~nerogram.types.Message` is returned.
+            In case the upload is deliberately stopped with :meth:`~nerogram.Client.stop_transmission`, None is returned
             instead.
 
         Raises:
@@ -1950,7 +1950,7 @@ class Message(Object, Update):
             "types.ForceReply"
         ] = None
     ) -> "Message":
-        """Bound method *reply_game* of :obj:`~pyrogram.types.Message`.
+        """Bound method *reply_game* of :obj:`~nerogram.types.Message`.
 
         Use as a shortcut for:
 
@@ -1985,12 +1985,12 @@ class Message(Object, Update):
             reply_to_message_id (``int``, *optional*):
                 If the message is a reply, ID of the original message.
 
-            reply_markup (:obj:`~pyrogram.types.InlineKeyboardMarkup`, *optional*):
+            reply_markup (:obj:`~nerogram.types.InlineKeyboardMarkup`, *optional*):
                 An object for an inline keyboard. If empty, one ‘Play game_title’ button will be shown automatically.
                 If not empty, the first button must launch the game.
 
         Returns:
-            On success, the sent :obj:`~pyrogram.types.Message` is returned.
+            On success, the sent :obj:`~nerogram.types.Message` is returned.
 
         Raises:
             RPCError: In case of a Telegram RPC error.
@@ -2022,7 +2022,7 @@ class Message(Object, Update):
         parse_mode: Optional["enums.ParseMode"] = None,
         quote_entities: List["types.MessageEntity"] = None
     ) -> "Message":
-        """Bound method *reply_inline_bot_result* of :obj:`~pyrogram.types.Message`.
+        """Bound method *reply_inline_bot_result* of :obj:`~nerogram.types.Message`.
 
         Use as a shortcut for:
 
@@ -2064,11 +2064,11 @@ class Message(Object, Update):
             quote_text (``str``):
                 Text of the quote to be sent.
 
-            parse_mode (:obj:`~pyrogram.enums.ParseMode`, *optional*):
+            parse_mode (:obj:`~nerogram.enums.ParseMode`, *optional*):
                 By default, texts are parsed using both Markdown and HTML styles.
                 You can combine both syntaxes together.
 
-            quote_entities (List of :obj:`~pyrogram.types.MessageEntity`):
+            quote_entities (List of :obj:`~nerogram.types.MessageEntity`):
                 List of special entities that appear in quote text, which can be specified instead of *parse_mode*.
 
         Returns:
@@ -2112,7 +2112,7 @@ class Message(Object, Update):
             "types.ForceReply"
         ] = None
     ) -> "Message":
-        """Bound method *reply_location* of :obj:`~pyrogram.types.Message`.
+        """Bound method *reply_location* of :obj:`~nerogram.types.Message`.
 
         Use as a shortcut for:
 
@@ -2154,15 +2154,15 @@ class Message(Object, Update):
             quote_text (``str``):
                 Text of the quote to be sent.
 
-            quote_entities (List of :obj:`~pyrogram.types.MessageEntity`):
+            quote_entities (List of :obj:`~nerogram.types.MessageEntity`):
                 List of special entities that appear in quote text, which can be specified instead of *parse_mode*.
 
-            reply_markup (:obj:`~pyrogram.types.InlineKeyboardMarkup` | :obj:`~pyrogram.types.ReplyKeyboardMarkup` | :obj:`~pyrogram.types.ReplyKeyboardRemove` | :obj:`~pyrogram.types.ForceReply`, *optional*):
+            reply_markup (:obj:`~nerogram.types.InlineKeyboardMarkup` | :obj:`~nerogram.types.ReplyKeyboardMarkup` | :obj:`~nerogram.types.ReplyKeyboardRemove` | :obj:`~nerogram.types.ForceReply`, *optional*):
                 Additional interface options. An object for an inline keyboard, custom reply keyboard,
                 instructions to remove reply keyboard or to force a reply from the user.
 
         Returns:
-            On success, the sent :obj:`~pyrogram.types.Message` is returned.
+            On success, the sent :obj:`~nerogram.types.Message` is returned.
 
         Raises:
             RPCError: In case of a Telegram RPC error.
@@ -2196,7 +2196,7 @@ class Message(Object, Update):
         parse_mode: Optional["enums.ParseMode"] = None,
         quote_entities: List["types.MessageEntity"] = None
     ) -> List["types.Message"]:
-        """Bound method *reply_media_group* of :obj:`~pyrogram.types.Message`.
+        """Bound method *reply_media_group* of :obj:`~nerogram.types.Message`.
 
         Use as a shortcut for:
 
@@ -2214,8 +2214,8 @@ class Message(Object, Update):
 
         Parameters:
             media (``list``):
-                A list containing either :obj:`~pyrogram.types.InputMediaPhoto` or
-                :obj:`~pyrogram.types.InputMediaVideo` objects
+                A list containing either :obj:`~nerogram.types.InputMediaPhoto` or
+                :obj:`~nerogram.types.InputMediaVideo` objects
                 describing photos and videos to be sent, must include 2–10 items.
 
             quote (``bool``, *optional*):
@@ -2236,15 +2236,15 @@ class Message(Object, Update):
             quote_text (``str``):
                 Text of the quote to be sent.
 
-            parse_mode (:obj:`~pyrogram.enums.ParseMode`, *optional*):
+            parse_mode (:obj:`~nerogram.enums.ParseMode`, *optional*):
                 By default, texts are parsed using both Markdown and HTML styles.
                 You can combine both syntaxes together.
 
-            quote_entities (List of :obj:`~pyrogram.types.MessageEntity`):
+            quote_entities (List of :obj:`~nerogram.types.MessageEntity`):
                 List of special entities that appear in quote text, which can be specified instead of *parse_mode*.
 
         Returns:
-            On success, a :obj:`~pyrogram.types.Messages` object is returned containing all the
+            On success, a :obj:`~nerogram.types.Messages` object is returned containing all the
             single messages sent.
 
         Raises:
@@ -2290,7 +2290,7 @@ class Message(Object, Update):
         progress: Callable = None,
         progress_args: tuple = ()
     ) -> "Message":
-        """Bound method *reply_photo* of :obj:`~pyrogram.types.Message`.
+        """Bound method *reply_photo* of :obj:`~nerogram.types.Message`.
 
         Use as a shortcut for:
 
@@ -2321,11 +2321,11 @@ class Message(Object, Update):
             caption (``str``, *optional*):
                 Photo caption, 0-1024 characters.
 
-            parse_mode (:obj:`~pyrogram.enums.ParseMode`, *optional*):
+            parse_mode (:obj:`~nerogram.enums.ParseMode`, *optional*):
                 By default, texts are parsed using both Markdown and HTML styles.
                 You can combine both syntaxes together.
 
-            caption_entities (List of :obj:`~pyrogram.types.MessageEntity`):
+            caption_entities (List of :obj:`~nerogram.types.MessageEntity`):
                 List of special entities that appear in the caption, which can be specified instead of *parse_mode*.
 
             has_spoiler (``bool``, *optional*):
@@ -2349,10 +2349,10 @@ class Message(Object, Update):
             quote_text (``str``):
                 Text of the quote to be sent.
 
-            quote_entities (List of :obj:`~pyrogram.types.MessageEntity`):
+            quote_entities (List of :obj:`~nerogram.types.MessageEntity`):
                 List of special entities that appear in quote text, which can be specified instead of *parse_mode*.
 
-            reply_markup (:obj:`~pyrogram.types.InlineKeyboardMarkup` | :obj:`~pyrogram.types.ReplyKeyboardMarkup` | :obj:`~pyrogram.types.ReplyKeyboardRemove` | :obj:`~pyrogram.types.ForceReply`, *optional*):
+            reply_markup (:obj:`~nerogram.types.InlineKeyboardMarkup` | :obj:`~nerogram.types.ReplyKeyboardMarkup` | :obj:`~nerogram.types.ReplyKeyboardRemove` | :obj:`~nerogram.types.ForceReply`, *optional*):
                 Additional interface options. An object for an inline keyboard, custom reply keyboard,
                 instructions to remove reply keyboard or to force a reply from the user.
 
@@ -2379,8 +2379,8 @@ class Message(Object, Update):
                 You can either keep ``*args`` or add every single extra argument in your function signature.
 
         Returns:
-            On success, the sent :obj:`~pyrogram.types.Message` is returned.
-            In case the upload is deliberately stopped with :meth:`~pyrogram.Client.stop_transmission`, None is returned
+            On success, the sent :obj:`~nerogram.types.Message` is returned.
+            In case the upload is deliberately stopped with :meth:`~nerogram.Client.stop_transmission`, None is returned
             instead.
 
         Raises:
@@ -2440,7 +2440,7 @@ class Message(Object, Update):
             "types.ForceReply"
         ] = None
     ) -> "Message":
-        """Bound method *reply_poll* of :obj:`~pyrogram.types.Message`.
+        """Bound method *reply_poll* of :obj:`~nerogram.types.Message`.
 
         Use as a shortcut for:
 
@@ -2468,9 +2468,9 @@ class Message(Object, Update):
                 True, if the poll needs to be anonymous.
                 Defaults to True.
 
-            type (:obj`~pyrogram.enums.PollType`, *optional*):
-                Poll type, :obj:`~pyrogram.enums.PollType.QUIZ` or :obj:`~pyrogram.enums.PollType.REGULAR`.
-                Defaults to :obj:`~pyrogram.enums.PollType.REGULAR`.
+            type (:obj`~nerogram.enums.PollType`, *optional*):
+                Poll type, :obj:`~nerogram.enums.PollType.QUIZ` or :obj:`~nerogram.enums.PollType.REGULAR`.
+                Defaults to :obj:`~nerogram.enums.PollType.REGULAR`.
 
             allows_multiple_answers (``bool``, *optional*):
                 True, if the poll allows multiple answers, ignored for polls in quiz mode.
@@ -2483,11 +2483,11 @@ class Message(Object, Update):
                 Text that is shown when a user chooses an incorrect answer or taps on the lamp icon in a quiz-style
                 poll, 0-200 characters with at most 2 line feeds after entities parsing.
 
-            explanation_parse_mode (:obj:`~pyrogram.enums.ParseMode`, *optional*):
+            explanation_parse_mode (:obj:`~nerogram.enums.ParseMode`, *optional*):
                 By default, texts are parsed using both Markdown and HTML styles.
                 You can combine both syntaxes together.
 
-            explanation_entities (List of :obj:`~pyrogram.types.MessageEntity`):
+            explanation_entities (List of :obj:`~nerogram.types.MessageEntity`):
                 List of special entities that appear in the poll explanation, which can be specified instead of
                 *parse_mode*.
 
@@ -2525,22 +2525,22 @@ class Message(Object, Update):
             quote_text (``str``):
                 Text of the quote to be sent.
 
-            parse_mode (:obj:`~pyrogram.enums.ParseMode`, *optional*):
+            parse_mode (:obj:`~nerogram.enums.ParseMode`, *optional*):
                 By default, texts are parsed using both Markdown and HTML styles.
                 You can combine both syntaxes together.
 
-            quote_entities (List of :obj:`~pyrogram.types.MessageEntity`):
+            quote_entities (List of :obj:`~nerogram.types.MessageEntity`):
                 List of special entities that appear in quote text, which can be specified instead of *parse_mode*.
 
             schedule_date (:py:obj:`~datetime.datetime`, *optional*):
                 Date when the message will be automatically sent.
 
-            reply_markup (:obj:`~pyrogram.types.InlineKeyboardMarkup` | :obj:`~pyrogram.types.ReplyKeyboardMarkup` | :obj:`~pyrogram.types.ReplyKeyboardRemove` | :obj:`~pyrogram.types.ForceReply`, *optional*):
+            reply_markup (:obj:`~nerogram.types.InlineKeyboardMarkup` | :obj:`~nerogram.types.ReplyKeyboardMarkup` | :obj:`~nerogram.types.ReplyKeyboardRemove` | :obj:`~nerogram.types.ForceReply`, *optional*):
                 Additional interface options. An object for an inline keyboard, custom reply keyboard,
                 instructions to remove reply keyboard or to force a reply from the user.
 
         Returns:
-            On success, the sent :obj:`~pyrogram.types.Message` is returned.
+            On success, the sent :obj:`~nerogram.types.Message` is returned.
 
         Raises:
             RPCError: In case of a Telegram RPC error.
@@ -2595,7 +2595,7 @@ class Message(Object, Update):
         progress: Callable = None,
         progress_args: tuple = ()
     ) -> "Message":
-        """Bound method *reply_sticker* of :obj:`~pyrogram.types.Message`.
+        """Bound method *reply_sticker* of :obj:`~nerogram.types.Message`.
 
         Use as a shortcut for:
 
@@ -2636,14 +2636,14 @@ class Message(Object, Update):
             quote_text (``str``):
                 Text of the quote to be sent.
 
-            parse_mode (:obj:`~pyrogram.enums.ParseMode`, *optional*):
+            parse_mode (:obj:`~nerogram.enums.ParseMode`, *optional*):
                 By default, texts are parsed using both Markdown and HTML styles.
                 You can combine both syntaxes together.
 
-            quote_entities (List of :obj:`~pyrogram.types.MessageEntity`):
+            quote_entities (List of :obj:`~nerogram.types.MessageEntity`):
                 List of special entities that appear in quote text, which can be specified instead of *parse_mode*.
 
-            reply_markup (:obj:`~pyrogram.types.InlineKeyboardMarkup` | :obj:`~pyrogram.types.ReplyKeyboardMarkup` | :obj:`~pyrogram.types.ReplyKeyboardRemove` | :obj:`~pyrogram.types.ForceReply`, *optional*):
+            reply_markup (:obj:`~nerogram.types.InlineKeyboardMarkup` | :obj:`~nerogram.types.ReplyKeyboardMarkup` | :obj:`~nerogram.types.ReplyKeyboardRemove` | :obj:`~nerogram.types.ForceReply`, *optional*):
                 Additional interface options. An object for an inline keyboard, custom reply keyboard,
                 instructions to remove reply keyboard or to force a reply from the user.
 
@@ -2670,8 +2670,8 @@ class Message(Object, Update):
                 You can either keep ``*args`` or add every single extra argument in your function signature.
 
         Returns:
-            On success, the sent :obj:`~pyrogram.types.Message` is returned.
-            In case the upload is deliberately stopped with :meth:`~pyrogram.Client.stop_transmission`, None is returned
+            On success, the sent :obj:`~nerogram.types.Message` is returned.
+            In case the upload is deliberately stopped with :meth:`~nerogram.Client.stop_transmission`, None is returned
             instead.
 
         Raises:
@@ -2719,7 +2719,7 @@ class Message(Object, Update):
             "types.ForceReply"
         ] = None
     ) -> "Message":
-        """Bound method *reply_venue* of :obj:`~pyrogram.types.Message`.
+        """Bound method *reply_venue* of :obj:`~nerogram.types.Message`.
 
         Use as a shortcut for:
 
@@ -2776,19 +2776,19 @@ class Message(Object, Update):
             quote_text (``str``):
                 Text of the quote to be sent.
 
-            parse_mode (:obj:`~pyrogram.enums.ParseMode`, *optional*):
+            parse_mode (:obj:`~nerogram.enums.ParseMode`, *optional*):
                 By default, texts are parsed using both Markdown and HTML styles.
                 You can combine both syntaxes together.
 
-            quote_entities (List of :obj:`~pyrogram.types.MessageEntity`):
+            quote_entities (List of :obj:`~nerogram.types.MessageEntity`):
                 List of special entities that appear in quote text, which can be specified instead of *parse_mode*.
 
-            reply_markup (:obj:`~pyrogram.types.InlineKeyboardMarkup` | :obj:`~pyrogram.types.ReplyKeyboardMarkup` | :obj:`~pyrogram.types.ReplyKeyboardRemove` | :obj:`~pyrogram.types.ForceReply`, *optional*):
+            reply_markup (:obj:`~nerogram.types.InlineKeyboardMarkup` | :obj:`~nerogram.types.ReplyKeyboardMarkup` | :obj:`~nerogram.types.ReplyKeyboardRemove` | :obj:`~nerogram.types.ForceReply`, *optional*):
                 Additional interface options. An object for an inline keyboard, custom reply keyboard,
                 instructions to remove reply keyboard or to force a reply from the user.
 
         Returns:
-            On success, the sent :obj:`~pyrogram.types.Message` is returned.
+            On success, the sent :obj:`~nerogram.types.Message` is returned.
 
         Raises:
             RPCError: In case of a Telegram RPC error.
@@ -2844,7 +2844,7 @@ class Message(Object, Update):
         progress: Callable = None,
         progress_args: tuple = ()
     ) -> "Message":
-        """Bound method *reply_video* of :obj:`~pyrogram.types.Message`.
+        """Bound method *reply_video* of :obj:`~nerogram.types.Message`.
 
         Use as a shortcut for:
 
@@ -2875,11 +2875,11 @@ class Message(Object, Update):
             caption (``str``, *optional*):
                 Video caption, 0-1024 characters.
 
-            parse_mode (:obj:`~pyrogram.enums.ParseMode`, *optional*):
+            parse_mode (:obj:`~nerogram.enums.ParseMode`, *optional*):
                 By default, texts are parsed using both Markdown and HTML styles.
                 You can combine both syntaxes together.
 
-            caption_entities (List of :obj:`~pyrogram.types.MessageEntity`):
+            caption_entities (List of :obj:`~nerogram.types.MessageEntity`):
                 List of special entities that appear in the caption, which can be specified instead of *parse_mode*.
 
             has_spoiler (``bool``, *optional*):
@@ -2921,10 +2921,10 @@ class Message(Object, Update):
             quote_text (``str``):
                 Text of the quote to be sent.
 
-            quote_entities (List of :obj:`~pyrogram.types.MessageEntity`):
+            quote_entities (List of :obj:`~nerogram.types.MessageEntity`):
                 List of special entities that appear in quote text, which can be specified instead of *parse_mode*.
 
-            reply_markup (:obj:`~pyrogram.types.InlineKeyboardMarkup` | :obj:`~pyrogram.types.ReplyKeyboardMarkup` | :obj:`~pyrogram.types.ReplyKeyboardRemove` | :obj:`~pyrogram.types.ForceReply`, *optional*):
+            reply_markup (:obj:`~nerogram.types.InlineKeyboardMarkup` | :obj:`~nerogram.types.ReplyKeyboardMarkup` | :obj:`~nerogram.types.ReplyKeyboardRemove` | :obj:`~nerogram.types.ForceReply`, *optional*):
                 Additional interface options. An object for an inline keyboard, custom reply keyboard,
                 instructions to remove reply keyboard or to force a reply from the user.
 
@@ -2951,8 +2951,8 @@ class Message(Object, Update):
                 You can either keep ``*args`` or add every single extra argument in your function signature.
 
         Returns:
-            On success, the sent :obj:`~pyrogram.types.Message` is returned.
-            In case the upload is deliberately stopped with :meth:`~pyrogram.Client.stop_transmission`, None is returned
+            On success, the sent :obj:`~nerogram.types.Message` is returned.
+            In case the upload is deliberately stopped with :meth:`~nerogram.Client.stop_transmission`, None is returned
             instead.
 
         Raises:
@@ -3009,7 +3009,7 @@ class Message(Object, Update):
         progress: Callable = None,
         progress_args: tuple = ()
     ) -> "Message":
-        """Bound method *reply_video_note* of :obj:`~pyrogram.types.Message`.
+        """Bound method *reply_video_note* of :obj:`~nerogram.types.Message`.
 
         Use as a shortcut for:
 
@@ -3062,14 +3062,14 @@ class Message(Object, Update):
             quote_text (``str``):
                 Text of the quote to be sent.
 
-            parse_mode (:obj:`~pyrogram.enums.ParseMode`, *optional*):
+            parse_mode (:obj:`~nerogram.enums.ParseMode`, *optional*):
                 By default, texts are parsed using both Markdown and HTML styles.
                 You can combine both syntaxes together.
 
-            quote_entities (List of :obj:`~pyrogram.types.MessageEntity`):
+            quote_entities (List of :obj:`~nerogram.types.MessageEntity`):
                 List of special entities that appear in quote text, which can be specified instead of *parse_mode*.
 
-            reply_markup (:obj:`~pyrogram.types.InlineKeyboardMarkup` | :obj:`~pyrogram.types.ReplyKeyboardMarkup` | :obj:`~pyrogram.types.ReplyKeyboardRemove` | :obj:`~pyrogram.types.ForceReply`, *optional*):
+            reply_markup (:obj:`~nerogram.types.InlineKeyboardMarkup` | :obj:`~nerogram.types.ReplyKeyboardMarkup` | :obj:`~nerogram.types.ReplyKeyboardRemove` | :obj:`~nerogram.types.ForceReply`, *optional*):
                 Additional interface options. An object for an inline keyboard, custom reply keyboard,
                 instructions to remove reply keyboard or to force a reply from the user.
 
@@ -3096,8 +3096,8 @@ class Message(Object, Update):
                 You can either keep ``*args`` or add every single extra argument in your function signature.
 
         Returns:
-            On success, the sent :obj:`~pyrogram.types.Message` is returned.
-            In case the upload is deliberately stopped with :meth:`~pyrogram.Client.stop_transmission`, None is returned
+            On success, the sent :obj:`~nerogram.types.Message` is returned.
+            In case the upload is deliberately stopped with :meth:`~nerogram.Client.stop_transmission`, None is returned
             instead.
 
         Raises:
@@ -3148,7 +3148,7 @@ class Message(Object, Update):
         progress: Callable = None,
         progress_args: tuple = ()
     ) -> "Message":
-        """Bound method *reply_voice* of :obj:`~pyrogram.types.Message`.
+        """Bound method *reply_voice* of :obj:`~nerogram.types.Message`.
 
         Use as a shortcut for:
 
@@ -3179,11 +3179,11 @@ class Message(Object, Update):
             caption (``str``, *optional*):
                 Voice message caption, 0-1024 characters.
 
-            parse_mode (:obj:`~pyrogram.enums.ParseMode`, *optional*):
+            parse_mode (:obj:`~nerogram.enums.ParseMode`, *optional*):
                 By default, texts are parsed using both Markdown and HTML styles.
                 You can combine both syntaxes together.
 
-            caption_entities (List of :obj:`~pyrogram.types.MessageEntity`):
+            caption_entities (List of :obj:`~nerogram.types.MessageEntity`):
                 List of special entities that appear in the caption, which can be specified instead of *parse_mode*.
 
             duration (``int``, *optional*):
@@ -3202,10 +3202,10 @@ class Message(Object, Update):
             quote_text (``str``):
                 Text of the quote to be sent.
 
-            quote_entities (List of :obj:`~pyrogram.types.MessageEntity`):
+            quote_entities (List of :obj:`~nerogram.types.MessageEntity`):
                 List of special entities that appear in quote text, which can be specified instead of *parse_mode*.
 
-            reply_markup (:obj:`~pyrogram.types.InlineKeyboardMarkup` | :obj:`~pyrogram.types.ReplyKeyboardMarkup` | :obj:`~pyrogram.types.ReplyKeyboardRemove` | :obj:`~pyrogram.types.ForceReply`, *optional*):
+            reply_markup (:obj:`~nerogram.types.InlineKeyboardMarkup` | :obj:`~nerogram.types.ReplyKeyboardMarkup` | :obj:`~nerogram.types.ReplyKeyboardRemove` | :obj:`~nerogram.types.ForceReply`, *optional*):
                 Additional interface options. An object for an inline keyboard, custom reply keyboard,
                 instructions to remove reply keyboard or to force a reply from the user.
 
@@ -3232,8 +3232,8 @@ class Message(Object, Update):
                 You can either keep ``*args`` or add every single extra argument in your function signature.
 
         Returns:
-            On success, the sent :obj:`~pyrogram.types.Message` is returned.
-            In case the upload is deliberately stopped with :meth:`~pyrogram.Client.stop_transmission`, None is returned
+            On success, the sent :obj:`~nerogram.types.Message` is returned.
+            In case the upload is deliberately stopped with :meth:`~nerogram.Client.stop_transmission`, None is returned
             instead.
 
         Raises:
@@ -3270,7 +3270,7 @@ class Message(Object, Update):
         disable_web_page_preview: bool = None,
         reply_markup: "types.InlineKeyboardMarkup" = None
     ) -> "Message":
-        """Bound method *edit_text* of :obj:`~pyrogram.types.Message`.
+        """Bound method *edit_text* of :obj:`~nerogram.types.Message`.
 
         An alias exists as *edit*.
 
@@ -3293,21 +3293,21 @@ class Message(Object, Update):
             text (``str``):
                 New text of the message.
 
-            parse_mode (:obj:`~pyrogram.enums.ParseMode`, *optional*):
+            parse_mode (:obj:`~nerogram.enums.ParseMode`, *optional*):
                 By default, texts are parsed using both Markdown and HTML styles.
                 You can combine both syntaxes together.
 
-            entities (List of :obj:`~pyrogram.types.MessageEntity`):
+            entities (List of :obj:`~nerogram.types.MessageEntity`):
                 List of special entities that appear in message text, which can be specified instead of *parse_mode*.
 
             disable_web_page_preview (``bool``, *optional*):
                 Disables link previews for links in this message.
 
-            reply_markup (:obj:`~pyrogram.types.InlineKeyboardMarkup`, *optional*):
+            reply_markup (:obj:`~nerogram.types.InlineKeyboardMarkup`, *optional*):
                 An InlineKeyboardMarkup object.
 
         Returns:
-            On success, the edited :obj:`~pyrogram.types.Message` is returned.
+            On success, the edited :obj:`~nerogram.types.Message` is returned.
 
         Raises:
             RPCError: In case of a Telegram RPC error.
@@ -3331,7 +3331,7 @@ class Message(Object, Update):
         caption_entities: List["types.MessageEntity"] = None,
         reply_markup: "types.InlineKeyboardMarkup" = None
     ) -> "Message":
-        """Bound method *edit_caption* of :obj:`~pyrogram.types.Message`.
+        """Bound method *edit_caption* of :obj:`~nerogram.types.Message`.
 
         Use as a shortcut for:
 
@@ -3352,18 +3352,18 @@ class Message(Object, Update):
             caption (``str``):
                 New caption of the message.
 
-            parse_mode (:obj:`~pyrogram.enums.ParseMode`, *optional*):
+            parse_mode (:obj:`~nerogram.enums.ParseMode`, *optional*):
                 By default, texts are parsed using both Markdown and HTML styles.
                 You can combine both syntaxes together.
 
-            caption_entities (List of :obj:`~pyrogram.types.MessageEntity`):
+            caption_entities (List of :obj:`~nerogram.types.MessageEntity`):
                 List of special entities that appear in the caption, which can be specified instead of *parse_mode*.
 
-            reply_markup (:obj:`~pyrogram.types.InlineKeyboardMarkup`, *optional*):
+            reply_markup (:obj:`~nerogram.types.InlineKeyboardMarkup`, *optional*):
                 An InlineKeyboardMarkup object.
 
         Returns:
-            On success, the edited :obj:`~pyrogram.types.Message` is returned.
+            On success, the edited :obj:`~nerogram.types.Message` is returned.
 
         Raises:
             RPCError: In case of a Telegram RPC error.
@@ -3382,7 +3382,7 @@ class Message(Object, Update):
         media: "types.InputMedia",
         reply_markup: "types.InlineKeyboardMarkup" = None
     ) -> "Message":
-        """Bound method *edit_media* of :obj:`~pyrogram.types.Message`.
+        """Bound method *edit_media* of :obj:`~nerogram.types.Message`.
 
         Use as a shortcut for:
 
@@ -3400,14 +3400,14 @@ class Message(Object, Update):
                 await message.edit_media(media)
 
         Parameters:
-            media (:obj:`~pyrogram.types.InputMedia`):
+            media (:obj:`~nerogram.types.InputMedia`):
                 One of the InputMedia objects describing an animation, audio, document, photo or video.
 
-            reply_markup (:obj:`~pyrogram.types.InlineKeyboardMarkup`, *optional*):
+            reply_markup (:obj:`~nerogram.types.InlineKeyboardMarkup`, *optional*):
                 An InlineKeyboardMarkup object.
 
         Returns:
-            On success, the edited :obj:`~pyrogram.types.Message` is returned.
+            On success, the edited :obj:`~nerogram.types.Message` is returned.
 
         Raises:
             RPCError: In case of a Telegram RPC error.
@@ -3420,7 +3420,7 @@ class Message(Object, Update):
         )
 
     async def edit_reply_markup(self, reply_markup: "types.InlineKeyboardMarkup" = None) -> "Message":
-        """Bound method *edit_reply_markup* of :obj:`~pyrogram.types.Message`.
+        """Bound method *edit_reply_markup* of :obj:`~nerogram.types.Message`.
 
         Use as a shortcut for:
 
@@ -3438,12 +3438,12 @@ class Message(Object, Update):
                 await message.edit_reply_markup(inline_reply_markup)
 
         Parameters:
-            reply_markup (:obj:`~pyrogram.types.InlineKeyboardMarkup`):
+            reply_markup (:obj:`~nerogram.types.InlineKeyboardMarkup`):
                 An InlineKeyboardMarkup object.
 
         Returns:
             On success, if edited message is sent by the bot, the edited
-            :obj:`~pyrogram.types.Message` is returned, otherwise True is returned.
+            :obj:`~nerogram.types.Message` is returned, otherwise True is returned.
 
         Raises:
             RPCError: In case of a Telegram RPC error.
@@ -3461,7 +3461,7 @@ class Message(Object, Update):
         disable_notification: bool = None,
         schedule_date: datetime = None
     ) -> Union["types.Message", List["types.Message"]]:
-        """Bound method *forward* of :obj:`~pyrogram.types.Message`.
+        """Bound method *forward* of :obj:`~nerogram.types.Message`.
 
         Use as a shortcut for:
 
@@ -3531,7 +3531,7 @@ class Message(Object, Update):
             "types.ForceReply"
         ] = object
     ) -> Union["types.Message", List["types.Message"]]:
-        """Bound method *copy* of :obj:`~pyrogram.types.Message`.
+        """Bound method *copy* of :obj:`~nerogram.types.Message`.
 
         Use as a shortcut for:
 
@@ -3559,11 +3559,11 @@ class Message(Object, Update):
                 If not specified, the original caption is kept.
                 Pass "" (empty string) to remove the caption.
 
-            parse_mode (:obj:`~pyrogram.enums.ParseMode`, *optional*):
+            parse_mode (:obj:`~nerogram.enums.ParseMode`, *optional*):
                 By default, texts are parsed using both Markdown and HTML styles.
                 You can combine both syntaxes together.
 
-            caption_entities (List of :obj:`~pyrogram.types.MessageEntity`):
+            caption_entities (List of :obj:`~nerogram.types.MessageEntity`):
                 List of special entities that appear in the new caption, which can be specified instead of *parse_mode*.
 
             disable_notification (``bool``, *optional*):
@@ -3583,7 +3583,7 @@ class Message(Object, Update):
             quote_text (``str``):
                 Text of the quote to be sent.
 
-            quote_entities (List of :obj:`~pyrogram.types.MessageEntity`):
+            quote_entities (List of :obj:`~nerogram.types.MessageEntity`):
                 List of special entities that appear in quote text, which can be specified instead of *parse_mode*.
 
             schedule_date (:py:obj:`~datetime.datetime`, *optional*):
@@ -3595,14 +3595,14 @@ class Message(Object, Update):
             has_spoiler (``bool``, *optional*):
                 True, if the message media is covered by a spoiler animation.
 
-            reply_markup (:obj:`~pyrogram.types.InlineKeyboardMarkup` | :obj:`~pyrogram.types.ReplyKeyboardMarkup` | :obj:`~pyrogram.types.ReplyKeyboardRemove` | :obj:`~pyrogram.types.ForceReply`, *optional*):
+            reply_markup (:obj:`~nerogram.types.InlineKeyboardMarkup` | :obj:`~nerogram.types.ReplyKeyboardMarkup` | :obj:`~nerogram.types.ReplyKeyboardRemove` | :obj:`~nerogram.types.ForceReply`, *optional*):
                 Additional interface options. An object for an inline keyboard, custom reply keyboard,
                 instructions to remove reply keyboard or to force a reply from the user.
                 If not specified, the original reply markup is kept.
                 Pass None to remove the reply markup.
 
         Returns:
-            :obj:`~pyrogram.types.Message`: On success, the copied message is returned.
+            :obj:`~nerogram.types.Message`: On success, the copied message is returned.
 
         Raises:
             RPCError: In case of a Telegram RPC error.
@@ -3736,7 +3736,7 @@ class Message(Object, Update):
             raise ValueError("Can't copy this message")
 
     async def delete(self, revoke: bool = True):
-        """Bound method *delete* of :obj:`~pyrogram.types.Message`.
+        """Bound method *delete* of :obj:`~nerogram.types.Message`.
 
         Use as a shortcut for:
 
@@ -3772,7 +3772,7 @@ class Message(Object, Update):
         )
 
     async def click(self, x: Union[int, str] = 0, y: int = None, quote: bool = None, timeout: int = 10):
-        """Bound method *click* of :obj:`~pyrogram.types.Message`.
+        """Bound method *click* of :obj:`~nerogram.types.Message`.
 
         Use as a shortcut for clicking a button attached to the message instead of:
 
@@ -3824,7 +3824,7 @@ class Message(Object, Update):
                 Timeout in seconds.
 
         Returns:
-            -   The result of :meth:`~pyrogram.Client.request_callback_answer` in case of inline callback button clicks.
+            -   The result of :meth:`~nerogram.Client.request_callback_answer` in case of inline callback button clicks.
             -   The result of :meth:`~Message.reply()` in case of normal button clicks.
             -   A string in case the inline button is a URL, a *switch_inline_query* or a
                 *switch_inline_query_current_chat* button.
@@ -3893,7 +3893,7 @@ class Message(Object, Update):
             await self.reply(button, quote=quote)
 
     async def react(self, emoji: Union[int, str] = None, big: bool = False) -> bool:
-        """Bound method *react* of :obj:`~pyrogram.types.Message`.
+        """Bound method *react* of :obj:`~nerogram.types.Message`.
 
         Use as a shortcut for:
 
@@ -3936,7 +3936,7 @@ class Message(Object, Update):
     async def retract_vote(
         self,
     ) -> "types.Poll":
-        """Bound method *retract_vote* of :obj:`~pyrogram.types.Message`.
+        """Bound method *retract_vote* of :obj:`~nerogram.types.Message`.
 
         Use as a shortcut for:
 
@@ -3953,7 +3953,7 @@ class Message(Object, Update):
                 message.retract_vote()
 
         Returns:
-            :obj:`~pyrogram.types.Poll`: On success, the poll with the retracted vote is returned.
+            :obj:`~nerogram.types.Poll`: On success, the poll with the retracted vote is returned.
 
         Raises:
             RPCError: In case of a Telegram RPC error.
@@ -3972,7 +3972,7 @@ class Message(Object, Update):
         progress: Callable = None,
         progress_args: tuple = ()
     ) -> str:
-        """Bound method *download* of :obj:`~pyrogram.types.Message`.
+        """Bound method *download* of :obj:`~nerogram.types.Message`.
 
         Use as a shortcut for:
 
@@ -4043,7 +4043,7 @@ class Message(Object, Update):
         self,
         option: int,
     ) -> "types.Poll":
-        """Bound method *vote* of :obj:`~pyrogram.types.Message`.
+        """Bound method *vote* of :obj:`~nerogram.types.Message`.
 
         Use as a shortcut for:
 
@@ -4065,7 +4065,7 @@ class Message(Object, Update):
                 Index of the poll option you want to vote for (0 to 9).
 
         Returns:
-            :obj:`~pyrogram.types.Poll`: On success, the poll with the chosen option is returned.
+            :obj:`~nerogram.types.Poll`: On success, the poll with the chosen option is returned.
 
         Raises:
             RPCError: In case of a Telegram RPC error.
@@ -4078,7 +4078,7 @@ class Message(Object, Update):
         )
 
     async def pin(self, disable_notification: bool = False, both_sides: bool = False) -> "types.Message":
-        """Bound method *pin* of :obj:`~pyrogram.types.Message`.
+        """Bound method *pin* of :obj:`~nerogram.types.Message`.
 
         Use as a shortcut for:
 
@@ -4104,7 +4104,7 @@ class Message(Object, Update):
                 Applicable to private chats only. Defaults to False.
 
         Returns:
-            :obj:`~pyrogram.types.Message`: On success, the service message is returned.
+            :obj:`~nerogram.types.Message`: On success, the service message is returned.
 
         Raises:
             RPCError: In case of a Telegram RPC error.
@@ -4117,7 +4117,7 @@ class Message(Object, Update):
         )
 
     async def unpin(self) -> bool:
-        """Bound method *unpin* of :obj:`~pyrogram.types.Message`.
+        """Bound method *unpin* of :obj:`~nerogram.types.Message`.
 
         Use as a shortcut for:
 

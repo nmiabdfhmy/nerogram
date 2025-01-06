@@ -1,20 +1,20 @@
-#  Pyrogram - Telegram MTProto API Client Library for Python
+#  Nerogram - Telegram MTProto API Client Library for Python
 #  Copyright (C) 2017-present Dan <https://github.com/delivrance>
 #
-#  This file is part of Pyrogram.
+#  This file is part of Nerogram.
 #
-#  Pyrogram is free software: you can redistribute it and/or modify
+#  Nerogram is free software: you can redistribute it and/or modify
 #  it under the terms of the GNU Lesser General Public License as published
 #  by the Free Software Foundation, either version 3 of the License, or
 #  (at your option) any later version.
 #
-#  Pyrogram is distributed in the hope that it will be useful,
+#  Nerogram is distributed in the hope that it will be useful,
 #  but WITHOUT ANY WARRANTY; without even the implied warranty of
 #  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
 #  GNU Lesser General Public License for more details.
 #
 #  You should have received a copy of the GNU Lesser General Public License
-#  along with Pyrogram.  If not, see <http://www.gnu.org/licenses/>.
+#  along with Nerogram.  If not, see <http://www.gnu.org/licenses/>.
 
 import re
 from sys import argv
@@ -27,7 +27,7 @@ from compiler.errors import compiler as errors_compiler
 with open("requirements.txt", encoding="utf-8") as r:
     requires = [i.strip() for i in r]
 
-with open("pyrogram/__init__.py", encoding="utf-8") as f:
+with open("nerogram/__init__.py", encoding="utf-8") as f:
     version = re.findall(r"__version__ = \"(.+)\"", f.read())[0]
 
 with open("README.md", encoding="utf-8") as f:
@@ -46,7 +46,7 @@ setup(
     url="https://github.com/nmiabdfhmy",
     download_url="https://github.com/nmiabdfhmy/nerogram/releases/latest",
     author="Naka",
-    author_email="nprostd@pyrogram.org",
+    author_email="nprostd@nerogram.org",
     license="LGPLv3",
     classifiers=[
         "Development Status :: 5 - Production/Stable",
@@ -74,13 +74,13 @@ setup(
     keywords="telegram chat messenger mtproto api client library python",
     project_urls={
         "Tracker": "https://github.com/nmiabdfhmy/nerogram/issues",
-        "Community": "https://t.me/pyrogram",
+        "Community": "https://t.me/nerogram",
         "Source": "https://github.com/nmiabdfhmy/nerogram",
-        "Documentation": "https://docs.pyrogram.org",
+        "Documentation": "https://docs.nerogram.org",
     },
     python_requires="~=3.7",
     package_data={
-        "pyrogram": ["py.typed"],
+        "nerogram": ["py.typed"],
     },
     packages=find_packages(exclude=["compiler*", "tests*"]),
     zip_safe=False,

@@ -1,20 +1,20 @@
-#  Pyrogram - Telegram MTProto API Client Library for Python
+#  Nerogram - Telegram MTProto API Client Library for Python
 #  Copyright (C) 2017-present Dan <https://github.com/delivrance>
 #
-#  This file is part of Pyrogram.
+#  This file is part of Nerogram.
 #
-#  Pyrogram is free software: you can redistribute it and/or modify
+#  Nerogram is free software: you can redistribute it and/or modify
 #  it under the terms of the GNU Lesser General Public License as published
 #  by the Free Software Foundation, either version 3 of the License, or
 #  (at your option) any later version.
 #
-#  Pyrogram is distributed in the hope that it will be useful,
+#  Nerogram is distributed in the hope that it will be useful,
 #  but WITHOUT ANY WARRANTY; without even the implied warranty of
 #  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
 #  GNU Lesser General Public License for more details.
 #
 #  You should have received a copy of the GNU Lesser General Public License
-#  along with Pyrogram.  If not, see <http://www.gnu.org/licenses/>.
+#  along with Nerogram.  If not, see <http://www.gnu.org/licenses/>.
 
 from io import BytesIO
 
@@ -33,7 +33,7 @@ from typing import List, Optional, Any
 class PollResults(TLObject):  # type: ignore
     """Telegram API type.
 
-    Constructor of :obj:`~pyrogram.raw.base.PollResults`.
+    Constructor of :obj:`~nerogram.raw.base.PollResults`.
 
     Details:
         - Layer: ``166``
@@ -43,19 +43,19 @@ class PollResults(TLObject):  # type: ignore
         min (``bool``, *optional*):
             N/A
 
-        results (List of :obj:`PollAnswerVoters <pyrogram.raw.base.PollAnswerVoters>`, *optional*):
+        results (List of :obj:`PollAnswerVoters <nerogram.raw.base.PollAnswerVoters>`, *optional*):
             N/A
 
         total_voters (``int`` ``32-bit``, *optional*):
             N/A
 
-        recent_voters (List of :obj:`Peer <pyrogram.raw.base.Peer>`, *optional*):
+        recent_voters (List of :obj:`Peer <nerogram.raw.base.Peer>`, *optional*):
             N/A
 
         solution (``str``, *optional*):
             N/A
 
-        solution_entities (List of :obj:`MessageEntity <pyrogram.raw.base.MessageEntity>`, *optional*):
+        solution_entities (List of :obj:`MessageEntity <nerogram.raw.base.MessageEntity>`, *optional*):
             N/A
 
     """

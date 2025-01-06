@@ -1,20 +1,20 @@
-#  Pyrogram - Telegram MTProto API Client Library for Python
+#  Nerogram - Telegram MTProto API Client Library for Python
 #  Copyright (C) 2017-present Dan <https://github.com/delivrance>
 #
-#  This file is part of Pyrogram.
+#  This file is part of Nerogram.
 #
-#  Pyrogram is free software: you can redistribute it and/or modify
+#  Nerogram is free software: you can redistribute it and/or modify
 #  it under the terms of the GNU Lesser General Public License as published
 #  by the Free Software Foundation, either version 3 of the License, or
 #  (at your option) any later version.
 #
-#  Pyrogram is distributed in the hope that it will be useful,
+#  Nerogram is distributed in the hope that it will be useful,
 #  but WITHOUT ANY WARRANTY; without even the implied warranty of
 #  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
 #  GNU Lesser General Public License for more details.
 #
 #  You should have received a copy of the GNU Lesser General Public License
-#  along with Pyrogram.  If not, see <http://www.gnu.org/licenses/>.
+#  along with Nerogram.  If not, see <http://www.gnu.org/licenses/>.
 
 from io import BytesIO
 
@@ -59,17 +59,17 @@ class InitConnection(TLObject):  # type: ignore
         lang_code (``str``):
             N/A
 
-        query (Any function from :obj:`~pyrogram.raw.functions`):
+        query (Any function from :obj:`~nerogram.raw.functions`):
             N/A
 
-        proxy (:obj:`InputClientProxy <pyrogram.raw.base.InputClientProxy>`, *optional*):
+        proxy (:obj:`InputClientProxy <nerogram.raw.base.InputClientProxy>`, *optional*):
             N/A
 
-        params (:obj:`JSONValue <pyrogram.raw.base.JSONValue>`, *optional*):
+        params (:obj:`JSONValue <nerogram.raw.base.JSONValue>`, *optional*):
             N/A
 
     Returns:
-        Any object from :obj:`~pyrogram.raw.types`
+        Any object from :obj:`~nerogram.raw.types`
     """
 
     __slots__: List[str] = ["api_id", "device_model", "system_version", "app_version", "system_lang_code", "lang_pack", "lang_code", "query", "proxy", "params"]
